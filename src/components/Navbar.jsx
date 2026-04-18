@@ -1,61 +1,53 @@
-import { NavLink, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-
-const navItems = [
-  { to: '/reps', label: 'REPS' },
-  { to: '/services', label: 'SERVICES' },
-  { to: '/labs', label: 'LABS' },
-  { to: '/studio', label: 'STUDIO' },
-  { to: '/about', label: 'ABOUT' },
-];
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Radio } from 'lucide-react';
+import MenuOverlay from './MenuOverlay';
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-botcore-black/75 backdrop-blur-md">
-      <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between px-6 md:px-10">
-        <Link
-          to="/"
-          className="font-display text-xl font-extrabold uppercase tracking-[0.2em] text-botcore-green drop-shadow-glow"
-        >
-          BOTCORE
-        </Link>
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-botcore-black/75 backdrop-blur-md">
+        <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between px-6 md:px-10">
+          <Link
+            to="/"
+            className="font-display text-xl font-extrabold uppercase tracking-[0.2em] text-botcore-green drop-shadow-glow"
+            onClick={() => setMenuOpen(false)}
+          >
+            BOTCORE
+          </Link>
 
-        <nav className="hidden items-center gap-6 font-mono text-[11px] tracking-[0.2em] lg:flex">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                `relative uppercase transition-colors ${
-                  isActive
-                    ? 'text-botcore-green'
-                    : 'text-botcore-greyLight hover:text-botcore-green'
-                }`
-              }
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              to="/studio"
+              onClick={() => setMenuOpen(false)}
+              className="hidden h-11 items-center gap-2 rounded-sm bg-botcore-green px-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-botcore-black transition-transform hover:scale-[1.03] sm:inline-flex"
             >
-              {({ isActive }) => (
-                <>
-                  {item.label}
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-underline"
-                      className="absolute -bottom-2 left-0 right-0 h-px bg-botcore-green"
-                    />
-                  )}
-                </>
-              )}
-            </NavLink>
-          ))}
-        </nav>
+              <Radio size={14} strokeWidth={2} />
+              MAKE CONTACT
+            </Link>
 
-        <Link
-          to="/studio"
-          className="group flex h-10 items-center gap-2 bg-botcore-green px-4 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-botcore-black transition-transform hover:scale-[1.03] hover:bg-botcore-greenDark hover:text-botcore-green"
-        >
-          <span className="hidden sm:inline">CONTACT</span>
-          <span aria-hidden>↗</span>
-        </Link>
-      </div>
-    </header>
+            <button
+              type="button"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-expanded={menuOpen}
+              aria-controls="main-menu"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              className="group flex h-11 items-center gap-2 rounded-sm border border-botcore-greyLight/30 px-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-botcore-greyLight transition-colors hover:border-botcore-green hover:text-botcore-green"
+            >
+              {menuOpen ? (
+                <X size={14} strokeWidth={2} />
+              ) : (
+                <Menu size={14} strokeWidth={2} />
+              )}
+              {menuOpen ? 'CLOSE' : 'MENU'}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <MenuOverlay open={menuOpen} onClose={() => setMenuOpen(false)} />
+    </>
   );
 }

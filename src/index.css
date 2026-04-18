@@ -61,6 +61,12 @@ p {
     letter-spacing: -0.03em;
   }
 
+  .h-menu {
+    font-size: clamp(1.75rem, 3.5vw + 0.25rem, 3rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
   .grid-bg {
     background-image:
       linear-gradient(rgba(0, 255, 0, 0.06) 1px, transparent 1px),
