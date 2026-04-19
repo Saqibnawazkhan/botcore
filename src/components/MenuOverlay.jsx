@@ -84,19 +84,17 @@ export default function MenuOverlay({ open, onClose }) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -12, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-x-3 top-[88px] bottom-3 overflow-hidden rounded-2xl border border-botcore-green/30 bg-botcore-black/95 backdrop-blur-xl md:inset-x-6 md:top-[92px] md:bottom-6"
+            className="absolute inset-x-3 bottom-3 top-[88px] overflow-hidden rounded-2xl border border-white/10 bg-botcore-black/95 backdrop-blur-xl md:inset-x-6 md:bottom-6 md:top-[92px]"
           >
-            <div className="radial-green pointer-events-none absolute inset-0 opacity-60" aria-hidden />
-            <div className="radial-purple pointer-events-none absolute inset-0 opacity-40" aria-hidden />
             <div
-              className="pointer-events-none absolute inset-0 opacity-[0.05]"
+              className="pointer-events-none absolute inset-0"
               aria-hidden
               style={{
-                backgroundImage:
-                  'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-                backgroundSize: '80px 80px',
+                background:
+                  'radial-gradient(ellipse at 80% 10%, rgba(0,255,0,0.06) 0%, transparent 55%)',
               }}
             />
+            <div className="grid-faint pointer-events-none absolute inset-0 opacity-40" aria-hidden />
 
             <div className="relative flex h-full flex-col overflow-y-auto px-6 pt-10 pb-6 md:px-12 md:pt-14">
               <div className="grid flex-1 grid-cols-1 gap-x-10 gap-y-2 md:grid-cols-2 md:gap-x-20">
@@ -158,7 +156,7 @@ function MenuList({ items, delay, onClose }) {
             onClick={onClose}
             className="group flex items-center justify-between gap-4 py-3 md:py-4"
           >
-            <span className="h-menu font-extrabold uppercase italic tracking-tight text-botcore-white transition-colors group-hover:text-botcore-green">
+            <span className="h-menu font-semibold text-botcore-greyLight transition-colors group-hover:text-botcore-green">
               {item.label}
             </span>
             <span

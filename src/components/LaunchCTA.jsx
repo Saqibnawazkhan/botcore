@@ -1,30 +1,33 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 export default function LaunchCTA() {
   return (
-    <section className="relative overflow-hidden bg-botcore-green">
-      <div className="scanline absolute inset-0 opacity-40" aria-hidden />
-      <div className="relative mx-auto flex max-w-[1280px] flex-col items-center gap-6 px-6 py-24 text-center md:px-10">
-        <span className="font-mono text-[11px] tracking-[0.3em] text-botcore-black/70">
-          // BEGIN YOUR VOYAGE
-        </span>
-        <h2 className="h-cta font-extrabold uppercase italic text-botcore-black">
-          READY TO LAUNCH?
-        </h2>
-        <p className="max-w-xl font-mono text-xs tracking-[0.2em] text-botcore-black/70 md:text-sm">
-          CLIMB ABOARD. LET'S FIND OUT WHAT'S OUT THERE.
-        </p>
-        <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.98 }} className="mt-2">
-          <Link
-            to="/studio"
-            className="inline-flex items-center gap-3 border-2 border-botcore-black bg-transparent px-8 py-4 font-mono text-sm font-bold uppercase tracking-[0.3em] text-botcore-black transition-colors hover:bg-botcore-black hover:text-botcore-green"
-          >
-            <span>[ MAKE CONTACT</span>
-            <span aria-hidden>↗</span>
-            <span>]</span>
-          </Link>
-        </motion.div>
+    <section className="relative border-t border-white/5 bg-botcore-green text-botcore-black">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        aria-hidden
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(0,0,0,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.8) 1px, transparent 1px)',
+          backgroundSize: '64px 64px',
+        }}
+      />
+      <div className="relative mx-auto flex max-w-[1280px] flex-col items-start gap-8 px-6 py-24 md:flex-row md:items-end md:justify-between md:px-10 md:py-28">
+        <div className="max-w-2xl">
+          <span className="eyebrow !text-botcore-black/70">Begin your voyage</span>
+          <h2 className="h-hero mt-4 font-bold text-botcore-black">
+            Ready to launch?
+          </h2>
+          <p className="mt-6 max-w-md text-base leading-relaxed text-botcore-black/80">
+            Climb aboard. Let’s find out what’s out there.
+          </p>
+        </div>
+        <Link
+          to="/studio"
+          className="inline-flex items-center gap-2 border-2 border-botcore-black bg-transparent px-7 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-botcore-black transition-colors hover:bg-botcore-black hover:text-botcore-green"
+        >
+          Make contact <span aria-hidden>↗</span>
+        </Link>
       </div>
     </section>
   );

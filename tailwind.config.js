@@ -7,9 +7,10 @@ export default {
         botcore: {
           green: '#00FF00',
           greenDark: '#006400',
-          black: '#1A1A1A',
+          black: '#0D0D0D',
+          ink: '#151515',
           grey: '#4D4D4D',
-          greyLight: '#F5F5F5',
+          greyLight: '#E8E8E8',
           white: '#FFFFFF',
         },
       },

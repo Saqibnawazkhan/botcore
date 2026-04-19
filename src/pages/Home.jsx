@@ -1,5 +1,4 @@
 import Hero from '../components/Hero';
-import Marquee from '../components/Marquee';
 import AboutSection from '../components/AboutSection';
 import Portfolio from '../components/Portfolio';
 import Capabilities from '../components/Capabilities';
@@ -13,11 +12,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Marquee />
       <AboutSection />
       <Portfolio />
       <Capabilities />
-      <Marquee />
       <SystematicVoyage />
       <CoreValues />
       <TeamSection />
