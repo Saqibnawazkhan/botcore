@@ -12,15 +12,22 @@ export default function AboutSection() {
 
           <MotionReveal delay={0.1} className="lg:col-span-8">
             <h2 className="h-section font-semibold text-botcore-greyLight">
-              We open doors to <span className="text-botcore-green">new spaces</span>
-              — bridging brand, product, and systems engineering under one studio.
+              We turn ordinary ideas into{' '}
+              <span className="text-botcore-green">powerful opportunities.</span>
             </h2>
 
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-              BOTCORE is a precision studio of designers, engineers, and strategists. We
-              discover infinite potential in everyday interfaces and ship work calibrated
-              for measurable impact — from brand systems to full product launches.
-            </p>
+            <div className="mt-8 max-w-2xl space-y-5 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+              <p>
+                Botcore is a dynamic, full-service creative and advertising agency
+                focused on delivering impactful results. We turn ordinary ideas into
+                powerful opportunities through fresh thinking and smart strategy.
+              </p>
+              <p>
+                Our team of creative minds and forward-thinkers works closely with you
+                to bring your vision to life. With Botcore, your growth isn’t just a
+                goal — it’s a journey we build and scale together.
+              </p>
+            </div>
 
             <dl className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4">
               <Stat value="180" suffix="+" label="Missions launched" />
