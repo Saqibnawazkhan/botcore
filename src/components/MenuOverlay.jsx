@@ -27,7 +27,7 @@ const columnA = [
 ];
 
 const columnB = [
-  { label: 'AI', to: '/labs' },
+  { label: 'AI', to: '/ai' },
   { label: 'ABOUT', to: '/about' },
   { label: 'TEAM', to: '/about' },
 ];

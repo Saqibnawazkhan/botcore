@@ -7,6 +7,7 @@ import Reps from './pages/Reps';
 import Labs from './pages/Labs';
 import Studio from './pages/Studio';
 import About from './pages/About';
+import AI from './pages/AI';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/labs" element={<Labs />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/about" element={<About />} />
+          <Route path="/ai" element={<AI />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
