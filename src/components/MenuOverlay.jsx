@@ -22,20 +22,14 @@ const LinkedinIcon = () => (
 
 const columnA = [
   { label: 'WORK', to: '/reps' },
-  { label: 'CAPABILITIES', to: '/services' },
-  { label: 'APPROACH', to: '/services' },
-  { label: 'CAREERS', to: '/labs' },
   { label: 'BLOG', to: '/labs' },
   { label: 'CONTACT', to: '/studio' },
 ];
 
 const columnB = [
-  { label: 'DATATAG', to: '/' },
-  { label: 'PATHFINDER', to: '/labs' },
-  { label: 'AI_ENABLEMENT', to: '/labs' },
+  { label: 'AI', to: '/labs' },
   { label: 'ABOUT', to: '/about' },
   { label: 'TEAM', to: '/about' },
-  { label: 'COMMUNITY', to: '/studio' },
 ];
 
 const utilityLinks = [
