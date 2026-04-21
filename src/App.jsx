@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/labs" element={<Labs />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/about" element={<About />} />
-          <Route path="/ai" element={<AI />} />
+          <Route path="/ai-enablement" element={<AI />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
