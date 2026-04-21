@@ -1,29 +1,8 @@
 import { Link } from 'react-router-dom';
 import MotionReveal from './MotionReveal';
+import { posts } from '../data/posts';
 
-const posts = [
-  {
-    id: '01',
-    title: 'Q2 2026 Core Value Call-Outs',
-    author: 'Russ',
-    date: 'Apr 07, 2026',
-    tag: 'Culture',
-  },
-  {
-    id: '02',
-    title: 'Leveraging Human Content in 2026',
-    author: 'Matt Parks',
-    date: 'Nov 28, 2025',
-    tag: 'SEO',
-  },
-  {
-    id: '03',
-    title: 'The Metamorphosis of Search',
-    author: 'Matt Parks',
-    date: 'Aug 26, 2025',
-    tag: 'SEO',
-  },
-];
+const featured = posts.filter((p) => p.featured).slice(0, 3);
 
 export default function BlogSection() {
   return (
@@ -40,13 +19,13 @@ export default function BlogSection() {
             to="/labs"
             className="eyebrow group inline-flex items-center gap-2 text-botcore-green hover:text-botcore-greyLight"
           >
-            Read more
+            Read all posts
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>
 
         <ul className="mt-14 divide-y divide-white/10 border-y border-white/10">
-          {posts.map((p, i) => (
+          {featured.map((p, i) => (
             <MotionReveal key={p.id} delay={i * 0.07}>
               <li>
                 <Link
@@ -59,10 +38,10 @@ export default function BlogSection() {
                       {p.title}
                     </h3>
                     <p className="eyebrow mt-2 !tracking-[0.2em]">
-                      {p.author} · {p.tag}
+                      {p.author} · {p.category}
                     </p>
                   </div>
-                  <span className="eyebrow hidden md:block">{p.date}</span>
+                  <span className="eyebrow hidden md:block">{p.dateLabel}</span>
                   <span
                     aria-hidden
                     className="text-botcore-greyLight/40 transition-all group-hover:translate-x-1 group-hover:text-botcore-green"

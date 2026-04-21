@@ -1,0 +1,148 @@
+// Central blog post catalog used by both the home BlogSection preview
+// and the full blog index at /labs. `hue` drives the card accent colour.
+
+export const POST_CATEGORIES = [
+  'All',
+  'Strategy',
+  'SEO',
+  'Branding',
+  'AI',
+  'Advertising',
+  'Culture',
+];
+
+export const posts = [
+  {
+    id: '01',
+    slug: 'standing-out-when-ai-writes-everything',
+    title: 'Standing out when AI writes everything',
+    excerpt:
+      'Strategic positioning is the last defensible moat as generative systems flatten brand voice across the web.',
+    author: 'Kai Asher',
+    date: '2026-04-15',
+    dateLabel: 'Apr 15, 2026',
+    category: 'Branding',
+    tags: ['Branding', 'AI'],
+    hue: 140,
+    featured: true,
+  },
+  {
+    id: '02',
+    slug: 'q2-2026-crew-recognition',
+    title: 'Q2 2026 crew recognition',
+    excerpt:
+      'Highlighting the operators who moved our core values forward over the last quarter.',
+    author: 'Kai Asher',
+    date: '2026-04-07',
+    dateLabel: 'Apr 07, 2026',
+    category: 'Culture',
+    tags: ['Culture'],
+    hue: 280,
+    featured: true,
+  },
+  {
+    id: '03',
+    slug: 'tag-day-2026-crew-highlights',
+    title: 'Tag Day 2026: crew highlights',
+    excerpt:
+      'Recapping the annual crew gathering and the value-in-action moments that defined it.',
+    author: 'Kai Asher',
+    date: '2026-01-30',
+    dateLabel: 'Jan 30, 2026',
+    category: 'Culture',
+    tags: ['Culture'],
+    hue: 260,
+  },
+  {
+    id: '04',
+    slug: 'why-human-content-still-wins-on-search',
+    title: 'Why human content still wins on search',
+    excerpt:
+      'Experience, expertise, and trust signals are harder to fake than ever. A field guide to E-E-A-T in 2026.',
+    author: 'Mori Okada',
+    date: '2025-11-28',
+    dateLabel: 'Nov 28, 2025',
+    category: 'SEO',
+    tags: ['SEO'],
+    hue: 190,
+    featured: true,
+  },
+  {
+    id: '05',
+    slug: 'crew-call-outs-october',
+    title: 'Crew call-outs: October edition',
+    excerpt:
+      'Recognising operators whose work embodied the studio’s core values this month.',
+    author: 'Kai Asher',
+    date: '2025-10-01',
+    dateLabel: 'Oct 01, 2025',
+    category: 'Culture',
+    tags: ['Culture'],
+    hue: 340,
+  },
+  {
+    id: '06',
+    slug: 'how-search-is-changing',
+    title: 'How search is changing under our feet',
+    excerpt:
+      'From keywords to conversational retrieval — what the shift means for brands that still optimise the old way.',
+    author: 'Mori Okada',
+    date: '2025-08-26',
+    dateLabel: 'Aug 26, 2025',
+    category: 'SEO',
+    tags: ['SEO'],
+    hue: 200,
+  },
+  {
+    id: '07',
+    slug: 'honoring-the-class-of-2025',
+    title: 'Crew awards: honoring the class of 2025',
+    excerpt:
+      'Our inaugural core-value award winners — the people setting the standard for the rest of the studio.',
+    author: 'Kai Asher',
+    date: '2025-07-07',
+    dateLabel: 'Jul 07, 2025',
+    category: 'Culture',
+    tags: ['Culture'],
+    hue: 300,
+  },
+  {
+    id: '08',
+    slug: 'louisvilles-next-chapter',
+    title: 'Louisville’s next chapter',
+    excerpt:
+      'The city is in a rebuild moment. A look at the growth vectors we think will shape the next decade.',
+    author: 'Ren Vex',
+    date: '2025-06-23',
+    dateLabel: 'Jun 23, 2025',
+    category: 'Strategy',
+    tags: ['Strategy'],
+    hue: 150,
+  },
+  {
+    id: '09',
+    slug: 'out-of-the-strategic-void',
+    title: 'Finding your way out of a strategic void',
+    excerpt:
+      'When leadership can’t articulate direction, everything downstream wobbles. Here’s how we diagnose and reset.',
+    author: 'Botcore Crew',
+    date: '2025-05-15',
+    dateLabel: 'May 15, 2025',
+    category: 'Strategy',
+    tags: ['Strategy'],
+    hue: 220,
+  },
+  {
+    id: '10',
+    slug: 'pinterest-ads-brands-keep-missing',
+    title: 'Pinterest ads: the channel brands keep missing',
+    excerpt:
+      'Quietly strong intent, low CPMs, and first-party signal loss elsewhere make it a 2026 sleeper.',
+    author: 'Sena Luna',
+    date: '2025-04-09',
+    dateLabel: 'Apr 09, 2025',
+    category: 'Advertising',
+    tags: ['Advertising'],
+    hue: 340,
+  },
+];
