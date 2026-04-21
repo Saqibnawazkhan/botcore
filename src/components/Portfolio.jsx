@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom';
 import MotionReveal from './MotionReveal';
+import { projects } from '../data/projects';
 
-const projects = [
-  { id: '01', name: 'Orion Golf', tag: 'Branding · Campaigns', year: '2026', hue: 120 },
-  { id: '02', name: 'Caterpax', tag: 'Web Platform', year: '2026', hue: 90 },
-  { id: '03', name: 'Airstream Amp', tag: 'Campaigns · Web', year: '2025', hue: 280 },
-  { id: '04', name: 'Barrel Foods', tag: 'Branding', year: '2025', hue: 40 },
-  { id: '05', name: 'LMPD Protocol', tag: 'Brand System', year: '2025', hue: 210 },
-  { id: '06', name: 'Bev Syndicate', tag: 'Branding · Photo', year: '2024', hue: 340 },
-];
+const featured = projects.filter((p) => p.featured).slice(0, 6);
 
 function Thumb({ hue }) {
   return (
@@ -52,18 +46,15 @@ export default function Portfolio() {
             to="/reps"
             className="eyebrow group inline-flex items-center gap-2 text-botcore-green hover:text-botcore-greyLight"
           >
-            View all
+            View all work
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p, i) => (
+          {featured.map((p, i) => (
             <MotionReveal key={p.id} delay={i * 0.05}>
-              <Link
-                to="/reps"
-                className="card group block overflow-hidden"
-              >
+              <Link to="/reps" className="card group block overflow-hidden">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Thumb hue={p.hue} />
                   <span className="eyebrow absolute left-4 top-4 !text-botcore-greyLight/70">
@@ -78,7 +69,9 @@ export default function Portfolio() {
                     <h3 className="h-card truncate font-semibold text-botcore-greyLight transition-colors group-hover:text-botcore-green">
                       {p.name}
                     </h3>
-                    <p className="eyebrow mt-1 truncate !tracking-[0.2em]">{p.tag}</p>
+                    <p className="eyebrow mt-1 truncate !tracking-[0.2em]">
+                      {p.tags.join(' · ')}
+                    </p>
                   </div>
                   <span
                     aria-hidden
