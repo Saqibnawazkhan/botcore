@@ -29,7 +29,7 @@ const columnA = [
 const columnB = [
   { label: 'AI-ENABLEMENT', to: '/ai-enablement' },
   { label: 'ABOUT', to: '/about' },
-  { label: 'TEAM', to: '/about' },
+  { label: 'TEAM', to: '/team' },
 ];
 
 const utilityLinks = [

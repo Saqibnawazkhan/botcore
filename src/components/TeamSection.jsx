@@ -54,7 +54,7 @@ export default function TeamSection() {
               Louisville-based, orbit-minded. A cross-disciplinary crew of designers,
               engineers, and strategists chartered to leave ordinary behind.
             </p>
-            <Link to="/about" className="btn-ghost mt-10 inline-flex">
+            <Link to="/team" className="btn-ghost mt-10 inline-flex">
               Meet the crew <span aria-hidden>↗</span>
             </Link>
           </MotionReveal>
