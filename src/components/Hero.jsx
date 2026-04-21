@@ -73,8 +73,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-10 flex flex-wrap items-center gap-3"
         >
-          <Link to="/services" className="btn-primary">
-            Discover capabilities <span aria-hidden>↗</span>
+          <Link to="/reps" className="btn-primary">
+            See our work <span aria-hidden>↗</span>
           </Link>
           <Link to="/studio" className="btn-ghost">
             Make contact <span aria-hidden>↗</span>

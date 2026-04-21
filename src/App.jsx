@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Reps from './pages/Reps';
-import Services from './pages/Services';
 import Labs from './pages/Labs';
 import Studio from './pages/Studio';
 import About from './pages/About';
@@ -26,7 +25,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/reps" element={<Reps />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/labs" element={<Labs />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/about" element={<About />} />

@@ -28,18 +28,15 @@ const LinkedinIcon = () => (
 const columns = [
   {
     title: 'Contact',
-    links: [
-      { label: 'Start a project', to: '/studio' },
-      { label: 'Careers', to: '/labs' },
-    ],
+    links: [{ label: 'Start a project', to: '/studio' }],
   },
   {
     title: 'Explore',
     links: [
-      { label: 'Capabilities', to: '/services' },
       { label: 'Work', to: '/reps' },
       { label: 'About', to: '/about' },
-      { label: 'Insights', to: '/labs' },
+      { label: 'Blog', to: '/labs' },
+      { label: 'AI', to: '/labs' },
     ],
   },
   {
