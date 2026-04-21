@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
+import Partners from '../components/Partners';
 import Portfolio from '../components/Portfolio';
 import CoreValues from '../components/CoreValues';
 import TeamSection from '../components/TeamSection';
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <AboutSection />
+      <Partners />
       <Portfolio />
       <CoreValues />
       <TeamSection />
