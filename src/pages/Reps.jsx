@@ -102,7 +102,7 @@ export default function Reps() {
             {filtered.map((p, i) => (
               <MotionReveal key={p.id} delay={Math.min(i * 0.03, 0.3)}>
                 <Link
-                  to="#"
+                  to={`/reps/${p.slug}`}
                   className="card group block overflow-hidden"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">

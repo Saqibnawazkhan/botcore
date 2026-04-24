@@ -54,7 +54,7 @@ export default function Portfolio() {
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((p, i) => (
             <MotionReveal key={p.id} delay={i * 0.05}>
-              <Link to="/reps" className="card group block overflow-hidden">
+              <Link to={`/reps/${p.slug}`} className="card group block overflow-hidden">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Thumb hue={p.hue} />
                   <span className="eyebrow absolute left-4 top-4 !text-botcore-greyLight/70">
