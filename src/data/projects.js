@@ -21,7 +21,7 @@ export const projects = [
     industry: 'Product',
     role: 'Brand identity, packaging, art direction',
     duration: '10 weeks',
-    logo: '/logos/01.png',
+    logo: '/logos/07.png',
     cover: '/projects/rzr-jaw/cover.png',
     banner: '/projects/rzr-jaw/banner.png',
     gallery: ['/projects/rzr-jaw/01.png', '/projects/rzr-jaw/02.png'],
@@ -57,7 +57,7 @@ export const projects = [
     industry: 'Brand',
     role: 'Brand strategy, identity, website',
     duration: '14 weeks',
-    logo: '/logos/02.png',
+    logo: '/logos/03.png',
     overview:
       'A lifestyle brand rooted in craft and culture, given a modern identity and a bespoke ecommerce presence.',
     challenge:
@@ -89,7 +89,7 @@ export const projects = [
     industry: 'Beauty',
     role: 'Identity, digital design, campaign',
     duration: '12 weeks',
-    logo: '/logos/03.png',
+    logo: '/logos/02.png',
     cover: '/projects/edit-beauty/02.png',
     banner: '/projects/edit-beauty/banner.png',
     gallery: [
@@ -127,7 +127,6 @@ export const projects = [
     industry: 'Wellness',
     role: 'Brand identity, packaging, art direction',
     duration: '9 weeks',
-    logo: '/logos/04.png',
     overview:
       'A respiratory-wellness brand repositioned from clinical to confident — still trusted, now desirable.',
     challenge:
@@ -159,7 +158,7 @@ export const projects = [
     industry: 'Fitness',
     role: 'Brand identity, website, booking UX',
     duration: '11 weeks',
-    logo: '/logos/05.png',
+    logo: '/logos/01.png',
     overview:
       'A boutique pilates studio group given a grounded, premium identity and a booking experience that actually makes sense.',
     challenge:
@@ -191,7 +190,7 @@ export const projects = [
     industry: 'Hospitality',
     role: 'Identity, environmental, campaign',
     duration: '8 weeks',
-    logo: '/logos/06.png',
+    logo: '/logos/04.png',
     overview:
       'An evening café positioned as a third place between dinner and the night — warm, grown-up, and photogenic.',
     challenge:
@@ -222,7 +221,7 @@ export const projects = [
     industry: 'Food & Beverage',
     role: 'Brand identity, packaging, campaign',
     duration: '10 weeks',
-    logo: '/logos/07.png',
+    logo: '/logos/08.png',
     overview:
       'A challenger snacks brand with an unapologetically playful identity engineered for grocery shelves and social.',
     challenge:
@@ -253,7 +252,7 @@ export const projects = [
     industry: 'Fitness',
     role: 'Brand identity, website, launch campaign',
     duration: '12 weeks',
-    logo: '/logos/08.png',
+    logo: '/logos/05.png',
     overview:
       'A strength-training brand built for a clientele that wants progress, not motivation posters.',
     challenge:
@@ -284,6 +283,7 @@ export const projects = [
     industry: 'Brand',
     role: 'Brand identity, art direction',
     duration: '7 weeks',
+    logo: '/logos/06.png',
     overview:
       'A minimalist luxury brand boiled down to a single character and a system that stays out of its own way.',
     challenge:
