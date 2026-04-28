@@ -4,7 +4,17 @@ import MotionReveal from '../components/MotionReveal';
 import LaunchCTA from '../components/LaunchCTA';
 import { projects, CATEGORIES } from '../data/projects';
 
-function Thumb({ hue }) {
+function Thumb({ hue, cover, alt }) {
+  if (cover) {
+    return (
+      <img
+        src={cover}
+        alt={alt}
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+      />
+    );
+  }
   return (
     <div
       className="relative h-full w-full"
@@ -106,7 +116,7 @@ export default function Reps() {
                   className="card group block overflow-hidden"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <Thumb hue={p.hue} />
+                    <Thumb hue={p.hue} cover={p.cover} alt={p.name} />
                     <span className="eyebrow absolute left-4 top-4 !text-botcore-greyLight/70">
                       {p.id}
                     </span>

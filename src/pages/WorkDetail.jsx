@@ -3,7 +3,18 @@ import MotionReveal from '../components/MotionReveal';
 import LaunchCTA from '../components/LaunchCTA';
 import { getProjectBySlug, getNextProject } from '../data/projects';
 
-function Cover({ hue }) {
+function Cover({ hue, banner, alt }) {
+  if (banner) {
+    return (
+      <div className="relative aspect-[16/9] overflow-hidden border border-white/10">
+        <img
+          src={banner}
+          alt={alt}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
+    );
+  }
   return (
     <div className="relative aspect-[16/9] overflow-hidden border border-white/10">
       <div
@@ -94,7 +105,7 @@ export default function WorkDetail() {
       <section className="relative">
         <div className="mx-auto max-w-[1280px] px-6 pt-10 md:px-10 md:pt-14">
           <MotionReveal>
-            <Cover hue={project.hue} />
+            <Cover hue={project.hue} banner={project.banner} alt={project.name} />
           </MotionReveal>
         </div>
       </section>
@@ -213,6 +224,31 @@ export default function WorkDetail() {
           </div>
         </div>
       </section>
+
+      {project.gallery && project.gallery.length > 0 && (
+        <section className="relative border-t border-white/5">
+          <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
+            <div className="eyebrow accent-rule">Gallery</div>
+            <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
+              Selected frames.
+            </h2>
+            <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
+              {project.gallery.map((src, i) => (
+                <MotionReveal key={src} delay={i * 0.05}>
+                  <div className="relative aspect-square overflow-hidden border border-white/10">
+                    <img
+                      src={src}
+                      alt={`${project.name} — frame ${i + 1}`}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  </div>
+                </MotionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {next && (
         <section className="relative border-t border-white/5">

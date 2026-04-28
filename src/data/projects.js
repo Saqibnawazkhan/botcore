@@ -21,6 +21,9 @@ export const projects = [
     industry: 'Product',
     role: 'Brand identity, packaging, art direction',
     duration: '10 weeks',
+    cover: '/projects/rzr-jaw/cover.png',
+    banner: '/projects/rzr-jaw/banner.png',
+    gallery: ['/projects/rzr-jaw/01.png', '/projects/rzr-jaw/02.png'],
     overview:
       'A precision-grooming product brand built around a sharp, industrial aesthetic and a confident new visual identity.',
     challenge:
@@ -84,6 +87,9 @@ export const projects = [
     industry: 'Beauty',
     role: 'Identity, digital design, campaign',
     duration: '12 weeks',
+    cover: '/projects/edit-beauty/cover.png',
+    banner: '/projects/edit-beauty/banner.png',
+    gallery: ['/projects/edit-beauty/01.png', '/projects/edit-beauty/02.png'],
     overview:
       'A clean, editorial beauty brand built on a promise of curation over clutter — and a site designed to read like a magazine.',
     challenge:
