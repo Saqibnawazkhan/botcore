@@ -4,7 +4,7 @@ import { projects } from '../data/projects';
 
 const featured = projects.filter((p) => p.featured).slice(0, 6);
 
-function Thumb({ hue, cover, alt }) {
+function Thumb({ hue, cover, logo, alt }) {
   if (cover) {
     return (
       <img
@@ -37,6 +37,14 @@ function Thumb({ hue, cover, alt }) {
           backgroundSize: '32px 32px',
         }}
       />
+      {logo && (
+        <img
+          src={logo}
+          alt={`${alt} logo`}
+          loading="lazy"
+          className="absolute inset-0 m-auto max-h-[55%] max-w-[60%] object-contain transition-transform duration-500 group-hover:scale-[1.05]"
+        />
+      )}
     </div>
   );
 }
@@ -66,7 +74,7 @@ export default function Portfolio() {
             <MotionReveal key={p.id} delay={i * 0.05}>
               <Link to={`/reps/${p.slug}`} className="card group block overflow-hidden">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <Thumb hue={p.hue} cover={p.cover} alt={p.name} />
+                  <Thumb hue={p.hue} cover={p.cover} logo={p.logo} alt={p.name} />
                   <span className="eyebrow absolute left-4 top-4 !text-botcore-greyLight/70">
                     {p.id}
                   </span>
