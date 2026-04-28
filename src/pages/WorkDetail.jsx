@@ -3,7 +3,7 @@ import MotionReveal from '../components/MotionReveal';
 import LaunchCTA from '../components/LaunchCTA';
 import { getProjectBySlug, getNextProject } from '../data/projects';
 
-function Cover({ hue, banner, alt }) {
+function Cover({ hue, banner, logo, alt }) {
   if (banner) {
     return (
       <div className="relative aspect-[16/9] overflow-hidden border border-white/10">
@@ -38,6 +38,13 @@ function Cover({ hue, banner, alt }) {
           backgroundSize: '40px 40px',
         }}
       />
+      {logo && (
+        <img
+          src={logo}
+          alt={`${alt} logo`}
+          className="absolute inset-0 m-auto max-h-[55%] max-w-[55%] object-contain"
+        />
+      )}
     </div>
   );
 }
@@ -79,6 +86,18 @@ export default function WorkDetail() {
             </Link>
           </MotionReveal>
 
+          {project.logo && (
+            <MotionReveal delay={0.08}>
+              <div className="mt-10 flex h-20 items-center md:h-24">
+                <img
+                  src={project.logo}
+                  alt={`${project.name} logo`}
+                  className="max-h-full max-w-[220px] object-contain object-left"
+                />
+              </div>
+            </MotionReveal>
+          )}
+
           <MotionReveal delay={0.1}>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <span className="eyebrow !text-botcore-green">{project.id}</span>
@@ -105,7 +124,12 @@ export default function WorkDetail() {
       <section className="relative">
         <div className="mx-auto max-w-[1280px] px-6 pt-10 md:px-10 md:pt-14">
           <MotionReveal>
-            <Cover hue={project.hue} banner={project.banner} alt={project.name} />
+            <Cover
+              hue={project.hue}
+              banner={project.banner}
+              logo={project.logo}
+              alt={project.name}
+            />
           </MotionReveal>
         </div>
       </section>
