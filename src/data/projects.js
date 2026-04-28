@@ -87,9 +87,12 @@ export const projects = [
     industry: 'Beauty',
     role: 'Identity, digital design, campaign',
     duration: '12 weeks',
-    cover: '/projects/edit-beauty/cover.png',
+    cover: '/projects/edit-beauty/02.png',
     banner: '/projects/edit-beauty/banner.png',
-    gallery: ['/projects/edit-beauty/01.png', '/projects/edit-beauty/02.png'],
+    gallery: [
+      '/projects/edit-beauty/cover.png',
+      '/projects/edit-beauty/01.png',
+    ],
     overview:
       'A clean, editorial beauty brand built on a promise of curation over clutter — and a site designed to read like a magazine.',
     challenge:
