@@ -1,5 +1,16 @@
 export default function ProjectThumb({ hue, cover, logo, name }) {
-  if (!logo && cover) {
+  if (logo) {
+    return (
+      <img
+        src={logo}
+        alt={name}
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+      />
+    );
+  }
+
+  if (cover) {
     return (
       <img
         src={cover}
@@ -32,18 +43,6 @@ export default function ProjectThumb({ hue, cover, logo, name }) {
           backgroundSize: '32px 32px',
         }}
       />
-
-      {logo && (
-        <div className="absolute inset-0 flex items-center justify-center p-8">
-          <img
-            src={logo}
-            alt={`${name} logo`}
-            loading="lazy"
-            className="max-h-[72%] max-w-[78%] object-contain transition-transform duration-500 group-hover:scale-[1.05]"
-            style={{ filter: 'drop-shadow(0 6px 24px rgba(0,0,0,0.55))' }}
-          />
-        </div>
-      )}
     </div>
   );
 }

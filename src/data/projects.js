@@ -21,7 +21,7 @@ export const projects = [
     industry: 'Product',
     role: 'Brand identity, packaging, art direction',
     duration: '10 weeks',
-    logo: '/logos/07.png',
+    logo: '/projects/thumbnails/rzrjaw.png',
     cover: '/projects/rzr-jaw/cover.png',
     banner: '/projects/rzr-jaw/banner.png',
     gallery: [
@@ -61,7 +61,7 @@ export const projects = [
     industry: 'Brand',
     role: 'Brand strategy, identity, website',
     duration: '14 weeks',
-    logo: '/logos/03.png',
+    logo: '/projects/thumbnails/tajjal.png',
     cover: '/projects/tajjal/cover.png',
     banner: '/projects/tajjal/banner.png',
     gallery: [
@@ -100,7 +100,7 @@ export const projects = [
     industry: 'Beauty',
     role: 'Identity, digital design, campaign',
     duration: '12 weeks',
-    logo: '/logos/02.png',
+    logo: '/projects/thumbnails/edit.png',
     cover: '/projects/edit-beauty/02.png',
     banner: '/projects/edit-beauty/banner.png',
     gallery: [
@@ -140,6 +140,7 @@ export const projects = [
     industry: 'Wellness',
     role: 'Brand identity, packaging, art direction',
     duration: '9 weeks',
+    logo: '/projects/thumbnails/proinhale.png',
     cover: '/projects/pro-inhale/cover.png',
     banner: '/projects/pro-inhale/banner.png',
     gallery: [
@@ -178,7 +179,7 @@ export const projects = [
     industry: 'Fitness',
     role: 'Brand identity, website, booking UX',
     duration: '11 weeks',
-    logo: '/logos/01.png',
+    logo: '/projects/thumbnails/reform.png',
     overview:
       'Reform Pilates is a studio brand built around community and movement. We created the full identity, the studio signage, and the online presence so the experience customers feel inside the space matches what they see online before they ever walk in.',
     challenge:
@@ -211,7 +212,7 @@ export const projects = [
     industry: 'Hospitality',
     role: 'Identity, environmental, campaign',
     duration: '8 weeks',
-    logo: '/logos/04.png',
+    logo: '/projects/thumbnails/soir.png',
     overview:
       'Cafe Soir wanted a brand that felt like a place rather than just a logo. We worked on the identity, the menu, the food photography, and the in-store graphics, building a brand that customers recognise the moment they step inside or scroll past on social.',
     challenge:
@@ -243,7 +244,7 @@ export const projects = [
     industry: 'Food & Beverage',
     role: 'Brand identity, packaging, campaign',
     duration: '10 weeks',
-    logo: '/logos/08.png',
+    logo: '/projects/thumbnails/snackeez.png',
     overview:
       'Snackeez is a snack brand built for everyday moments. We handled the identity, the packaging across multiple SKUs, the product photography, and the launch ads. The brand needed to feel fun on the shelf and convert clicks into orders online, so we built the system to do both.',
     challenge:
@@ -275,7 +276,7 @@ export const projects = [
     industry: 'Fitness',
     role: 'Brand identity, website, launch campaign',
     duration: '12 weeks',
-    logo: '/logos/05.png',
+    logo: '/projects/thumbnails/ur.png',
     overview:
       'Urstrong is a fitness and lifestyle brand. We shaped the identity and the content engine that keeps the brand active across platforms. The work covers the website, the photography style, and the ongoing social content that keeps the audience growing.',
     challenge:
@@ -307,7 +308,7 @@ export const projects = [
     industry: 'Brand',
     role: 'Brand identity, art direction',
     duration: '7 weeks',
-    logo: '/logos/06.png',
+    logo: '/projects/thumbnails/zar.png',
     overview:
       'Zar needed a brand that could carry a premium feel without becoming distant. We built the identity, the packaging, and the visual world around it, then translated that into a website and product imagery that makes the brand feel ready for the next stage of its journey.',
     challenge:
