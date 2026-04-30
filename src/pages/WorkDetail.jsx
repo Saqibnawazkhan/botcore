@@ -84,7 +84,7 @@ export default function WorkDetail() {
           }}
         />
 
-        <div className="relative z-10 mx-auto flex h-full max-w-[1280px] flex-col justify-end px-6 pb-16 pt-28 md:px-10 md:pb-20 md:pt-32">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1280px] flex-col px-6 pb-16 pt-28 md:px-10 md:pb-20 md:pt-32">
           <MotionReveal>
             <Link
               to="/reps"
@@ -100,36 +100,38 @@ export default function WorkDetail() {
             </Link>
           </MotionReveal>
 
-          <MotionReveal delay={0.1}>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
-              <span className="eyebrow !text-botcore-green">{project.id}</span>
-              <span className="eyebrow !text-botcore-greyLight/80">
-                {project.industry}
-              </span>
-              <span className="eyebrow !text-botcore-greyLight/80">
-                {project.year}
-              </span>
-            </div>
-          </MotionReveal>
+          <div className="mt-auto">
+            <MotionReveal delay={0.1}>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="eyebrow !text-botcore-green">{project.id}</span>
+                <span className="eyebrow !text-botcore-greyLight/80">
+                  {project.industry}
+                </span>
+                <span className="eyebrow !text-botcore-greyLight/80">
+                  {project.year}
+                </span>
+              </div>
+            </MotionReveal>
 
-          <MotionReveal delay={0.15}>
-            <h1
-              className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight"
-              style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}
-            >
-              {project.name}
-              <span className="text-botcore-green">.</span>
-            </h1>
-          </MotionReveal>
+            <MotionReveal delay={0.15}>
+              <h1
+                className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight"
+                style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}
+              >
+                {project.name}
+                <span className="text-botcore-green">.</span>
+              </h1>
+            </MotionReveal>
 
-          <MotionReveal delay={0.25}>
-            <p
-              className="mt-8 max-w-3xl text-base leading-relaxed text-botcore-greyLight/85 md:text-lg"
-              style={{ textShadow: '0 1px 16px rgba(0,0,0,0.5)' }}
-            >
-              {project.overview}
-            </p>
-          </MotionReveal>
+            <MotionReveal delay={0.25}>
+              <p
+                className="mt-8 max-w-3xl text-base leading-relaxed text-botcore-greyLight/85 md:text-lg"
+                style={{ textShadow: '0 1px 16px rgba(0,0,0,0.5)' }}
+              >
+                {project.overview}
+              </p>
+            </MotionReveal>
+          </div>
         </div>
       </section>
 
