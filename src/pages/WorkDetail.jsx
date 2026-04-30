@@ -6,21 +6,15 @@ import { getProjectBySlug, getNextProject } from '../data/projects';
 function Cover({ hue, banner, logo, alt }) {
   if (banner) {
     return (
-      <div className="relative h-[80vh] min-h-[480px] w-full overflow-hidden md:h-screen md:max-h-[1080px]">
-        <img
-          src={banner}
-          alt={alt}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-botcore-black to-transparent"
-        />
-      </div>
+      <img
+        src={banner}
+        alt={alt}
+        className="absolute inset-0 h-full w-full object-cover"
+      />
     );
   }
   return (
-    <div className="relative h-[60vh] min-h-[420px] w-full overflow-hidden md:h-[80vh]">
+    <>
       <div
         className="absolute inset-0"
         style={{
@@ -49,7 +43,7 @@ function Cover({ hue, banner, logo, alt }) {
           className="absolute inset-0 m-auto max-h-[40%] max-w-[40%] object-contain"
         />
       )}
-    </div>
+    </>
   );
 }
 
@@ -65,20 +59,36 @@ export default function WorkDetail() {
 
   return (
     <>
-      <section className="relative border-b border-white/5">
+      <section className="relative h-screen min-h-[600px] w-full overflow-hidden md:max-h-[1080px]">
+        <Cover
+          hue={project.hue}
+          banner={project.banner}
+          logo={project.logo}
+          alt={project.name}
+        />
+
         <div
-          className="pointer-events-none absolute inset-0"
           aria-hidden
+          className="pointer-events-none absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse at 20% 0%, rgba(0,255,0,0.06) 0%, transparent 55%)',
+              'linear-gradient(180deg, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.15) 35%, rgba(13,13,13,0.55) 75%, rgba(13,13,13,0.95) 100%)',
           }}
         />
-        <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-32 md:px-10 md:pb-20 md:pt-40">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(90deg, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.25) 45%, transparent 70%)',
+          }}
+        />
+
+        <div className="relative z-10 mx-auto flex h-full max-w-[1280px] flex-col justify-end px-6 pb-16 pt-28 md:px-10 md:pb-20 md:pt-32">
           <MotionReveal>
             <Link
               to="/reps"
-              className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.24em] text-botcore-greyLight/60 transition-colors hover:text-botcore-green"
+              className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.24em] text-botcore-greyLight/80 transition-colors hover:text-botcore-green"
             >
               <span
                 aria-hidden
@@ -90,50 +100,37 @@ export default function WorkDetail() {
             </Link>
           </MotionReveal>
 
-          {project.logo && (
-            <MotionReveal delay={0.08}>
-              <div className="mt-10 flex h-20 items-center md:h-24">
-                <img
-                  src={project.logo}
-                  alt={`${project.name} logo`}
-                  className="max-h-full max-w-[220px] object-contain object-left"
-                />
-              </div>
-            </MotionReveal>
-          )}
-
           <MotionReveal delay={0.1}>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-10 flex flex-wrap items-center gap-3">
               <span className="eyebrow !text-botcore-green">{project.id}</span>
-              <span className="eyebrow">{project.industry}</span>
-              <span className="eyebrow">{project.year}</span>
+              <span className="eyebrow !text-botcore-greyLight/80">
+                {project.industry}
+              </span>
+              <span className="eyebrow !text-botcore-greyLight/80">
+                {project.year}
+              </span>
             </div>
           </MotionReveal>
 
           <MotionReveal delay={0.15}>
-            <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
+            <h1
+              className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight"
+              style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}
+            >
               {project.name}
               <span className="text-botcore-green">.</span>
             </h1>
           </MotionReveal>
 
           <MotionReveal delay={0.25}>
-            <p className="mt-8 max-w-3xl text-base leading-relaxed text-botcore-greyLight/70 md:text-lg">
+            <p
+              className="mt-8 max-w-3xl text-base leading-relaxed text-botcore-greyLight/85 md:text-lg"
+              style={{ textShadow: '0 1px 16px rgba(0,0,0,0.5)' }}
+            >
               {project.overview}
             </p>
           </MotionReveal>
         </div>
-      </section>
-
-      <section className="relative">
-        <MotionReveal>
-          <Cover
-            hue={project.hue}
-            banner={project.banner}
-            logo={project.logo}
-            alt={project.name}
-          />
-        </MotionReveal>
       </section>
 
       <section className="relative">
