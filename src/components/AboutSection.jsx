@@ -12,22 +12,22 @@ export default function AboutSection() {
 
           <MotionReveal delay={0.1} className="lg:col-span-8">
             <h2 className="h-section font-semibold text-botcore-greyLight">
-              A full-service marketing agency{' '}
-              <span className="text-botcore-green">built for founders.</span>
+              A full service marketing agency{' '}
+              <span className="text-botcore-green">built for founders</span>
             </h2>
 
             <div className="mt-8 max-w-2xl space-y-5 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               <p>
                 Botcore is a marketing and creative agency built around one
-                purpose — helping new brands find their footing and grow with
-                confidence. We work with founders who are starting from zero and
-                need a partner that can handle every part of the brand.
+                purpose, helping new brands find their footing and grow with
+                confidence. We work with founders who are starting from zero
+                and need a partner that can handle every part of the brand.
               </p>
               <p>
                 From the first sketch of a logo to the campaigns that bring in
-                real customers, we treat your business like our own. Every brand
-                we take on gets a small focused team, honest advice, and work
-                that holds up next to anyone in the market.
+                real customers, we treat your business like our own. Every
+                brand we take on gets a small focused team, honest advice, and
+                work that holds up next to anyone in the market.
               </p>
             </div>
 
