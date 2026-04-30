@@ -24,7 +24,11 @@ export const projects = [
     logo: '/logos/07.png',
     cover: '/projects/rzr-jaw/cover.png',
     banner: '/projects/rzr-jaw/banner.png',
-    gallery: ['/projects/rzr-jaw/01.png', '/projects/rzr-jaw/02.png'],
+    gallery: [
+      '/projects/rzr-jaw/cover.png',
+      '/projects/rzr-jaw/01.png',
+      '/projects/rzr-jaw/02.png',
+    ],
     overview:
       'A precision-grooming product brand built around a sharp, industrial aesthetic and a confident new visual identity.',
     challenge:
