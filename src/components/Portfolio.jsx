@@ -1,45 +1,9 @@
 import { Link } from 'react-router-dom';
 import MotionReveal from './MotionReveal';
+import ProjectThumb from './ProjectThumb';
 import { projects } from '../data/projects';
 
 const featured = projects.filter((p) => p.featured).slice(0, 6);
-
-function Thumb({ hue, cover, alt }) {
-  if (cover) {
-    return (
-      <img
-        src={cover}
-        alt={alt}
-        loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-      />
-    );
-  }
-  return (
-    <div
-      className="relative h-full w-full"
-      style={{
-        background: `linear-gradient(135deg, hsl(${hue} 40% 16%) 0%, #0d0d0d 70%)`,
-      }}
-    >
-      <div
-        className="absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 70% 30%, rgba(0,255,0,0.25), transparent 60%)',
-        }}
-      />
-      <div
-        className="absolute inset-0 opacity-[0.07]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-        }}
-      />
-    </div>
-  );
-}
 
 export default function Portfolio() {
   return (
@@ -66,7 +30,12 @@ export default function Portfolio() {
             <MotionReveal key={p.id} delay={i * 0.05}>
               <Link to={`/reps/${p.slug}`} className="card group block overflow-hidden">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <Thumb hue={p.hue} cover={p.cover} alt={p.name} />
+                  <ProjectThumb
+                    hue={p.hue}
+                    cover={p.cover}
+                    logo={p.logo}
+                    name={p.name}
+                  />
                   <span className="eyebrow absolute left-4 top-4 !text-botcore-greyLight/70">
                     {p.id}
                   </span>
