@@ -24,6 +24,7 @@ const columnA = [
   { label: 'WORK', to: '/reps' },
   { label: 'BLOG', to: '/labs' },
   { label: 'CONTACT', to: '/studio' },
+  { label: 'APPROACH', to: '/approach' },
 ];
 
 const columnB = [
