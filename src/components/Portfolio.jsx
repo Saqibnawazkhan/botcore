@@ -44,7 +44,7 @@ export default function Portfolio() {
                       {p.name}
                     </h3>
                     <ul className="mt-3 flex flex-wrap gap-1.5">
-                      {p.tags.map((t) => (
+                      {[...p.tags, p.industry].map((t) => (
                         <li
                           key={t}
                           className="border border-white/15 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.2em] text-botcore-greyLight/65 transition-colors group-hover:border-botcore-green/40 group-hover:text-botcore-greyLight/85"
