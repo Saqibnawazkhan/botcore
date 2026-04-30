@@ -26,19 +26,20 @@ export default function Reps() {
         />
         <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">Selected projects</div>
+            <div className="eyebrow accent-rule">Selected Projects</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
             <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
-              Brands we helped build{' '}
-              <span className="text-botcore-green">from the ground up.</span>
+              Brands We Helped Build{' '}
+              <span className="text-botcore-green">From the Ground Up</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Every project on this page started as a conversation with a
               founder who had a vision and needed someone to help bring it to
-              life. Filter by discipline.
+              life. These are the brands we have shaped, launched, and grown
+              with.
             </p>
           </MotionReveal>
         </div>

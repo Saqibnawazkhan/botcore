@@ -13,15 +13,21 @@ export default function Portfolio() {
           <div>
             <div className="eyebrow accent-rule">Selected Projects</div>
             <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-              Brands we helped build{' '}
-              <span className="text-botcore-green">from the ground up.</span>
+              Brands We Helped Build{' '}
+              <span className="text-botcore-green">From the Ground Up</span>
             </h2>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+              Every project on this page started as a conversation with a
+              founder who had a vision and needed someone to help bring it to
+              life. These are the brands we have shaped, launched, and grown
+              with.
+            </p>
           </div>
           <Link
             to="/reps"
             className="eyebrow group inline-flex items-center gap-2 text-botcore-green hover:text-botcore-greyLight"
           >
-            Explore more projects
+            Explore More Projects
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>
