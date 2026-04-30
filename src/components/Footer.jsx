@@ -36,6 +36,7 @@ const columns = [
       { label: 'Work', to: '/reps' },
       { label: 'About', to: '/about' },
       { label: 'Approach', to: '/approach' },
+      { label: 'Capabilities', to: '/capabilities' },
       { label: 'Blog', to: '/labs' },
       { label: 'AI-Enablement', to: '/ai-enablement' },
     ],

@@ -31,6 +31,7 @@ const columnB = [
   { label: 'AI-ENABLEMENT', to: '/ai-enablement' },
   { label: 'ABOUT', to: '/about' },
   { label: 'TEAM', to: '/team' },
+  { label: 'CAPABILITIES', to: '/capabilities' },
 ];
 
 const utilityLinks = [
