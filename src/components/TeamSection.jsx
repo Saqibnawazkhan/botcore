@@ -45,17 +45,19 @@ export default function TeamSection() {
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
         <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
           <MotionReveal>
-            <div className="eyebrow accent-rule">The Crew</div>
+            <div className="eyebrow accent-rule">The Botcore Team</div>
             <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-              A constellation of{' '}
-              <span className="text-botcore-green">brave storytellers.</span>
+              A small team of designers, strategists, and{' '}
+              <span className="text-botcore-green">storytellers.</span>
             </h2>
             <p className="mt-8 max-w-md text-base leading-relaxed text-botcore-greyLight/65">
-              Louisville-based, orbit-minded. A cross-disciplinary crew of designers,
-              engineers, and strategists chartered to leave ordinary behind.
+              We come from design, advertising, photography, development, and
+              strategy backgrounds. We keep the team small on purpose so every
+              client gets real attention — not a junior account manager and a
+              long email chain.
             </p>
             <Link to="/team" className="btn-ghost mt-10 inline-flex">
-              Meet the crew <span aria-hidden>↗</span>
+              Meet the team <span aria-hidden>↗</span>
             </Link>
           </MotionReveal>
 

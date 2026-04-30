@@ -12,28 +12,30 @@ export default function AboutSection() {
 
           <MotionReveal delay={0.1} className="lg:col-span-8">
             <h2 className="h-section font-semibold text-botcore-greyLight">
-              We turn ordinary ideas into{' '}
-              <span className="text-botcore-green">powerful opportunities.</span>
+              A full-service marketing agency{' '}
+              <span className="text-botcore-green">built for founders.</span>
             </h2>
 
             <div className="mt-8 max-w-2xl space-y-5 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               <p>
-                Botcore is a dynamic, full-service creative and advertising agency
-                focused on delivering impactful results. We turn ordinary ideas into
-                powerful opportunities through fresh thinking and smart strategy.
+                Botcore is a marketing and creative agency built around one
+                purpose — helping new brands find their footing and grow with
+                confidence. We work with founders who are starting from zero and
+                need a partner that can handle every part of the brand.
               </p>
               <p>
-                Our team of creative minds and forward-thinkers works closely with you
-                to bring your vision to life. With Botcore, your growth isn’t just a
-                goal — it’s a journey we build and scale together.
+                From the first sketch of a logo to the campaigns that bring in
+                real customers, we treat your business like our own. Every brand
+                we take on gets a small focused team, honest advice, and work
+                that holds up next to anyone in the market.
               </p>
             </div>
 
             <dl className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4">
-              <Stat value="180" suffix="+" label="Missions launched" />
-              <Stat value="24" label="Crew members" />
-              <Stat value="12" suffix=" yrs" label="In orbit" />
-              <Stat value="97" suffix="%" label="Signal clarity" />
+              <Stat value="9" suffix="+" label="Brands launched" />
+              <Stat value="7" label="Services in-house" />
+              <Stat value="5" suffix=" steps" label="From brief to launch" />
+              <Stat value="100" suffix="%" label="Founder-focused" />
             </dl>
           </MotionReveal>
         </div>

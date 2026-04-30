@@ -13,37 +13,35 @@ import TeamSection from '../components/TeamSection';
 import LaunchCTA from '../components/LaunchCTA';
 
 const stats = [
-  { value: '180', suffix: '+', label: 'Missions launched' },
-  { value: '24', label: 'Crew members' },
-  { value: '12', suffix: ' yrs', label: 'In orbit' },
-  { value: '40', suffix: '+', label: 'Industries touched' },
-  { value: '4', label: 'Continents reached' },
-  { value: '97', suffix: '%', label: 'Signal clarity' },
+  { value: '9', suffix: '+', label: 'Brands launched' },
+  { value: '7', label: 'Services in-house' },
+  { value: '5', suffix: ' steps', label: 'Brief to launch' },
+  { value: '1', label: 'Team for every brand' },
 ];
 
 const atelier = [
   {
     id: '01',
-    title: 'Production bay',
-    body: 'A full in-house set with a cyc wall, lighting rig, and colour suite. We shoot, cut, and finish without leaving the studio.',
+    title: 'In-house production',
+    body: 'Photography and video produced under one roof — product shoots, lifestyle content, brand films, and short-form social. We handle the full production from concept to final edit.',
     Icon: Camera,
   },
   {
     id: '02',
-    title: 'Engineering lab',
-    body: 'Workstations, staging environments, and a Labs sandbox where experimental tools ship alongside client work.',
+    title: 'Design & development',
+    body: 'Designers and developers working side by side. Brand systems, websites, and product surfaces shipped together so nothing lives in a silo.',
     Icon: Cpu,
   },
   {
     id: '03',
-    title: 'Audio booth',
-    body: 'An acoustically-treated room for voiceover, podcasts, and score reference. Same-day turnaround on most cuts.',
+    title: 'Strategy & insights',
+    body: 'Market research, customer studies, and analytics that shape every other service we offer — so creative output always serves a real business goal.',
     Icon: Mic,
   },
   {
     id: '04',
-    title: 'Open learning days',
-    body: 'Twice-monthly open-door sessions for students, peer studios, and anyone curious about the way we work.',
+    title: 'Always-on partnership',
+    body: 'After launch we stay on the work — content, ads, reporting, refinement. A long-term partner, not a vendor that disappears once the file is delivered.',
     Icon: Lightbulb,
   },
 ];
@@ -51,18 +49,18 @@ const atelier = [
 const impact = [
   {
     id: '01',
-    title: 'Pro-bono crew cycles',
-    body: 'A portion of every quarter is reserved for nonprofit, civic, and community initiatives at no cost.',
+    title: 'We specialise in new brands',
+    body: 'Built for founders starting from zero who need a partner that understands the pace, the budget, and the pressure of building something new.',
   },
   {
     id: '02',
-    title: 'Mentorship & fellowships',
-    body: 'Paid fellowships for early-career designers and engineers from underrepresented backgrounds.',
+    title: 'Everything under one roof',
+    body: 'Designers, video, developers, media buyers — all in-house. The work stays consistent and the timelines stay tight.',
   },
   {
     id: '03',
-    title: 'Open-sourced tools',
-    body: 'Select outputs from Labs are released as open source — free for the wider industry to adopt.',
+    title: 'Honest communication',
+    body: 'We tell you what we think, even when it is not what you want to hear. You get a partner, not a yes machine.',
   },
 ];
 
@@ -80,25 +78,27 @@ export default function About() {
         />
         <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-36 md:px-10 md:pb-24 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">About Botcore</div>
+            <div className="eyebrow accent-rule">The Botcore team</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
             <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
-              Following in <span className="text-botcore-green">nobody’s</span>{' '}
-              footsteps.
+              A small team of designers, strategists, and{' '}
+              <span className="text-botcore-green">storytellers.</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-              A precision studio of designers, engineers, and strategists — engineered
-              for the next epoch. We don’t follow trends. We chart territory the rest of
-              the industry will eventually catch up to.
+              Botcore is built around a tight team that cares about the work.
+              We come from design, advertising, photography, development, and
+              strategy backgrounds. We keep the team small on purpose so every
+              client gets real attention and real ownership of their work — not
+              a junior account manager and a long email chain.
             </p>
           </MotionReveal>
           <MotionReveal delay={0.3}>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <Link to="/studio" className="btn-primary">
-                Make contact <span aria-hidden>↗</span>
+                Start a project <span aria-hidden>↗</span>
               </Link>
               <Link to="/reps" className="btn-ghost">
                 See our work <span aria-hidden>↗</span>
@@ -112,29 +112,30 @@ export default function About() {
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
             <MotionReveal className="lg:col-span-5">
-              <div className="eyebrow accent-rule">North star</div>
+              <div className="eyebrow accent-rule">Our purpose</div>
               <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-                Signal over noise,{' '}
-                <span className="text-botcore-green">always.</span>
+                Built for founders,{' '}
+                <span className="text-botcore-green">not committees.</span>
               </h2>
             </MotionReveal>
             <MotionReveal delay={0.1} className="lg:col-span-7">
               <div className="space-y-5 text-base leading-relaxed text-botcore-greyLight/70 md:text-lg">
                 <p>
-                  Botcore was founded on the belief that creative agencies should ship
-                  measurable outcomes, not decks. Every mission we take on is scoped
-                  with clear objectives, quantified deliverables, and a plan for life
-                  after launch.
+                  Botcore is a marketing and creative agency built around one
+                  purpose — helping new brands find their footing and grow with
+                  confidence. We work with founders starting from zero who need
+                  a partner that can handle every part of the brand.
                 </p>
                 <p>
-                  We’re intentionally small. A cross-disciplinary crew under one roof,
-                  with no black boxes, no subcontracted deliverables, and no layers
-                  between the operator doing the work and the person accountable for
-                  it.
+                  From the first sketch of a logo to the campaigns that bring
+                  in real customers, we treat your business like our own. Every
+                  brand we take on gets a small focused team, honest advice,
+                  and work that holds up next to anyone in the market.
                 </p>
                 <p>
-                  If it can be strategised, designed, fabricated, and shipped — we
-                  have a protocol for it. And if we don’t, we build one.
+                  Beautiful work that does not sell anything is just decoration.
+                  Every piece we ship is built to do a job — winning trust,
+                  driving a click, or closing a sale.
                 </p>
               </div>
             </MotionReveal>
@@ -145,7 +146,7 @@ export default function About() {
       <section className="relative border-b border-white/5">
         <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
           <div className="eyebrow accent-rule">By the numbers</div>
-          <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+          <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4">
             {stats.map((s, i) => (
               <MotionReveal key={s.label} delay={i * 0.05}>
                 <div>
@@ -164,13 +165,14 @@ export default function About() {
       <section className="relative border-b border-white/5">
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
           <div className="max-w-2xl">
-            <div className="eyebrow accent-rule">The atelier</div>
+            <div className="eyebrow accent-rule">How we are set up</div>
             <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
               Built to make everything in one place.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-              Our Louisville studio is equipped to take a mission from first signal to
-              final deliverable without stepping outside. A rare thing at our size.
+              Every service runs in-house. You do not need to manage a designer,
+              a video team, a developer, and a media buyer separately — the
+              work stays consistent and the timelines stay tight.
             </p>
           </div>
 
@@ -205,14 +207,14 @@ export default function About() {
                 <span className="flex h-12 w-12 items-center justify-center border border-botcore-green/40 text-botcore-green">
                   <HeartHandshake size={22} strokeWidth={1.5} />
                 </span>
-                <div className="eyebrow">Pointed outward</div>
+                <div className="eyebrow">Why founders choose us</div>
               </div>
               <h2 className="h-section mt-6 font-semibold text-botcore-greyLight">
-                Building beyond the brief.
+                The reasons we keep being picked.
               </h2>
               <p className="mt-6 max-w-sm text-sm text-botcore-greyLight/60">
-                A studio is only as strong as the ecosystem it’s part of. We invest a
-                visible share of every year back into ours.
+                Not a sales pitch — just the three things we hear from
+                founders most often when we ask why they signed with us.
               </p>
             </MotionReveal>
 

@@ -11,16 +11,17 @@ export default function Portfolio() {
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <div className="eyebrow accent-rule">Selected Work</div>
+            <div className="eyebrow accent-rule">Selected Projects</div>
             <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-              Recent missions.
+              Brands we helped build{' '}
+              <span className="text-botcore-green">from the ground up.</span>
             </h2>
           </div>
           <Link
             to="/reps"
             className="eyebrow group inline-flex items-center gap-2 text-botcore-green hover:text-botcore-greyLight"
           >
-            View all work
+            Explore more projects
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>

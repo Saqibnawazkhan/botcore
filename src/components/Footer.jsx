@@ -27,25 +27,30 @@ const LinkedinIcon = () => (
 
 const columns = [
   {
-    title: 'Contact',
-    links: [{ label: 'Start a project', to: '/studio' }],
-  },
-  {
     title: 'Explore',
     links: [
+      { label: 'Home', to: '/' },
+      { label: 'Capabilities', to: '/capabilities' },
+      { label: 'Approach', to: '/approach' },
       { label: 'Work', to: '/reps' },
       { label: 'About', to: '/about' },
-      { label: 'Approach', to: '/approach' },
-      { label: 'Capabilities', to: '/capabilities' },
       { label: 'Blog', to: '/labs' },
-      { label: 'AI-Enablement', to: '/ai-enablement' },
+      { label: 'Contact', to: '/studio' },
+    ],
+  },
+  {
+    title: 'Get started',
+    links: [
+      { label: 'Start a project', to: '/studio' },
+      { label: 'Careers', to: '/' },
+      { label: 'Client portal', to: '/' },
     ],
   },
   {
     title: 'Legal',
     links: [
       { label: 'Privacy policy', to: '/' },
-      { label: 'Terms', to: '/' },
+      { label: 'Terms & conditions', to: '/' },
       { label: 'Sitemap', to: '/' },
     ],
   },
@@ -66,8 +71,9 @@ export default function Footer() {
             BOTCORE
           </span>
           <p className="max-w-xs text-sm leading-relaxed text-botcore-greyLight/55">
-            A constellation of brave storytellers. Precision-engineered digital
-            experiences for the next epoch.
+            Botcore.Technology is a marketing agency built for new brands. We
+            design, build, and grow the businesses that are just getting
+            started.
           </p>
           <ul className="flex gap-3">
             {socials.map(({ Icon, label }) => (
@@ -105,8 +111,10 @@ export default function Footer() {
 
       <div className="border-t border-white/5">
         <div className="mx-auto flex max-w-[1280px] flex-col gap-3 px-6 py-5 md:flex-row md:items-center md:justify-between md:px-10">
-          <p className="eyebrow">© 2026 BOTCORE. All rights reserved.</p>
-          <p className="eyebrow">Louisville · Orbit</p>
+          <p className="eyebrow">
+            © 2026 Botcore.Technology. All rights reserved.
+          </p>
+          <p className="eyebrow">Built for new brands</p>
         </div>
       </div>
     </footer>

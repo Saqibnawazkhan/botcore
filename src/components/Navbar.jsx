@@ -24,7 +24,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="hidden h-10 items-center gap-2 bg-botcore-green px-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-botcore-black transition-transform hover:scale-[1.03] sm:inline-flex"
             >
-              Make contact <span aria-hidden>↗</span>
+              Start a project <span aria-hidden>↗</span>
             </Link>
 
             <button

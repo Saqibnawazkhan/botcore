@@ -1,42 +1,65 @@
 import { Link } from 'react-router-dom';
-import { Sparkles, Monitor, Video, Megaphone, LineChart, ArrowUpRight } from 'lucide-react';
+import {
+  Sparkles,
+  PenTool,
+  Camera,
+  Monitor,
+  Megaphone,
+  LineChart,
+  Compass,
+  ArrowUpRight,
+} from 'lucide-react';
 import MotionReveal from './MotionReveal';
 
 const capabilities = [
   {
     id: '01',
-    label: 'Brands',
+    label: 'Branding',
     Icon: Sparkles,
-    to: '/reps',
-    blurb: 'Identity systems, naming, positioning, brand worlds.',
+    to: '/capabilities',
+    blurb: 'Names, logos, colour, type, voice, full guidelines.',
   },
   {
     id: '02',
-    label: 'Websites',
-    Icon: Monitor,
-    to: '/reps',
-    blurb: 'Marketing sites, product surfaces, design systems.',
+    label: 'Graphic Design',
+    Icon: PenTool,
+    to: '/capabilities',
+    blurb: 'Packaging, print, social, decks, signage, menus.',
   },
   {
     id: '03',
-    label: 'Productions',
-    Icon: Video,
-    to: '/reps',
-    blurb: 'Film, photo, motion, audio — captured in-house.',
+    label: 'Photo & Video',
+    Icon: Camera,
+    to: '/capabilities',
+    blurb: 'Product, lifestyle, brand films, short-form social.',
   },
   {
     id: '04',
-    label: 'Campaigns',
-    Icon: Megaphone,
-    to: '/reps',
-    blurb: 'Launches, paid media, social activations.',
+    label: 'Websites',
+    Icon: Monitor,
+    to: '/capabilities',
+    blurb: 'Brand sites, e-commerce, custom builds, ongoing care.',
   },
   {
     id: '05',
-    label: 'Insights',
+    label: 'Content & Social',
+    Icon: Megaphone,
+    to: '/capabilities',
+    blurb: 'Calendars, captions, short-form video, community.',
+  },
+  {
+    id: '06',
+    label: 'Performance Ads',
     Icon: LineChart,
-    to: '/labs',
-    blurb: 'Analytics, research, signal — turned into strategy.',
+    to: '/capabilities',
+    blurb: 'Meta, Google, TikTok — tracked, tuned, accountable.',
+  },
+  {
+    id: '07',
+    label: 'Strategy',
+    Icon: Compass,
+    to: '/capabilities',
+    blurb: 'Market, customer, and competitor research that leads creative.',
   },
 ];
 
@@ -56,19 +79,26 @@ export default function Capabilities() {
       <div className="relative mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
         <div className="text-center">
           <MotionReveal>
-            <div className="eyebrow">Our capabilities</div>
+            <div className="eyebrow">What we do</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
             <h2 className="h-hero mt-5 font-bold text-botcore-greyLight">
-              Your{' '}
-              <span className="text-botcore-green glow-green">possibilities.</span>
+              Everything your brand needs{' '}
+              <span className="text-botcore-green glow-green">under one roof.</span>
             </h2>
+          </MotionReveal>
+          <MotionReveal delay={0.2}>
+            <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+              New brands need more than a logo or a single ad. They need a full
+              system that works from first impression to final sale. We bring
+              every service a marketing agency can offer into one place.
+            </p>
           </MotionReveal>
         </div>
 
-        <ul className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+        <ul className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {capabilities.map((c, i) => (
-            <MotionReveal key={c.id} delay={i * 0.05}>
+            <MotionReveal key={c.id} delay={i * 0.04}>
               <li>
                 <Link
                   to={c.to}
@@ -89,7 +119,7 @@ export default function Capabilities() {
 
                   <div className="text-center">
                     <h3
-                      className="text-lg font-bold uppercase tracking-[0.18em] text-botcore-greyLight md:text-xl"
+                      className="text-base font-bold uppercase tracking-[0.16em] text-botcore-greyLight md:text-lg"
                       style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
                     >
                       {c.label}
@@ -113,8 +143,8 @@ export default function Capabilities() {
 
         <MotionReveal delay={0.4}>
           <div className="mt-14 flex justify-center">
-            <Link to="/approach" className="btn-primary">
-              Discover our approach <span aria-hidden>↗</span>
+            <Link to="/capabilities" className="btn-primary">
+              See all capabilities <span aria-hidden>↗</span>
             </Link>
           </div>
         </MotionReveal>

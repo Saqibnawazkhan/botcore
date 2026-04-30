@@ -30,7 +30,7 @@ export const projects = [
       '/projects/rzr-jaw/02.png',
     ],
     overview:
-      'A precision-grooming product brand built around a sharp, industrial aesthetic and a confident new visual identity.',
+      'Rzr Jaw came to us as an early-stage product brand looking for an identity with edge and presence. We built the full brand system from the name treatment to the packaging language, then carried it across the website and launch content so the brand felt sharp and consistent the day it went live.',
     challenge:
       'Rzr Jaw was launching into a saturated grooming market dominated by soft, wellness-leaning brands. They needed a voice that felt engineered and uncompromising without drifting into the generic "bold masculine" trope the category overuses.',
     approach:
@@ -43,11 +43,11 @@ export const projects = [
       { value: '9', suffix: ' SKUs', label: 'Product system' },
     ],
     deliverables: [
-      'Custom wordmark and monogram',
-      'Primary and secondary colour system',
-      'Packaging across 9 SKUs',
-      'Ecommerce art direction',
-      'Launch campaign assets',
+      'Branding',
+      'Logo design',
+      'Packaging',
+      'Social media',
+      'Website',
     ],
   },
   {
@@ -69,7 +69,7 @@ export const projects = [
       '/projects/tajjal/01.png',
     ],
     overview:
-      'A lifestyle brand rooted in craft and culture, given a modern identity and a bespoke ecommerce presence.',
+      'Tajjal is a Pakistani Extra Virgin Olive Oil brand built around in-house manufacturing and a digital-first approach. We shaped the identity, the packaging, and the visual story behind the product, then created the assets needed to bring it to retail shelves and to investors. The work focuses on premium feel without losing the local roots that make the brand honest.',
     challenge:
       'Tajjal wanted to expand beyond a niche audience without losing the cultural texture that made it distinctive. The existing identity and site were holding the business back at every step of the funnel.',
     approach:
@@ -82,10 +82,11 @@ export const projects = [
       { value: '0.9', suffix: 's', label: 'Median page load' },
     ],
     deliverables: [
-      'Brand strategy and voice system',
-      'Logo, typography, and art direction',
-      'Ecommerce website',
-      'Campaign-ready template library',
+      'Branding',
+      'Packaging',
+      'Photography',
+      'Website',
+      'Investor materials',
     ],
   },
   {
@@ -108,7 +109,7 @@ export const projects = [
       '/projects/edit-beauty/02.png',
     ],
     overview:
-      'A clean, editorial beauty brand built on a promise of curation over clutter — and a site designed to read like a magazine.',
+      'Edit Beauty needed a brand that could sit comfortably next to global names while staying approachable for everyday customers. We developed the identity, the packaging across the product line, and a content style that runs through the website and the social channels, giving the brand a clean and confident voice.',
     challenge:
       'The beauty space is crowded with brands shouting about every feature. Edit Beauty wanted the opposite — a calm, confident voice that positioned it as a discerning edit, not a warehouse.',
     approach:
@@ -121,10 +122,11 @@ export const projects = [
       { value: '12', suffix: ' routines', label: 'Guided journeys' },
     ],
     deliverables: [
-      'Brand identity and editorial voice',
-      'Type system and photography direction',
-      'Website with routine builder',
-      'Launch campaign across paid and organic',
+      'Branding',
+      'Packaging',
+      'Photography',
+      'Social media',
+      'Website',
     ],
   },
   {
@@ -146,7 +148,7 @@ export const projects = [
       '/projects/pro-inhale/02.png',
     ],
     overview:
-      'A respiratory-wellness brand repositioned from clinical to confident — still trusted, now desirable.',
+      'Pro Inhale is a wellness-focused product brand. The challenge was to create a brand that felt clinical enough to trust and warm enough to enjoy. We built the identity, the website, and the launch campaigns around clear messaging that explains what the product does and why it matters.',
     challenge:
       'Pro Inhale’s category is clinical by default: sterile blues, medical typography, and packaging that looks like it belongs in a pharmacy back room. The team wanted trust without the drabness.',
     approach:
@@ -159,10 +161,10 @@ export const projects = [
       { value: '6', suffix: ' SKUs', label: 'New system' },
     ],
     deliverables: [
-      'Repositioning and messaging',
-      'Primary logotype and icon',
-      'Packaging system across 6 SKUs',
-      'Retail and digital photography',
+      'Branding',
+      'Product design',
+      'Website',
+      'Campaigns',
     ],
   },
   {
@@ -178,7 +180,7 @@ export const projects = [
     duration: '11 weeks',
     logo: '/logos/01.png',
     overview:
-      'A boutique pilates studio group given a grounded, premium identity and a booking experience that actually makes sense.',
+      'Reform Pilates is a studio brand built around community and movement. We created the full identity, the studio signage, and the online presence so the experience customers feel inside the space matches what they see online before they ever walk in.',
     challenge:
       'Growing from one studio to four, Reform Pilates needed a system that could scale across locations while staying warm. The legacy booking flow was causing measurable drop-off at every step.',
     approach:
@@ -191,10 +193,11 @@ export const projects = [
       { value: '4', suffix: ' studios', label: 'Unified system' },
     ],
     deliverables: [
-      'Brand identity and guidelines',
-      'Location signage system',
-      'Website and booking flow',
-      'Instructor content templates',
+      'Branding',
+      'Interior signage',
+      'Photography',
+      'Website',
+      'Social media',
     ],
   },
   {
@@ -210,7 +213,7 @@ export const projects = [
     duration: '8 weeks',
     logo: '/logos/04.png',
     overview:
-      'An evening café positioned as a third place between dinner and the night — warm, grown-up, and photogenic.',
+      'Cafe Soir wanted a brand that felt like a place rather than just a logo. We worked on the identity, the menu, the food photography, and the in-store graphics, building a brand that customers recognise the moment they step inside or scroll past on social.',
     challenge:
       'The owners wanted a venue that didn’t feel like a morning coffee shop running late. Everything from the menu to the signage needed to communicate "evening" without sliding into nightclub aesthetics.',
     approach:
@@ -223,10 +226,11 @@ export const projects = [
       { value: '5', suffix: ' seasons', label: 'Menu systems' },
     ],
     deliverables: [
-      'Identity and naming support',
-      'Menu and print system',
-      'Environmental signage',
-      'Opening campaign across social and print',
+      'Branding',
+      'Menu design',
+      'Photography',
+      'Interior graphics',
+      'Social media',
     ],
   },
   {
@@ -241,7 +245,7 @@ export const projects = [
     duration: '10 weeks',
     logo: '/logos/08.png',
     overview:
-      'A challenger snacks brand with an unapologetically playful identity engineered for grocery shelves and social.',
+      'Snackeez is a snack brand built for everyday moments. We handled the identity, the packaging across multiple SKUs, the product photography, and the launch ads. The brand needed to feel fun on the shelf and convert clicks into orders online, so we built the system to do both.',
     challenge:
       'The founding team had a great product with zero shelf presence. Packaging had to earn attention in a three-second decision window against incumbents ten times larger.',
     approach:
@@ -254,10 +258,11 @@ export const projects = [
       { value: '7', suffix: ' SKUs', label: 'Launch lineup' },
     ],
     deliverables: [
-      'Logo and brand system',
-      'Packaging across launch lineup',
-      'Social campaign assets',
-      'In-store point of sale',
+      'Branding',
+      'Packaging',
+      'Photography',
+      'Website',
+      'Performance ads',
     ],
   },
   {
@@ -272,7 +277,7 @@ export const projects = [
     duration: '12 weeks',
     logo: '/logos/05.png',
     overview:
-      'A strength-training brand built for a clientele that wants progress, not motivation posters.',
+      'Urstrong is a fitness and lifestyle brand. We shaped the identity and the content engine that keeps the brand active across platforms. The work covers the website, the photography style, and the ongoing social content that keeps the audience growing.',
     challenge:
       'Urstrong was tired of fitness branding that leans on hustle language and generic stock photography. The goal was a calmer, more technical voice that treated members as serious athletes from day one.',
     approach:
@@ -285,10 +290,11 @@ export const projects = [
       { value: '3', suffix: ' tiers', label: 'Programme lineup' },
     ],
     deliverables: [
-      'Brand identity and voice',
-      'Website with programme catalogue',
-      'Launch campaign assets',
-      'Member welcome kit',
+      'Branding',
+      'Website',
+      'Content',
+      'Photography',
+      'Social media',
     ],
   },
   {
@@ -303,7 +309,7 @@ export const projects = [
     duration: '7 weeks',
     logo: '/logos/06.png',
     overview:
-      'A minimalist luxury brand boiled down to a single character and a system that stays out of its own way.',
+      'Zar needed a brand that could carry a premium feel without becoming distant. We built the identity, the packaging, and the visual world around it, then translated that into a website and product imagery that makes the brand feel ready for the next stage of its journey.',
     challenge:
       'Zar’s founder wanted an identity built around the single-letter name — memorable and unmistakable, but flexible enough to carry an expanding product line.',
     approach:
@@ -316,10 +322,10 @@ export const projects = [
       { value: '2', suffix: ' drops', label: 'Launch rollout' },
     ],
     deliverables: [
-      'Custom letterform and wordmark',
-      'Brand guidelines',
-      'Art direction and photography',
-      'Launch collateral',
+      'Branding',
+      'Packaging',
+      'Photography',
+      'Website',
     ],
   },
 ];

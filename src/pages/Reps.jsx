@@ -26,18 +26,19 @@ export default function Reps() {
         />
         <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">Selected Work</div>
+            <div className="eyebrow accent-rule">Selected projects</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
             <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
-              Missions from the{' '}
-              <span className="text-botcore-green">archive.</span>
+              Brands we helped build{' '}
+              <span className="text-botcore-green">from the ground up.</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-              A cross-section of the brands, platforms, and campaigns we’ve engineered.
-              Filter by discipline.
+              Every project on this page started as a conversation with a
+              founder who had a vision and needed someone to help bring it to
+              life. Filter by discipline.
             </p>
           </MotionReveal>
         </div>

@@ -44,7 +44,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="eyebrow accent-rule"
         >
-          Studio · Est. 2026
+          Marketing Agency for New Brands
         </motion.div>
 
         <motion.h1
@@ -53,8 +53,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="h-hero mt-8 max-w-5xl font-bold text-botcore-greyLight"
         >
-          Leave ordinary{' '}
-          <span className="italic text-botcore-green glow-green">behind.</span>
+          Where new brands{' '}
+          <span className="text-botcore-green glow-green">begin.</span>
         </motion.h1>
 
         <motion.p
@@ -63,8 +63,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="mt-8 max-w-xl text-base leading-relaxed text-botcore-greyLight/70 md:text-lg"
         >
-          Precision-engineered digital experiences for the next epoch. We bridge the gap
-          between biological intuition and synthetic logic.
+          We build the marketing engine your brand needs from day one. Logo,
+          website, content, ads — every piece working together.
         </motion.p>
 
         <motion.div
@@ -73,11 +73,11 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-10 flex flex-wrap items-center gap-3"
         >
-          <Link to="/reps" className="btn-primary">
-            See our work <span aria-hidden>↗</span>
+          <Link to="/capabilities" className="btn-primary">
+            See what we do <span aria-hidden>↗</span>
           </Link>
           <Link to="/studio" className="btn-ghost">
-            Make contact <span aria-hidden>↗</span>
+            Start your project <span aria-hidden>↗</span>
           </Link>
         </motion.div>
       </div>

@@ -25,27 +25,29 @@ const LinkedinIcon = () => (
 const projectTypes = [
   'Branding',
   'Website',
-  'Campaign',
-  'Video / Photo',
+  'Photo / Video',
+  'Content & Social',
+  'Performance Ads',
   'Strategy',
+  'Full launch',
   'Other',
 ];
 
 const expectations = [
   {
     id: '01',
-    title: 'Reply in 48 hours',
-    body: 'Every message gets a human response from a senior operator within two business days.',
+    title: 'A human reply, fast',
+    body: 'Every message gets a real response from a senior operator within two business days.',
   },
   {
     id: '02',
-    title: '30-minute diagnostic',
-    body: 'A scoped intro call to hear the mission, pressure-test scope, and align on outcomes.',
+    title: 'A short intro call',
+    body: 'A 30-minute conversation to hear your project, ask honest questions, and figure out if we are the right fit.',
   },
   {
     id: '03',
-    title: 'Mission brief in 5 days',
-    body: 'A written scope, timeline, and investment range — no decks, no black boxes.',
+    title: 'A clear plan in a week',
+    body: 'A short follow-up plan — scope, timeline, and investment range — usually within five working days.',
   },
 ];
 
@@ -81,17 +83,20 @@ export default function Studio() {
         />
         <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">Mission control</div>
+            <div className="eyebrow accent-rule">Get in touch</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
             <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
-              Make <span className="text-botcore-green">contact.</span>
+              Ready to build your{' '}
+              <span className="text-botcore-green">brand?</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-              Botcore is a place for teams with their eyes on the far horizon, done
-              settling for the everyday. Sound like you? Let’s talk.
+              Tell us about your project. Whether you have a clear brief or
+              just a rough idea, we will get on a call, listen properly, and
+              tell you honestly how we can help. Most projects start with a
+              short conversation and a follow-up plan within a week.
             </p>
           </MotionReveal>
         </div>
@@ -101,32 +106,32 @@ export default function Studio() {
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
             <MotionReveal>
-              <div className="eyebrow accent-rule">Get in touch</div>
+              <div className="eyebrow accent-rule">Reach the team</div>
               <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-                Three ways to reach the studio.
+                Three ways to start a project.
               </h2>
 
               <ul className="mt-10 space-y-6">
                 <InfoRow
                   Icon={Mail}
                   label="Email"
-                  value="hello@botcore.studio"
-                  href="mailto:hello@botcore.studio"
+                  value="hello@botcore.technology"
+                  href="mailto:hello@botcore.technology"
                 />
                 <InfoRow
                   Icon={MapPin}
-                  label="Studio"
-                  value={<>Louisville, KY · Open to orbit</>}
+                  label="Office"
+                  value={<>Working with founders worldwide</>}
                 />
                 <InfoRow
                   Icon={Clock}
                   label="Hours"
-                  value="Mon – Fri · 9am – 6pm ET"
+                  value="Mon – Fri · 9am – 6pm"
                 />
               </ul>
 
               <div className="mt-10">
-                <p className="eyebrow !text-botcore-green">Follow the signal</p>
+                <p className="eyebrow !text-botcore-green">Follow us</p>
                 <ul className="mt-4 flex gap-3">
                   {[FacebookIcon, InstagramIcon, LinkedinIcon].map((Icon, i) => (
                     <li key={i}>
@@ -149,8 +154,8 @@ export default function Studio() {
                 className="card flex flex-col gap-6 p-6 md:p-8"
               >
                 <div className="flex items-center justify-between">
-                  <span className="eyebrow !text-botcore-green">// Transmission</span>
-                  <span className="eyebrow">Encrypted</span>
+                  <span className="eyebrow !text-botcore-green">// Project brief</span>
+                  <span className="eyebrow">Confidential</span>
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -205,7 +210,8 @@ export default function Studio() {
 
                 <div className="flex flex-col gap-2">
                   <label className="eyebrow !text-botcore-greyLight/70" htmlFor="msg">
-                    Mission brief <span className="text-botcore-green">*</span>
+                    Tell us about your project{' '}
+                    <span className="text-botcore-green">*</span>
                   </label>
                   <textarea
                     id="msg"
@@ -213,14 +219,14 @@ export default function Studio() {
                     value={form.message}
                     onChange={update('message')}
                     rows={5}
-                    placeholder="Tell us about your objectives, timeline, and what success looks like."
+                    placeholder="A rough idea is fine. Goals, timeline, and what success looks like for you."
                     className="resize-none border border-white/15 bg-transparent px-4 py-3 text-sm text-botcore-greyLight placeholder:text-botcore-greyLight/30 focus:border-botcore-green focus:outline-none"
                   />
                 </div>
 
                 <div className="flex items-center justify-between gap-4">
                   <p className="eyebrow max-w-xs !tracking-[0.2em]">
-                    We respond to every transmission within 48 hours.
+                    We reply to every message within 48 hours.
                   </p>
                   <button
                     type="submit"
@@ -233,7 +239,7 @@ export default function Studio() {
                       </>
                     ) : (
                       <>
-                        Initialise <Send size={14} strokeWidth={2} />
+                        Send brief <Send size={14} strokeWidth={2} />
                       </>
                     )}
                   </button>
@@ -248,7 +254,7 @@ export default function Studio() {
         <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
           <div className="eyebrow accent-rule">What to expect</div>
           <h2 className="h-section mt-5 max-w-2xl font-semibold text-botcore-greyLight">
-            From first transmission to mission brief.
+            From your first message to a follow-up plan.
           </h2>
 
           <ul className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">

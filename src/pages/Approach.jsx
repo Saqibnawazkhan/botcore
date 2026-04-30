@@ -5,32 +5,32 @@ import LaunchCTA from '../components/LaunchCTA';
 const steps = [
   {
     id: '01',
-    title: 'Learn',
-    body: 'Chart a course with overall brand and creative strategy, all fueled by deep insights and research.',
+    title: 'Discover',
+    body: 'We start by learning your business, your customer, and your market. We ask the hard questions about positioning, pricing, and the story you want to tell. The output is a clear brief the rest of the work stands on.',
     accent: '#FF3355',
   },
   {
     id: '02',
     title: 'Plan',
-    body: 'Take your company to new heights with creative concepts engineered to captivate your audience.',
+    body: 'We turn the brief into a creative and marketing plan — the brand direction, the content pillars, the channels we will use, and the timeline. You see the plan before any heavy production begins.',
     accent: '#C13BFF',
   },
   {
     id: '03',
-    title: 'Build',
-    body: 'Transform ideas into reality with our capabilities in graphic design, video production, web development, and more.',
+    title: 'Create',
+    body: 'Design, photography, video, websites, and content all come to life. Our team builds everything in-house, which keeps the work consistent and the timeline tight.',
     accent: '#7A3BFF',
   },
   {
     id: '04',
     title: 'Launch',
-    body: 'Amplify your reach with targeted advertising solutions across all the channels that matter to your customers.',
+    body: 'We take the work live across the channels that matter — website launch, social rollout, paid campaigns. Every launch is treated as a moment to make a strong first impression and start building real traction.',
     accent: '#3B7AFF',
   },
   {
     id: '05',
-    title: 'Measure',
-    body: 'Navigate with precision using data-driven insights and unlock new strategic opportunities.',
+    title: 'Measure & improve',
+    body: 'Once you are live, we track the numbers that matter and share clear monthly reports on what is working, what is not, and what we are changing next. Marketing is a long game.',
     accent: '#3BD4D4',
   },
 ];
@@ -38,18 +38,18 @@ const steps = [
 const principles = [
   {
     id: '01',
-    title: 'No black boxes',
-    body: 'Every decision is documented and shared. You see the same dashboards, briefs, and metrics that we do.',
+    title: 'Built for momentum',
+    body: 'We do not believe in slow agency processes that burn months before anything ships. Founders need momentum without losing quality.',
   },
   {
     id: '02',
-    title: 'Quantified outcomes',
-    body: 'Every mission is scoped against measurable goals — traffic, conversion, recall, retention. Pick your KPIs.',
+    title: 'Clear at every step',
+    body: 'You always know where the work stands and what comes next. Plans are signed off before heavy production. No surprises down the line.',
   },
   {
     id: '03',
-    title: 'Built to last past launch',
-    body: 'We hand off systems, not artefacts. Your team owns and operates everything we build, end-to-end.',
+    title: 'Honest reporting',
+    body: 'Monthly readouts show what worked, what did not, and what we are changing. We tell you what we think — even when it is not what you want to hear.',
   },
 ];
 
@@ -71,27 +71,27 @@ export default function Approach() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <MotionReveal>
-                <div className="eyebrow accent-rule">Our approach</div>
+                <div className="eyebrow accent-rule">How we work</div>
               </MotionReveal>
               <MotionReveal delay={0.1}>
                 <h1 className="h-hero mt-6 font-bold text-botcore-greyLight">
-                  Driven to get{' '}
-                  <span className="text-botcore-green glow-green">results.</span>
+                  Built to get{' '}
+                  <span className="text-botcore-green glow-green">real results.</span>
                 </h1>
               </MotionReveal>
               <MotionReveal delay={0.2}>
                 <p className="mt-8 max-w-md text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-                  Your success is our success. Our integrated approach ensures that
-                  at every stage we keep our course set on reaching your audience
-                  and goals. Being driven by results means that even with our sights
-                  set on the stars, we remain grounded in what matters most to you.
-                  Achieving your goals is always our north star.
+                  We do not believe in slow agency processes that burn months
+                  before anything ships. Our approach is built for founders who
+                  need momentum without losing quality. Every engagement runs
+                  through a clear five-step process, so you always know where
+                  the work stands and what comes next.
                 </p>
               </MotionReveal>
               <MotionReveal delay={0.3}>
                 <div className="mt-10 flex flex-wrap items-center gap-3">
                   <Link to="/studio" className="btn-primary">
-                    Make contact <span aria-hidden>↗</span>
+                    Start a project <span aria-hidden>↗</span>
                   </Link>
                   <Link to="/reps" className="btn-ghost">
                     See the work <span aria-hidden>↗</span>
@@ -160,8 +160,8 @@ export default function Approach() {
               The way we work, in three lines.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-              Our process is the visible part. These are the principles that hold
-              it up — non-negotiable on every mission, regardless of scope.
+              Our process is the visible part. These are the principles that
+              hold it up — non-negotiable on every project, regardless of scope.
             </p>
           </div>
 

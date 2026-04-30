@@ -3,23 +3,23 @@ import MotionReveal from './MotionReveal';
 const values = [
   {
     id: '01',
-    title: 'Visionary',
-    body: 'Scanning beyond the visible spectrum to anticipate the future of digital interaction.',
+    title: 'We specialise in new brands',
+    body: 'Most agencies are built to service big established companies. We are built for founders starting from zero who need a partner that understands the pace, the budget, and the pressure of building something new.',
   },
   {
     id: '02',
-    title: 'Precise',
-    body: 'Millimeter-perfect execution. Every pixel and line of code is calibrated for impact.',
+    title: 'Everything under one roof',
+    body: 'You do not need to manage a designer, a video team, a developer, and a media buyer separately. We handle every service in-house, which keeps the work consistent and the timelines tight.',
   },
   {
     id: '03',
-    title: 'Uncharted',
-    body: 'Fearless exploration of new technology frontiers. We don’t follow trends — we forge them.',
+    title: 'Honest communication',
+    body: 'We tell you what we think, even when it is not what you want to hear. If a campaign is not working, we say so. If a strategy needs to change, we change it. You get a partner, not a yes machine.',
   },
   {
     id: '04',
-    title: 'Stellar',
-    body: 'Uncompromising quality that reaches the highest standards of the digital ecosystem.',
+    title: 'Work that performs',
+    body: 'Beautiful work that does not sell anything is just decoration. Every piece we ship is built to do a job — winning trust, driving a click, or closing a sale.',
   },
 ];
 
@@ -29,9 +29,10 @@ export default function CoreValues() {
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <MotionReveal className="lg:col-span-4">
-            <div className="eyebrow accent-rule">Core Constants</div>
+            <div className="eyebrow accent-rule">Why Botcore</div>
             <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-              The values that guide every mission.
+              Reasons founders{' '}
+              <span className="text-botcore-green">choose us.</span>
             </h2>
           </MotionReveal>
 

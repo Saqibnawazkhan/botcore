@@ -22,24 +22,24 @@ const LinkedinIcon = () => (
 
 const columnA = [
   { label: 'WORK', to: '/reps' },
-  { label: 'BLOG', to: '/labs' },
-  { label: 'CONTACT', to: '/studio' },
+  { label: 'CAPABILITIES', to: '/capabilities' },
   { label: 'APPROACH', to: '/approach' },
+  { label: 'ABOUT', to: '/about' },
 ];
 
 const columnB = [
-  { label: 'AI-ENABLEMENT', to: '/ai-enablement' },
-  { label: 'ABOUT', to: '/about' },
-  { label: 'TEAM', to: '/team' },
-  { label: 'CAPABILITIES', to: '/capabilities' },
+  { label: 'BLOG', to: '/labs' },
+  { label: 'CAREERS', to: '/' },
+  { label: 'CONTACT', to: '/studio' },
+  { label: 'CLIENT PORTAL', to: '/' },
 ];
 
 const utilityLinks = [
-  'DATATAG LOGIN',
-  'EMPLOYEE PORTAL',
   'CAREERS',
+  'CLIENT PORTAL',
   'BLOG',
   'PRIVACY POLICY',
+  'TERMS',
 ];
 
 export default function MenuOverlay({ open, onClose }) {
