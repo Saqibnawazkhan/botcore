@@ -3,34 +3,22 @@ import MotionReveal from './MotionReveal';
 import ProjectThumb from './ProjectThumb';
 import { projects } from '../data/projects';
 
-const featured = projects.filter((p) => p.featured).slice(0, 6);
+const featured = projects.filter((p) => p.featured).slice(0, 3);
 
 export default function Portfolio() {
   return (
     <section className="relative border-t border-white/5">
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <div className="eyebrow accent-rule">Selected Projects</div>
-            <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-              Brands We Helped Build{' '}
-              <span className="text-botcore-green">From the Ground Up</span>
-            </h2>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-              Every project on this page started as a conversation with a
-              founder who had a vision and needed someone to help bring it to
-              life. These are the brands we have shaped, launched, and grown
-              with.
-            </p>
-          </div>
-          <Link
-            to="/reps"
-            className="eyebrow group inline-flex items-center gap-2 text-botcore-green hover:text-botcore-greyLight"
-          >
-            Explore More Projects
-            <span className="transition-transform group-hover:translate-x-1">→</span>
-          </Link>
-        </div>
+        <div className="eyebrow accent-rule">Selected Projects</div>
+        <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
+          Brands We Helped Build{' '}
+          <span className="text-botcore-green">From the Ground Up</span>
+        </h2>
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+          Every project on this page started as a conversation with a founder
+          who had a vision and needed someone to help bring it to life. These
+          are the brands we have shaped, launched, and grown with.
+        </p>
 
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((p, i) => (
@@ -76,6 +64,13 @@ export default function Portfolio() {
               </Link>
             </MotionReveal>
           ))}
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <Link to="/reps" className="btn-ghost inline-flex items-center gap-2">
+            Explore More Projects
+            <span aria-hidden>→</span>
+          </Link>
         </div>
       </div>
     </section>
