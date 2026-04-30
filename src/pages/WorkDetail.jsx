@@ -6,17 +6,21 @@ import { getProjectBySlug, getNextProject } from '../data/projects';
 function Cover({ hue, banner, logo, alt }) {
   if (banner) {
     return (
-      <div className="relative aspect-[16/9] overflow-hidden border border-white/10">
+      <div className="relative h-[80vh] min-h-[480px] w-full overflow-hidden md:h-screen md:max-h-[1080px]">
         <img
           src={banner}
           alt={alt}
           className="absolute inset-0 h-full w-full object-cover"
         />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-botcore-black to-transparent"
+        />
       </div>
     );
   }
   return (
-    <div className="relative aspect-[16/9] overflow-hidden border border-white/10">
+    <div className="relative h-[60vh] min-h-[420px] w-full overflow-hidden md:h-[80vh]">
       <div
         className="absolute inset-0"
         style={{
@@ -42,7 +46,7 @@ function Cover({ hue, banner, logo, alt }) {
         <img
           src={logo}
           alt={`${alt} logo`}
-          className="absolute inset-0 m-auto max-h-[55%] max-w-[55%] object-contain"
+          className="absolute inset-0 m-auto max-h-[40%] max-w-[40%] object-contain"
         />
       )}
     </div>
@@ -122,16 +126,14 @@ export default function WorkDetail() {
       </section>
 
       <section className="relative">
-        <div className="mx-auto max-w-[1280px] px-6 pt-10 md:px-10 md:pt-14">
-          <MotionReveal>
-            <Cover
-              hue={project.hue}
-              banner={project.banner}
-              logo={project.logo}
-              alt={project.name}
-            />
-          </MotionReveal>
-        </div>
+        <MotionReveal>
+          <Cover
+            hue={project.hue}
+            banner={project.banner}
+            logo={project.logo}
+            alt={project.name}
+          />
+        </MotionReveal>
       </section>
 
       <section className="relative">
