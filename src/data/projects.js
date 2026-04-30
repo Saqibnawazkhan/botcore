@@ -62,6 +62,12 @@ export const projects = [
     role: 'Brand strategy, identity, website',
     duration: '14 weeks',
     logo: '/logos/03.png',
+    cover: '/projects/tajjal/cover.png',
+    banner: '/projects/tajjal/banner.png',
+    gallery: [
+      '/projects/tajjal/cover.png',
+      '/projects/tajjal/01.png',
+    ],
     overview:
       'A lifestyle brand rooted in craft and culture, given a modern identity and a bespoke ecommerce presence.',
     challenge:
@@ -99,6 +105,7 @@ export const projects = [
     gallery: [
       '/projects/edit-beauty/cover.png',
       '/projects/edit-beauty/01.png',
+      '/projects/edit-beauty/02.png',
     ],
     overview:
       'A clean, editorial beauty brand built on a promise of curation over clutter — and a site designed to read like a magazine.',
@@ -131,6 +138,13 @@ export const projects = [
     industry: 'Wellness',
     role: 'Brand identity, packaging, art direction',
     duration: '9 weeks',
+    cover: '/projects/pro-inhale/cover.png',
+    banner: '/projects/pro-inhale/banner.png',
+    gallery: [
+      '/projects/pro-inhale/cover.png',
+      '/projects/pro-inhale/01.png',
+      '/projects/pro-inhale/02.png',
+    ],
     overview:
       'A respiratory-wellness brand repositioned from clinical to confident — still trusted, now desirable.',
     challenge:
