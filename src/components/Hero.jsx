@@ -53,8 +53,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="h-hero mt-8 max-w-5xl font-bold text-botcore-greyLight"
         >
-          Where new brands{' '}
-          <span className="text-botcore-green glow-green">begin.</span>
+          Where New Brands{' '}
+          <span className="text-botcore-green glow-green">Begin</span>
         </motion.h1>
 
         <motion.p
@@ -64,7 +64,7 @@ export default function Hero() {
           className="mt-8 max-w-xl text-base leading-relaxed text-botcore-greyLight/70 md:text-lg"
         >
           We build the marketing engine your brand needs from day one. Logo,
-          website, content, ads — every piece working together.
+          website, content, ads, every piece working together.
         </motion.p>
 
         <motion.div
@@ -74,10 +74,10 @@ export default function Hero() {
           className="mt-10 flex flex-wrap items-center gap-3"
         >
           <Link to="/capabilities" className="btn-primary">
-            See what we do <span aria-hidden>↗</span>
+            See What We Do <span aria-hidden>↗</span>
           </Link>
           <Link to="/studio" className="btn-ghost">
-            Start your project <span aria-hidden>↗</span>
+            Start Your Project <span aria-hidden>↗</span>
           </Link>
         </motion.div>
       </div>
