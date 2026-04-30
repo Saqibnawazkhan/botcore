@@ -1,5 +1,5 @@
 export default function ProjectThumb({ hue, cover, logo, name }) {
-  if (cover) {
+  if (!logo && cover) {
     return (
       <img
         src={cover}
