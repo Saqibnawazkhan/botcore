@@ -283,13 +283,20 @@ export default function WorkDetail() {
               className="group grid grid-cols-1 items-center gap-6 md:grid-cols-[1fr_auto_auto]"
             >
               <div>
-                <div className="eyebrow accent-rule">Next mission</div>
+                <div className="eyebrow accent-rule">Next project</div>
                 <h3 className="h-section mt-4 font-semibold text-botcore-greyLight transition-colors group-hover:text-botcore-green">
                   {next.name}.
                 </h3>
-                <p className="eyebrow mt-3 !tracking-[0.2em]">
-                  {next.tags.join(' · ')} · {next.industry}
-                </p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {[...next.tags, next.industry].map((t) => (
+                    <li
+                      key={t}
+                      className="border border-white/15 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-botcore-greyLight/65 transition-colors group-hover:border-botcore-green/40 group-hover:text-botcore-greyLight/85"
+                    >
+                      {t}
+                    </li>
+                  ))}
+                </ul>
               </div>
               <span className="eyebrow hidden self-start md:block">{next.year}</span>
               <span
