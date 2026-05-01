@@ -16,6 +16,7 @@ const capabilities = [
     id: '01',
     label: 'Branding & Identity',
     Icon: Sparkles,
+    href: '/capabilities/branding',
     blurb:
       'We create brand identities from the ground up — name treatment, logo, colour, typography, voice, and the full guidelines that keep everything consistent as you grow. Built to last beyond launch and stand up to real competition.',
     deliverables: [
@@ -198,6 +199,15 @@ export default function CapabilitiesPage() {
                         </li>
                       ))}
                     </ul>
+                    {c.href && (
+                      <Link
+                        to={c.href}
+                        className="eyebrow mt-8 inline-flex items-center gap-2 text-botcore-green hover:text-botcore-greyLight"
+                      >
+                        Explore {c.label.split(' ')[0]}
+                        <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+                      </Link>
+                    )}
                   </div>
                 </li>
               </MotionReveal>

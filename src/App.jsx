@@ -11,6 +11,7 @@ import AI from './pages/AI';
 import Team from './pages/Team';
 import Approach from './pages/Approach';
 import CapabilitiesPage from './pages/Capabilities';
+import CapabilityBranding from './pages/CapabilityBranding';
 import WorkDetail from './pages/WorkDetail';
 
 function ScrollToTop() {
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/approach" element={<Approach />} />
           <Route path="/capabilities" element={<CapabilitiesPage />} />
+          <Route path="/capabilities/branding" element={<CapabilityBranding />} />
           <Route path="/ai-enablement" element={<AI />} />
           <Route path="/team" element={<Team />} />
           <Route path="*" element={<Home />} />
