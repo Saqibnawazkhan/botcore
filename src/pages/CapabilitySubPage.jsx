@@ -5,19 +5,17 @@ import LaunchCTA from '../components/LaunchCTA';
 import { projects } from '../data/projects';
 import { capabilityBySlug } from '../data/capabilities';
 
-// Pick three representative images for the hero collage. We prefer the
-// brand thumbnail (logo panel) for the centre tile and the first cover
-// images we can find for the flanking tiles, falling back to the logo
-// when a project has no cover.
-function buildCollage(matchedProjects) {
+// Each capability config in capabilities.js declares its own
+// hand-picked imagery so the hero collage and the supporting strip
+// surface work that matches the service — packaging shots on Branding,
+// website screenshots on Websites, lifestyle stills on Photo & Video,
+// etc. The fallback below only kicks in if a config forgets to list
+// images.
+function fallbackCollage(matchedProjects) {
   const pick = (p) => p.cover || p.logo;
   const slice = matchedProjects.slice(0, 3);
   if (slice.length < 3) return null;
-  return [
-    { project: slice[0], src: slice[0].logo || slice[0].cover },
-    { project: slice[1], src: pick(slice[1]) },
-    { project: slice[2], src: pick(slice[2]) },
-  ];
+  return slice.map((p) => ({ src: pick(p), slug: p.slug, name: p.name }));
 }
 
 export default function CapabilitySubPage() {
@@ -29,7 +27,11 @@ export default function CapabilitySubPage() {
   }
 
   const matchedProjects = projects.filter(config.projectFilter);
-  const collage = buildCollage(matchedProjects);
+  const collage =
+    (config.collageImages && config.collageImages.length >= 3
+      ? config.collageImages
+      : fallbackCollage(matchedProjects)) || null;
+  const extras = config.extraImages || [];
   const featured = matchedProjects.slice(0, 3);
 
   return (
@@ -87,25 +89,23 @@ export default function CapabilitySubPage() {
             <div className="relative mx-auto h-[560px] w-full max-w-6xl sm:h-[640px] md:h-[820px] lg:h-[900px]">
               {/* Centre tile — sits behind the flanking ones */}
               <Link
-                to={`/reps/${collage[0].project.slug}`}
-                aria-label={`Open ${collage[0].project.name} case study`}
+                to={`/reps/${collage[0].slug}`}
+                aria-label={`Open ${collage[0].name} case study`}
                 className="group/centre collage-tile-centre absolute left-1/2 top-1/2 z-10 block w-[68%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[60%]"
               >
-                <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/centre:scale-[1.04]">
-                  <ProjectThumb
-                    hue={collage[0].project.hue}
-                    cover={collage[0].src}
-                    logo={null}
-                    name={collage[0].project.name}
-                  />
-                </div>
+                <img
+                  src={collage[0].src}
+                  alt={collage[0].name}
+                  loading="lazy"
+                  className="block aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover/centre:scale-[1.04]"
+                />
                 <div
                   aria-hidden
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-botcore-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/centre:opacity-100"
                 />
                 <div className="absolute bottom-0 left-0 right-0 flex translate-y-2 items-center justify-between px-5 py-4 opacity-0 transition-all duration-500 group-hover/centre:translate-y-0 group-hover/centre:opacity-100">
                   <span className="text-sm font-semibold text-botcore-greyLight md:text-base">
-                    {collage[0].project.name}
+                    {collage[0].name}
                   </span>
                   <span className="eyebrow !text-botcore-green">View →</span>
                 </div>
@@ -113,25 +113,23 @@ export default function CapabilitySubPage() {
 
               {/* Left flanking tile */}
               <Link
-                to={`/reps/${collage[1].project.slug}`}
-                aria-label={`Open ${collage[1].project.name} case study`}
+                to={`/reps/${collage[1].slug}`}
+                aria-label={`Open ${collage[1].name} case study`}
                 className="group/left collage-tile-left absolute -left-4 bottom-0 z-20 block w-[52%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:z-30 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[48%] md:-left-10 md:bottom-4 lg:-left-16"
               >
-                <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/left:scale-[1.05]">
-                  <ProjectThumb
-                    hue={collage[1].project.hue}
-                    cover={collage[1].src}
-                    logo={null}
-                    name={collage[1].project.name}
-                  />
-                </div>
+                <img
+                  src={collage[1].src}
+                  alt={collage[1].name}
+                  loading="lazy"
+                  className="block aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover/left:scale-[1.05]"
+                />
                 <div
                   aria-hidden
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-botcore-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/left:opacity-100"
                 />
                 <div className="absolute bottom-0 left-0 right-0 flex translate-y-2 items-center justify-between px-5 py-4 opacity-0 transition-all duration-500 group-hover/left:translate-y-0 group-hover/left:opacity-100">
                   <span className="text-sm font-semibold text-botcore-greyLight md:text-base">
-                    {collage[1].project.name}
+                    {collage[1].name}
                   </span>
                   <span className="eyebrow !text-botcore-green">View →</span>
                 </div>
@@ -139,25 +137,23 @@ export default function CapabilitySubPage() {
 
               {/* Right flanking tile */}
               <Link
-                to={`/reps/${collage[2].project.slug}`}
-                aria-label={`Open ${collage[2].project.name} case study`}
+                to={`/reps/${collage[2].slug}`}
+                aria-label={`Open ${collage[2].name} case study`}
                 className="group/right collage-tile-right absolute -right-4 top-0 z-20 block w-[54%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:z-30 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[50%] md:-right-10 md:top-4 lg:-right-16"
               >
-                <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/right:scale-[1.05]">
-                  <ProjectThumb
-                    hue={collage[2].project.hue}
-                    cover={collage[2].src}
-                    logo={null}
-                    name={collage[2].project.name}
-                  />
-                </div>
+                <img
+                  src={collage[2].src}
+                  alt={collage[2].name}
+                  loading="lazy"
+                  className="block aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover/right:scale-[1.05]"
+                />
                 <div
                   aria-hidden
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-botcore-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/right:opacity-100"
                 />
                 <div className="absolute bottom-0 left-0 right-0 flex translate-y-2 items-center justify-between px-5 py-4 opacity-0 transition-all duration-500 group-hover/right:translate-y-0 group-hover/right:opacity-100">
                   <span className="text-sm font-semibold text-botcore-greyLight md:text-base">
-                    {collage[2].project.name}
+                    {collage[2].name}
                   </span>
                   <span className="eyebrow !text-botcore-green">View →</span>
                 </div>
@@ -166,6 +162,50 @@ export default function CapabilitySubPage() {
           </div>
         )}
       </section>
+
+      {extras.length > 0 && (
+        <section className="relative border-b border-white/5">
+          <div className="mx-auto max-w-[1480px] px-6 py-16 md:px-10 md:py-24">
+            <MotionReveal>
+              <div className="eyebrow accent-rule">More {config.shortLabel}</div>
+            </MotionReveal>
+            <MotionReveal delay={0.1}>
+              <h2 className="h-section mt-5 max-w-3xl font-semibold text-botcore-greyLight">
+                A closer look{' '}
+                <span className="text-botcore-green">at the work.</span>
+              </h2>
+            </MotionReveal>
+            <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
+              {extras.map((tile, i) => (
+                <MotionReveal key={tile.src} delay={Math.min(i, 8) * 0.04}>
+                  <Link
+                    to={`/reps/${tile.slug}`}
+                    aria-label={`Open ${tile.name} case study`}
+                    className="group relative block overflow-hidden border border-white/10 bg-botcore-black transition-colors duration-500 hover:border-botcore-green/70"
+                  >
+                    <img
+                      src={tile.src}
+                      alt={tile.name}
+                      loading="lazy"
+                      className="block aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                    />
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-t from-botcore-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 flex translate-y-2 items-center justify-between px-4 py-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                      <span className="truncate text-xs font-semibold text-botcore-greyLight md:text-sm">
+                        {tile.name}
+                      </span>
+                      <span className="eyebrow ml-2 shrink-0 !text-botcore-green">→</span>
+                    </div>
+                  </Link>
+                </MotionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="relative border-b border-white/5 bg-white/[0.015]">
         <div

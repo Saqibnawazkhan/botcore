@@ -1,8 +1,9 @@
 // Configuration for each capability sub-page at /capabilities/:slug.
-// `projectFilter` decides which projects appear in the mosaic and the
-// featured-work grid. `useGallery` pulls every gallery image from the
-// matched projects (used on Branding so the mosaic shows everything we
-// have shot for branded work, not just the logo thumbnails).
+// `projectFilter` decides which projects appear in the featured-work
+// grid. Each capability also has its own hand-picked image pool so the
+// hero collage and the supporting strip show imagery relevant to that
+// service — packaging shots on Branding, website screenshots on
+// Websites, lifestyle/brand-film stills on Photo & Video, etc.
 
 import {
   Sparkles,
@@ -68,6 +69,17 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.tags?.includes('Branding'),
     useGallery: true,
+    collageImages: [
+      { src: '/projects/rzr-jaw/02.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Packaging' },
+      { src: '/projects/tajjal/banner.png', slug: 'tajjal', name: 'Tajjal — Olive Oil Identity' },
+      { src: '/projects/edit-beauty/02.png', slug: 'edit-beauty', name: 'Edit Beauty — Product' },
+    ],
+    extraImages: [
+      { src: '/projects/pro-inhale/cover.png', slug: 'pro-inhale', name: 'Pro Inhale — Packaging Spec' },
+      { src: '/projects/rzr-jaw/banner.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Brand Hero' },
+      { src: '/projects/edit-beauty/banner.png', slug: 'edit-beauty', name: 'Edit Beauty — Brand Hero' },
+      { src: '/projects/pro-inhale/banner.png', slug: 'pro-inhale', name: 'Pro Inhale — Brand Hero' },
+    ],
     platformsHeadingWhite: 'Tools-',
     platformsHeadingGreen: 'Of the trade',
     platformsIntro:
@@ -111,6 +123,17 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.tags?.includes('Design') || p.deliverables?.some((d) => /packag|menu|print|signage|deck/i.test(d)),
     useGallery: true,
+    collageImages: [
+      { src: '/projects/rzr-jaw/02.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Pack & Campaign' },
+      { src: '/projects/pro-inhale/cover.png', slug: 'pro-inhale', name: 'Pro Inhale — Spec Sheet' },
+      { src: '/projects/edit-beauty/02.png', slug: 'edit-beauty', name: 'Edit Beauty — Product Layout' },
+    ],
+    extraImages: [
+      { src: '/projects/edit-beauty/01.png', slug: 'edit-beauty', name: 'Edit Beauty — Editorial' },
+      { src: '/projects/tajjal/banner.png', slug: 'tajjal', name: 'Tajjal — Identity' },
+      { src: '/projects/rzr-jaw/banner.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Wordmark' },
+      { src: '/projects/pro-inhale/banner.png', slug: 'pro-inhale', name: 'Pro Inhale — Wordmark' },
+    ],
     platformsHeadingWhite: 'Production-',
     platformsHeadingGreen: 'Stack',
     platformsIntro:
@@ -154,6 +177,17 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.deliverables?.some((d) => /photograph|video|film/i.test(d)),
     useGallery: true,
+    collageImages: [
+      { src: '/projects/edit-beauty/banner.png', slug: 'edit-beauty', name: 'Edit Beauty — Lifestyle' },
+      { src: '/projects/rzr-jaw/banner.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Brand Film' },
+      { src: '/projects/pro-inhale/banner.png', slug: 'pro-inhale', name: 'Pro Inhale — Brand Hero' },
+    ],
+    extraImages: [
+      { src: '/projects/edit-beauty/02.png', slug: 'edit-beauty', name: 'Edit Beauty — Product Hero' },
+      { src: '/projects/rzr-jaw/02.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Lifestyle' },
+      { src: '/projects/tajjal/banner.png', slug: 'tajjal', name: 'Tajjal — Brand Stills' },
+      { src: '/projects/pro-inhale/cover.png', slug: 'pro-inhale', name: 'Pro Inhale — Product' },
+    ],
     platformsHeadingWhite: 'Studio-',
     platformsHeadingGreen: '& Post',
     platformsIntro:
@@ -197,6 +231,18 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.tags?.includes('Websites'),
     useGallery: true,
+    collageImages: [
+      { src: '/projects/rzr-jaw/cover.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Storefront' },
+      { src: '/projects/edit-beauty/cover.png', slug: 'edit-beauty', name: 'Edit Beauty — Storefront' },
+      { src: '/projects/tajjal/cover.png', slug: 'tajjal', name: 'Tajjal — Storefront' },
+    ],
+    extraImages: [
+      { src: '/projects/rzr-jaw/01.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Product Listing' },
+      { src: '/projects/tajjal/01.png', slug: 'tajjal', name: 'Tajjal — Process Page' },
+      { src: '/projects/edit-beauty/01.png', slug: 'edit-beauty', name: 'Edit Beauty — Bestsellers' },
+      { src: '/projects/pro-inhale/01.png', slug: 'pro-inhale', name: 'Pro Inhale — Mobile Site' },
+      { src: '/projects/pro-inhale/02.png', slug: 'pro-inhale', name: 'Pro Inhale — Product Detail' },
+    ],
     platformsHeadingWhite: 'Platform-',
     platformsHeadingGreen: 'Agnostic',
     platformsIntro:
@@ -252,6 +298,17 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.deliverables?.some((d) => /social|content/i.test(d)),
     useGallery: true,
+    collageImages: [
+      { src: '/projects/edit-beauty/banner.png', slug: 'edit-beauty', name: 'Edit Beauty — Social Hero' },
+      { src: '/projects/rzr-jaw/02.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Reels Cut' },
+      { src: '/projects/pro-inhale/banner.png', slug: 'pro-inhale', name: 'Pro Inhale — Campaign' },
+    ],
+    extraImages: [
+      { src: '/projects/tajjal/01.png', slug: 'tajjal', name: 'Tajjal — Content Series' },
+      { src: '/projects/edit-beauty/01.png', slug: 'edit-beauty', name: 'Edit Beauty — Editorial Reel' },
+      { src: '/projects/rzr-jaw/cover.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Drop Post' },
+      { src: '/projects/pro-inhale/01.png', slug: 'pro-inhale', name: 'Pro Inhale — Story Cut' },
+    ],
     platformsHeadingWhite: 'Channels-',
     platformsHeadingGreen: 'We Run',
     platformsIntro:
@@ -295,6 +352,17 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.tags?.includes('Campaigns') || p.deliverables?.some((d) => /ads|campaign/i.test(d)),
     useGallery: true,
+    collageImages: [
+      { src: '/projects/rzr-jaw/banner.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Launch Creative' },
+      { src: '/projects/edit-beauty/banner.png', slug: 'edit-beauty', name: 'Edit Beauty — Lifestyle Ad' },
+      { src: '/projects/pro-inhale/banner.png', slug: 'pro-inhale', name: 'Pro Inhale — Performance Ad' },
+    ],
+    extraImages: [
+      { src: '/projects/rzr-jaw/02.png', slug: 'rzr-jaw', name: 'Rzr Jaw — UGC Cut' },
+      { src: '/projects/edit-beauty/02.png', slug: 'edit-beauty', name: 'Edit Beauty — Product Cut' },
+      { src: '/projects/tajjal/banner.png', slug: 'tajjal', name: 'Tajjal — Awareness Creative' },
+      { src: '/projects/pro-inhale/cover.png', slug: 'pro-inhale', name: 'Pro Inhale — Product Ad' },
+    ],
     platformsHeadingWhite: 'Channels-',
     platformsHeadingGreen: 'We Buy On',
     platformsIntro:
@@ -338,6 +406,17 @@ export const capabilityList = [
     ],
     projectFilter: () => true,
     useGallery: true,
+    collageImages: [
+      { src: '/projects/rzr-jaw/banner.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Strategy in Practice' },
+      { src: '/projects/tajjal/banner.png', slug: 'tajjal', name: 'Tajjal — Positioning' },
+      { src: '/projects/edit-beauty/cover.png', slug: 'edit-beauty', name: 'Edit Beauty — Audience Insight' },
+    ],
+    extraImages: [
+      { src: '/projects/pro-inhale/banner.png', slug: 'pro-inhale', name: 'Pro Inhale — Category Audit' },
+      { src: '/projects/rzr-jaw/cover.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Funnel Mapping' },
+      { src: '/projects/tajjal/01.png', slug: 'tajjal', name: 'Tajjal — Customer Journey' },
+      { src: '/projects/edit-beauty/01.png', slug: 'edit-beauty', name: 'Edit Beauty — Roadmap' },
+    ],
     platformsHeadingWhite: 'How-',
     platformsHeadingGreen: 'We Sift',
     platformsIntro:
