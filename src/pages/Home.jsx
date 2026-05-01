@@ -1,6 +1,5 @@
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
-import Partners from '../components/Partners';
 import Capabilities from '../components/Capabilities';
 import Portfolio from '../components/Portfolio';
 import CoreValues from '../components/CoreValues';
@@ -13,7 +12,6 @@ export default function Home() {
     <>
       <Hero />
       <AboutSection />
-      <Partners />
       <Capabilities />
       <Portfolio />
       <CoreValues />
