@@ -68,6 +68,16 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.tags?.includes('Branding'),
     useGallery: true,
+    platformsHeadingWhite: 'Tools-',
+    platformsHeadingGreen: 'Of the trade',
+    platformsIntro:
+      'We work in the platforms a founder can keep using after we hand off — modern, flexible, and built to scale alongside the brand.',
+    platforms: [
+      { name: 'Figma', blurb: 'System design, brand libraries, and shared component kits the in-house team can pick up.' },
+      { name: 'Illustrator', blurb: 'Wordmarks, mark systems, and any vector asset that needs full print fidelity.' },
+      { name: 'Photoshop', blurb: 'Imagery work, retouch, and packaging mockups where pixel-level control matters.' },
+      { name: 'Notion', blurb: 'Living brand guidelines and a single source of truth for everyone touching the brand.' },
+    ],
   },
   {
     slug: 'graphic-design',
@@ -101,6 +111,16 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.tags?.includes('Design') || p.deliverables?.some((d) => /packag|menu|print|signage|deck/i.test(d)),
     useGallery: true,
+    platformsHeadingWhite: 'Production-',
+    platformsHeadingGreen: 'Stack',
+    platformsIntro:
+      'The studio runs on a tight set of tools chosen for collaboration, file fidelity, and ease of handoff to the in-house team.',
+    platforms: [
+      { name: 'Illustrator', blurb: 'Vector design for logos, packaging, and any asset destined for print or large-format.' },
+      { name: 'Photoshop', blurb: 'Image work, mockups, and any pixel-precise composite for digital and print.' },
+      { name: 'InDesign', blurb: 'Editorial layouts, decks, and long-form documents that need real typography.' },
+      { name: 'Figma', blurb: 'Social templates, motion-ready frames, and shared asset libraries.' },
+    ],
   },
   {
     slug: 'photo-video',
@@ -134,6 +154,16 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.deliverables?.some((d) => /photograph|video|film/i.test(d)),
     useGallery: true,
+    platformsHeadingWhite: 'Studio-',
+    platformsHeadingGreen: '& Post',
+    platformsIntro:
+      'An in-house production setup with the gear, software, and crew to take a shoot from concept to final delivery.',
+    platforms: [
+      { name: 'Sony / Canon', blurb: 'Cinema and stills bodies for brand films, lifestyle, and product hero shots.' },
+      { name: 'DaVinci Resolve', blurb: 'Colour grading, finishing, and the look that ties a brand’s video output together.' },
+      { name: 'Premiere Pro', blurb: 'Edit, sound design, and short-form delivery built for social and ads.' },
+      { name: 'Capture One', blurb: 'Tethered product capture and colour-managed retouch for packaging and ecom.' },
+    ],
   },
   {
     slug: 'websites',
@@ -222,6 +252,16 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.deliverables?.some((d) => /social|content/i.test(d)),
     useGallery: true,
+    platformsHeadingWhite: 'Channels-',
+    platformsHeadingGreen: 'We Run',
+    platformsIntro:
+      'We plan, produce, and post on the platforms your audience actually spends time on — built for each channel rather than recycled across them.',
+    platforms: [
+      { name: 'Instagram', blurb: 'Reels, photography, and the feed where most brand identity lands first.' },
+      { name: 'TikTok', blurb: 'Short-form video built for the platform, not repurposed from elsewhere.' },
+      { name: 'LinkedIn', blurb: 'Founder-led storytelling and B2B content that drives inbound conversations.' },
+      { name: 'YouTube', blurb: 'Long-form brand films and shorts as a search-driven discovery channel.' },
+    ],
   },
   {
     slug: 'performance-ads',
@@ -255,6 +295,16 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.tags?.includes('Campaigns') || p.deliverables?.some((d) => /ads|campaign/i.test(d)),
     useGallery: true,
+    platformsHeadingWhite: 'Channels-',
+    platformsHeadingGreen: 'We Buy On',
+    platformsIntro:
+      'Paid media planned, bought, and optimised on the platforms that match your customer — not the ones that pay the highest agency commission.',
+    platforms: [
+      { name: 'Meta', blurb: 'Facebook and Instagram, the workhorse of most consumer brand growth plans.' },
+      { name: 'Google', blurb: 'Search, Performance Max, and YouTube — capturing intent at every funnel stage.' },
+      { name: 'TikTok', blurb: 'Creative-led performance for brands willing to test fast and iterate weekly.' },
+      { name: 'Snap & Pinterest', blurb: 'Discovery-stage channels where the right creative still buys real reach cheaply.' },
+    ],
   },
   {
     slug: 'strategy',
@@ -288,6 +338,16 @@ export const capabilityList = [
     ],
     projectFilter: () => true,
     useGallery: true,
+    platformsHeadingWhite: 'How-',
+    platformsHeadingGreen: 'We Sift',
+    platformsIntro:
+      'Strategy is a research method, not a deck. The frameworks we lean on the most are listed here — applied to the brand in front of us, not pulled off a shelf.',
+    platforms: [
+      { name: 'Jobs-to-be-Done', blurb: 'Customer interviews focused on what people are actually hiring the brand to do.' },
+      { name: 'Brand Positioning', blurb: 'A documented point of view the team can stand behind across every surface.' },
+      { name: 'Category Audits', blurb: 'Competitor mapping that finds the white space before we design into it.' },
+      { name: 'Roadmaps', blurb: 'Quarterly creative and channel plans tied to the strategic intent, not vibes.' },
+    ],
   },
 ];
 
