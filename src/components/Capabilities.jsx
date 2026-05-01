@@ -8,6 +8,7 @@ import {
   LineChart,
   Compass,
   ArrowUpRight,
+  ArrowRight,
 } from 'lucide-react';
 import MotionReveal from './MotionReveal';
 
@@ -63,6 +64,137 @@ const capabilities = [
   },
 ];
 
+function trackPointer(e) {
+  const rect = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+  e.currentTarget.style.setProperty('--my', `${e.clientY - rect.top}px`);
+}
+
+function CapabilityCard({ c }) {
+  const Icon = c.Icon;
+  return (
+    <Link
+      to={c.to}
+      onMouseMove={trackPointer}
+      className="group relative flex h-full flex-col items-center justify-between gap-6 overflow-hidden border border-white/8 bg-white/[0.02] p-6 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green/60 hover:bg-white/[0.04] md:p-7"
+    >
+      {/* Cursor-tracking spotlight */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background:
+            'radial-gradient(220px circle at var(--mx,50%) var(--my,50%), rgba(0,255,0,0.18), transparent 70%)',
+        }}
+      />
+
+      {/* Top-left dashed corner mark grows on hover */}
+      <span
+        aria-hidden
+        className="absolute left-4 top-3 h-[3px] w-12 transition-all duration-300 group-hover:w-20"
+        style={{
+          background:
+            'repeating-linear-gradient(135deg, rgba(0,255,0,0.7) 0 6px, transparent 6px 10px)',
+        }}
+      />
+
+      {/* Bottom-right dashed corner mark mirrors on hover */}
+      <span
+        aria-hidden
+        className="absolute bottom-3 right-4 h-[3px] w-0 transition-all duration-300 group-hover:w-12"
+        style={{
+          background:
+            'repeating-linear-gradient(135deg, rgba(0,255,0,0.7) 0 6px, transparent 6px 10px)',
+        }}
+      />
+
+      <span className="relative flex h-20 w-20 items-center justify-center text-botcore-greyLight/85 transition-all duration-300 group-hover:scale-110 group-hover:text-botcore-green md:h-24 md:w-24">
+        <Icon size={48} strokeWidth={1.25} />
+      </span>
+
+      <div className="relative text-center">
+        <h3
+          className="text-base font-bold uppercase tracking-[0.16em] text-botcore-greyLight transition-colors duration-300 group-hover:text-botcore-green md:text-lg"
+          style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
+        >
+          {c.label}
+        </h3>
+        <p className="mt-3 hidden text-xs leading-relaxed text-botcore-greyLight/55 md:block">
+          {c.blurb}
+        </p>
+      </div>
+
+      <span
+        aria-hidden
+        className="relative flex h-9 w-9 items-center justify-center border border-botcore-green/40 text-botcore-green transition-all duration-300 group-hover:rotate-[10deg] group-hover:bg-botcore-green group-hover:text-botcore-black"
+      >
+        <ArrowUpRight size={16} strokeWidth={1.75} />
+      </span>
+    </Link>
+  );
+}
+
+function SeeAllCard() {
+  return (
+    <Link
+      to="/capabilities"
+      onMouseMove={trackPointer}
+      className="group relative flex h-full flex-col items-center justify-between gap-6 overflow-hidden border border-botcore-green/40 bg-botcore-green/[0.04] p-6 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green hover:bg-botcore-green/[0.08] md:p-7"
+    >
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background:
+            'radial-gradient(260px circle at var(--mx,50%) var(--my,50%), rgba(0,255,0,0.28), transparent 70%)',
+        }}
+      />
+
+      <span
+        aria-hidden
+        className="absolute left-4 top-3 h-[3px] w-12 transition-all duration-300 group-hover:w-20"
+        style={{
+          background:
+            'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
+        }}
+      />
+      <span
+        aria-hidden
+        className="absolute bottom-3 right-4 h-[3px] w-0 transition-all duration-300 group-hover:w-12"
+        style={{
+          background:
+            'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
+        }}
+      />
+
+      <span className="relative flex h-20 w-20 items-center justify-center text-botcore-green transition-all duration-300 group-hover:scale-110 md:h-24 md:w-24">
+        <ArrowRight size={56} strokeWidth={1.25} />
+      </span>
+
+      <div className="relative text-center">
+        <h3
+          className="text-base font-bold uppercase tracking-[0.16em] text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-lg"
+          style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
+        >
+          See All
+          <br />
+          Capabilities
+        </h3>
+        <p className="mt-3 hidden text-xs leading-relaxed text-botcore-greyLight/65 md:block">
+          One team, one brief, every service a brand needs.
+        </p>
+      </div>
+
+      <span
+        aria-hidden
+        className="relative flex h-9 w-9 items-center justify-center border border-botcore-green bg-botcore-green/30 text-botcore-green transition-all duration-300 group-hover:rotate-[10deg] group-hover:bg-botcore-green group-hover:text-botcore-black"
+      >
+        <ArrowUpRight size={16} strokeWidth={2} />
+      </span>
+    </Link>
+  );
+}
+
 export default function Capabilities() {
   return (
     <section className="relative border-b border-white/5">
@@ -96,58 +228,20 @@ export default function Capabilities() {
           </MotionReveal>
         </div>
 
-        <ul className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <ul className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {capabilities.map((c, i) => (
             <MotionReveal key={c.id} delay={i * 0.04}>
-              <li>
-                <Link
-                  to={c.to}
-                  className="group relative flex h-full flex-col items-center justify-between gap-6 border border-white/8 bg-white/[0.02] p-6 transition-colors hover:border-botcore-green/50 hover:bg-white/[0.04] md:p-7"
-                >
-                  <span
-                    aria-hidden
-                    className="absolute left-4 top-3 h-[3px] w-12"
-                    style={{
-                      background:
-                        'repeating-linear-gradient(135deg, rgba(0,255,0,0.7) 0 6px, transparent 6px 10px)',
-                    }}
-                  />
-
-                  <span className="flex h-20 w-20 items-center justify-center text-botcore-greyLight/85 transition-colors group-hover:text-botcore-green md:h-24 md:w-24">
-                    <c.Icon size={48} strokeWidth={1.25} />
-                  </span>
-
-                  <div className="text-center">
-                    <h3
-                      className="text-base font-bold uppercase tracking-[0.16em] text-botcore-greyLight md:text-lg"
-                      style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
-                    >
-                      {c.label}
-                    </h3>
-                    <p className="mt-3 hidden text-xs leading-relaxed text-botcore-greyLight/55 md:block">
-                      {c.blurb}
-                    </p>
-                  </div>
-
-                  <span
-                    aria-hidden
-                    className="flex h-9 w-9 items-center justify-center border border-botcore-green/40 text-botcore-green transition-all group-hover:bg-botcore-green group-hover:text-botcore-black"
-                  >
-                    <ArrowUpRight size={16} strokeWidth={1.75} />
-                  </span>
-                </Link>
+              <li className="h-full">
+                <CapabilityCard c={c} />
               </li>
             </MotionReveal>
           ))}
+          <MotionReveal delay={capabilities.length * 0.04}>
+            <li className="h-full">
+              <SeeAllCard />
+            </li>
+          </MotionReveal>
         </ul>
-
-        <MotionReveal delay={0.4}>
-          <div className="mt-14 flex justify-center">
-            <Link to="/capabilities" className="btn-primary">
-              See all capabilities <span aria-hidden>↗</span>
-            </Link>
-          </div>
-        </MotionReveal>
       </div>
     </section>
   );
