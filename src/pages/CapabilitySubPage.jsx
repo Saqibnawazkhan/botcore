@@ -5,46 +5,19 @@ import LaunchCTA from '../components/LaunchCTA';
 import { projects } from '../data/projects';
 import { capabilityBySlug } from '../data/capabilities';
 
-function buildMosaic(matchedProjects, useGallery) {
-  // For useGallery=true we surface every gallery image we have plus the
-  // logo thumbnail so the page reads like a real visual portfolio rather
-  // than a row of repeated chips.
-  if (!useGallery) {
-    return matchedProjects.slice(0, 9).map((p) => ({
-      key: p.slug,
-      slug: p.slug,
-      hue: p.hue,
-      cover: p.cover,
-      logo: p.logo,
-      name: p.name,
-      id: p.id,
-    }));
-  }
-
-  const tiles = [];
-  matchedProjects.forEach((p) => {
-    tiles.push({
-      key: `${p.slug}-logo`,
-      slug: p.slug,
-      hue: p.hue,
-      cover: p.cover,
-      logo: p.logo,
-      name: p.name,
-      id: p.id,
-    });
-    (p.gallery || []).forEach((img, idx) => {
-      tiles.push({
-        key: `${p.slug}-g${idx}`,
-        slug: p.slug,
-        hue: p.hue,
-        cover: img,
-        logo: null,
-        name: p.name,
-        id: p.id,
-      });
-    });
-  });
-  return tiles;
+// Pick three representative images for the hero collage. We prefer the
+// brand thumbnail (logo panel) for the centre tile and the first cover
+// images we can find for the flanking tiles, falling back to the logo
+// when a project has no cover.
+function buildCollage(matchedProjects) {
+  const pick = (p) => p.cover || p.logo;
+  const slice = matchedProjects.slice(0, 3);
+  if (slice.length < 3) return null;
+  return [
+    { project: slice[0], src: slice[0].logo || slice[0].cover },
+    { project: slice[1], src: pick(slice[1]) },
+    { project: slice[2], src: pick(slice[2]) },
+  ];
 }
 
 export default function CapabilitySubPage() {
@@ -56,9 +29,8 @@ export default function CapabilitySubPage() {
   }
 
   const matchedProjects = projects.filter(config.projectFilter);
-  const mosaic = buildMosaic(matchedProjects, config.useGallery);
+  const collage = buildCollage(matchedProjects);
   const featured = matchedProjects.slice(0, 3);
-  const Icon = config.Icon;
 
   return (
     <>
@@ -76,158 +48,145 @@ export default function CapabilitySubPage() {
           aria-hidden
         />
 
-        <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-36 md:px-10 md:pb-24 md:pt-44">
+        <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 text-center md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">{config.eyebrow}</div>
+            <div className="eyebrow accent-rule mx-auto inline-block">
+              {config.eyebrow}
+            </div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
-            <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
-              {config.headlineWhite}{' '}
-              <span className="text-botcore-green glow-green">
-                {config.headlineGreen}
-              </span>
+            <h1
+              className="mt-8 font-bold uppercase leading-[0.95] tracking-tight text-botcore-greyLight"
+              style={{
+                fontFamily: 'Syne, Space Grotesk, sans-serif',
+                fontSize: 'clamp(3.5rem, 11vw, 9rem)',
+              }}
+            >
+              {config.shortLabel}
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               {config.intro}
             </p>
           </MotionReveal>
           <MotionReveal delay={0.3}>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
-              <Link to="/studio" className="btn-primary">
-                Start a project <span aria-hidden>↗</span>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+              <Link to="/reps" className="btn-primary">
+                See {config.shortLabel} Work <span aria-hidden>↗</span>
               </Link>
-              <Link to="/reps" className="btn-ghost">
-                See related work <span aria-hidden>↗</span>
+              <Link to="/studio" className="btn-ghost">
+                Make Contact <span aria-hidden>↗</span>
               </Link>
             </div>
           </MotionReveal>
         </div>
+
+        {collage && (
+          <div className="relative mx-auto max-w-[1280px] px-6 pb-24 md:px-10 md:pb-32">
+            <div className="relative mx-auto h-[460px] w-full max-w-3xl md:h-[600px]">
+              {/* Centre tile — sits behind the flanking ones */}
+              <Link
+                to={`/reps/${collage[0].project.slug}`}
+                className="absolute left-1/2 top-1/2 z-10 w-[58%] -translate-x-1/2 -translate-y-1/2 overflow-hidden border border-white/10 bg-botcore-black shadow-[0_30px_80px_rgba(0,0,0,0.6)] transition-transform duration-500 hover:-translate-y-[55%]"
+              >
+                <div className="relative aspect-[4/3]">
+                  <ProjectThumb
+                    hue={collage[0].project.hue}
+                    cover={collage[0].src}
+                    logo={null}
+                    name={collage[0].project.name}
+                  />
+                </div>
+              </Link>
+
+              {/* Left flanking tile */}
+              <Link
+                to={`/reps/${collage[1].project.slug}`}
+                className="absolute -left-2 bottom-2 z-20 w-[44%] -rotate-3 overflow-hidden border border-white/10 bg-botcore-black shadow-[0_30px_80px_rgba(0,0,0,0.65)] transition-transform duration-500 hover:scale-[1.04] hover:-rotate-2 md:-left-6 md:bottom-6"
+              >
+                <div className="relative aspect-[4/3]">
+                  <ProjectThumb
+                    hue={collage[1].project.hue}
+                    cover={collage[1].src}
+                    logo={null}
+                    name={collage[1].project.name}
+                  />
+                </div>
+              </Link>
+
+              {/* Right flanking tile */}
+              <Link
+                to={`/reps/${collage[2].project.slug}`}
+                className="absolute -right-2 top-4 z-20 w-[46%] rotate-3 overflow-hidden border border-white/10 bg-botcore-black shadow-[0_30px_80px_rgba(0,0,0,0.65)] transition-transform duration-500 hover:scale-[1.04] hover:rotate-2 md:-right-6 md:top-8"
+              >
+                <div className="relative aspect-[4/3]">
+                  <ProjectThumb
+                    hue={collage[2].project.hue}
+                    cover={collage[2].src}
+                    logo={null}
+                    name={collage[2].project.name}
+                  />
+                </div>
+              </Link>
+            </div>
+          </div>
+        )}
       </section>
 
-      {mosaic.length > 0 && (
-        <section className="relative border-b border-white/5">
-          <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
+      <section className="relative border-b border-white/5 bg-white/[0.015]">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-40"
+          aria-hidden
+          style={{
+            background:
+              'radial-gradient(circle at 20% 0%, rgba(0,255,0,0.06) 0%, transparent 45%)',
+          }}
+        />
+        <div className="grid-faint pointer-events-none absolute inset-0 opacity-25" aria-hidden />
+
+        <div className="relative mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-28">
+          <div className="text-center">
             <MotionReveal>
-              <div className="eyebrow accent-rule">
-                {config.shortLabel} — Selected Imagery
-              </div>
+              <div className="eyebrow">Our {config.shortLabel} Process</div>
             </MotionReveal>
             <MotionReveal delay={0.1}>
-              <h2 className="h-section mt-5 max-w-3xl font-semibold text-botcore-greyLight">
-                A system,{' '}
-                <span className="text-botcore-green">not a single asset.</span>
+              <h2 className="h-section mt-5 max-w-3xl font-semibold text-botcore-greyLight md:mx-auto">
+                {config.processWhite}{' '}
+                <span className="text-botcore-green">{config.processGreen}</span>
               </h2>
             </MotionReveal>
-
-            <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5">
-              {mosaic.map((tile, i) => (
-                <MotionReveal key={tile.key} delay={Math.min(i, 12) * 0.03}>
-                  <Link
-                    to={`/reps/${tile.slug}`}
-                    className="card group block overflow-hidden"
-                  >
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <ProjectThumb
-                        hue={tile.hue}
-                        cover={tile.cover}
-                        logo={tile.logo}
-                        name={tile.name}
-                      />
-                    </div>
-                    <div className="flex items-center justify-between px-4 py-4">
-                      <h3 className="truncate text-sm font-semibold text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-base">
-                        {tile.name}
-                      </h3>
-                      <span
-                        aria-hidden
-                        className="text-botcore-greyLight/40 transition-all group-hover:translate-x-1 group-hover:text-botcore-green"
-                      >
-                        →
-                      </span>
-                    </div>
-                  </Link>
-                </MotionReveal>
-              ))}
-            </div>
+            <MotionReveal delay={0.2}>
+              <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+                Our process starts with the founder's story. We use those
+                insights to launch creative work that stays true to the brand
+                while opening the door to new growth.
+              </p>
+            </MotionReveal>
           </div>
-        </section>
-      )}
 
-      <section className="relative border-b border-white/5">
-        <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
-            <div className="md:col-span-5">
-              <MotionReveal>
-                <div className="eyebrow accent-rule">What We Deliver</div>
-              </MotionReveal>
-              <MotionReveal delay={0.1}>
-                <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-                  {config.deliverWhite}{' '}
-                  <span className="text-botcore-green">
-                    {config.deliverGreen}
-                  </span>
-                </h2>
-              </MotionReveal>
-              <MotionReveal delay={0.15}>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-                  {config.deliverIntro}
-                </p>
-              </MotionReveal>
-            </div>
-
-            <div className="md:col-span-7">
-              <MotionReveal delay={0.1}>
-                <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {config.deliverables.map((d) => (
-                    <li
-                      key={d}
-                      className="flex items-center gap-4 border border-white/10 bg-white/[0.02] px-5 py-4 text-sm text-botcore-greyLight/80 transition-colors hover:border-botcore-green/40 hover:text-botcore-greyLight md:text-base"
-                    >
-                      <span
-                        aria-hidden
-                        className="flex h-9 w-9 shrink-0 items-center justify-center border border-botcore-green/40 text-botcore-green"
-                      >
-                        <Icon size={16} strokeWidth={1.5} />
-                      </span>
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </MotionReveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative border-b border-white/5">
-        <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
-          <MotionReveal>
-            <div className="eyebrow accent-rule">Our Process</div>
-          </MotionReveal>
-          <MotionReveal delay={0.1}>
-            <h2 className="h-section mt-5 max-w-3xl font-semibold text-botcore-greyLight">
-              {config.processWhite}{' '}
-              <span className="text-botcore-green">{config.processGreen}</span>
-            </h2>
-          </MotionReveal>
-
-          <ul className="mt-12 flex flex-col">
+          <ul className="mt-16 flex flex-col">
             {config.process.map((step, i) => (
               <MotionReveal key={step.id} delay={i * 0.04}>
-                <li className="grid grid-cols-1 gap-6 border-b border-white/10 py-10 last:border-b-0 md:grid-cols-12 md:gap-10 md:py-12">
-                  <div className="md:col-span-1">
-                    <span className="eyebrow !text-botcore-green">
+                <li className="grid grid-cols-1 items-center gap-6 border-b border-white/10 py-10 last:border-b-0 md:grid-cols-12 md:gap-10 md:py-12">
+                  <div className="flex items-center gap-5 md:col-span-4">
+                    <span
+                      className="select-none font-bold leading-none text-transparent"
+                      style={{
+                        fontFamily: 'Syne, Space Grotesk, sans-serif',
+                        fontSize: 'clamp(3.5rem, 6vw, 5.5rem)',
+                        WebkitTextStroke: '1.5px rgba(0,255,0,0.7)',
+                      }}
+                    >
                       {step.id}
                     </span>
+                    <h3
+                      className="text-2xl font-bold uppercase tracking-tight text-botcore-greyLight md:text-4xl"
+                      style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
+                    >
+                      {step.title}
+                    </h3>
                   </div>
-                  <h3
-                    className="text-2xl font-bold uppercase tracking-tight text-botcore-greyLight md:col-span-3 md:text-3xl"
-                    style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
-                  >
-                    {step.title}
-                  </h3>
                   <p className="text-base leading-relaxed text-botcore-greyLight/70 md:col-span-8 md:text-lg">
                     {step.body}
                   </p>
@@ -241,19 +200,22 @@ export default function CapabilitySubPage() {
       {featured.length > 0 && (
         <section className="relative border-b border-white/5">
           <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
-            <MotionReveal>
-              <div className="eyebrow accent-rule">
-                Selected {config.shortLabel} Work
+            <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+              <div>
+                <MotionReveal>
+                  <div className="eyebrow accent-rule">Mission Briefs</div>
+                </MotionReveal>
+                <MotionReveal delay={0.1}>
+                  <h2 className="h-section mt-5 max-w-2xl font-semibold text-botcore-greyLight">
+                    From refreshes to brands built{' '}
+                    <span className="text-botcore-green">from the ground up.</span>
+                  </h2>
+                </MotionReveal>
               </div>
-            </MotionReveal>
-            <MotionReveal delay={0.1}>
-              <h2 className="h-section mt-5 max-w-2xl font-semibold text-botcore-greyLight">
-                Brands we have shaped,{' '}
-                <span className="text-botcore-green">
-                  launched, and grown with.
-                </span>
-              </h2>
-            </MotionReveal>
+              <Link to="/reps" className="btn-ghost shrink-0">
+                Explore More Projects <span aria-hidden>→</span>
+              </Link>
+            </div>
 
             <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {featured.map((p, i) => (
@@ -281,34 +243,17 @@ export default function CapabilitySubPage() {
                         <h3 className="h-card truncate font-semibold text-botcore-greyLight transition-colors group-hover:text-botcore-green">
                           {p.name}
                         </h3>
-                        <ul className="mt-3 flex flex-wrap gap-1.5">
-                          {[...p.tags, p.industry].map((t) => (
-                            <li
-                              key={t}
-                              className="border border-white/15 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.2em] text-botcore-greyLight/65 transition-colors group-hover:border-botcore-green/40 group-hover:text-botcore-greyLight/85"
-                            >
-                              {t}
-                            </li>
-                          ))}
-                        </ul>
+                        <span className="eyebrow mt-3 inline-flex items-center gap-2 !text-botcore-green/80 transition-colors group-hover:!text-botcore-green">
+                          Read the brief
+                          <span aria-hidden className="transition-transform group-hover:translate-x-1">
+                            →
+                          </span>
+                        </span>
                       </div>
-                      <span
-                        aria-hidden
-                        className="ml-4 text-botcore-greyLight/40 transition-all group-hover:translate-x-1 group-hover:text-botcore-green"
-                      >
-                        →
-                      </span>
                     </div>
                   </Link>
                 </MotionReveal>
               ))}
-            </div>
-
-            <div className="mt-14 flex justify-center">
-              <Link to="/reps" className="btn-ghost inline-flex items-center gap-2">
-                Explore More Projects
-                <span aria-hidden>→</span>
-              </Link>
             </div>
           </div>
         </section>
