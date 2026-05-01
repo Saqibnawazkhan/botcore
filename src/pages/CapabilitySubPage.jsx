@@ -89,7 +89,7 @@ export default function CapabilitySubPage() {
               <Link
                 to={`/reps/${collage[0].project.slug}`}
                 aria-label={`Open ${collage[0].project.name} case study`}
-                className="group/centre collage-tile-centre absolute left-1/2 top-1/2 z-10 block w-[68%] overflow-hidden border border-white/10 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[box-shadow] duration-500 hover:shadow-[0_50px_160px_rgba(0,255,0,0.18)] sm:w-[60%]"
+                className="group/centre collage-tile-centre absolute left-1/2 top-1/2 z-10 block w-[68%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[60%]"
               >
                 <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/centre:scale-[1.04]">
                   <ProjectThumb
@@ -115,7 +115,7 @@ export default function CapabilitySubPage() {
               <Link
                 to={`/reps/${collage[1].project.slug}`}
                 aria-label={`Open ${collage[1].project.name} case study`}
-                className="group/left collage-tile-left absolute -left-4 bottom-0 z-20 block w-[52%] overflow-hidden border border-white/10 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[box-shadow] duration-500 hover:z-30 hover:shadow-[0_50px_160px_rgba(0,255,0,0.18)] sm:w-[48%] md:-left-10 md:bottom-4 lg:-left-16"
+                className="group/left collage-tile-left absolute -left-4 bottom-0 z-20 block w-[52%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:z-30 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[48%] md:-left-10 md:bottom-4 lg:-left-16"
               >
                 <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/left:scale-[1.05]">
                   <ProjectThumb
@@ -141,7 +141,7 @@ export default function CapabilitySubPage() {
               <Link
                 to={`/reps/${collage[2].project.slug}`}
                 aria-label={`Open ${collage[2].project.name} case study`}
-                className="group/right collage-tile-right absolute -right-4 top-0 z-20 block w-[54%] overflow-hidden border border-white/10 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[box-shadow] duration-500 hover:z-30 hover:shadow-[0_50px_160px_rgba(0,255,0,0.18)] sm:w-[50%] md:-right-10 md:top-4 lg:-right-16"
+                className="group/right collage-tile-right absolute -right-4 top-0 z-20 block w-[54%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:z-30 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[50%] md:-right-10 md:top-4 lg:-right-16"
               >
                 <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/right:scale-[1.05]">
                   <ProjectThumb
