@@ -230,6 +230,61 @@ export default function CapabilitySubPage() {
         </div>
       </section>
 
+      {config.platforms && config.platforms.length > 0 && (
+        <section className="relative border-b border-white/5">
+          <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+              <div className="md:col-span-5">
+                <MotionReveal>
+                  <h2
+                    className="text-4xl font-bold uppercase leading-[0.95] tracking-tight text-botcore-greyLight md:text-6xl"
+                    style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
+                  >
+                    {config.platformsHeadingWhite}
+                    <span className="text-botcore-green">
+                      {config.platformsHeadingGreen}
+                    </span>
+                  </h2>
+                </MotionReveal>
+                <MotionReveal delay={0.1}>
+                  <p className="mt-6 max-w-md text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+                    {config.platformsIntro}
+                  </p>
+                </MotionReveal>
+              </div>
+
+              <div className="md:col-span-7">
+                <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {config.platforms.map((platform, i) => (
+                    <MotionReveal key={platform.name} delay={i * 0.05}>
+                      <li className="group relative flex h-full flex-col gap-3 border border-white/10 bg-white/[0.02] p-6 transition-colors hover:border-botcore-green/60 hover:bg-white/[0.04] md:p-7">
+                        <span
+                          aria-hidden
+                          className="absolute left-4 top-3 h-[3px] w-12"
+                          style={{
+                            background:
+                              'repeating-linear-gradient(135deg, rgba(0,255,0,0.7) 0 6px, transparent 6px 10px)',
+                          }}
+                        />
+                        <h3
+                          className="mt-4 text-2xl font-bold uppercase tracking-tight text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-3xl"
+                          style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
+                        >
+                          {platform.name}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-botcore-greyLight/65 md:text-base">
+                          {platform.blurb}
+                        </p>
+                      </li>
+                    </MotionReveal>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {featured.length > 0 && (
         <section className="relative border-b border-white/5">
           <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">

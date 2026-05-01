@@ -167,6 +167,28 @@ export const capabilityList = [
     ],
     projectFilter: (p) => p.tags?.includes('Websites'),
     useGallery: true,
+    platformsHeadingWhite: 'Platform-',
+    platformsHeadingGreen: 'Agnostic',
+    platformsIntro:
+      'Our development team is platform-agnostic. We have shipped on every leading stack — and we recommend the right one for your business, not the one we earn the most on.',
+    platforms: [
+      {
+        name: 'Webflow',
+        blurb: 'Editorial brand sites and marketing pages with a CMS the team can actually run.',
+      },
+      {
+        name: 'Shopify',
+        blurb: 'Headless and themed storefronts tuned for conversion, speed, and clean post-purchase flows.',
+      },
+      {
+        name: 'WordPress',
+        blurb: 'Long-form content, multi-region builds, and integrations with the marketing stack you already use.',
+      },
+      {
+        name: 'Next.js',
+        blurb: 'Custom platforms and product surfaces where editorial alone is not enough.',
+      },
+    ],
   },
   {
     slug: 'content-social',
