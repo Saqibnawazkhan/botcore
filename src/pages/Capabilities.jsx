@@ -31,6 +31,7 @@ const capabilities = [
     id: '02',
     label: 'Graphic Design',
     Icon: PenTool,
+    href: '/capabilities/graphic-design',
     blurb:
       'Design that bridges strategy and the moment a customer decides to trust you. Packaging, print, social creatives, pitch decks, menus, signage — any surface where your brand needs to appear.',
     deliverables: [
@@ -45,6 +46,7 @@ const capabilities = [
     id: '03',
     label: 'Photography & Video',
     Icon: Camera,
+    href: '/capabilities/photo-video',
     blurb:
       'In-house photography and video — product shoots, lifestyle content, brand films, and short-form social. Strong original imagery is one of the fastest ways for a new brand to look credible.',
     deliverables: [
@@ -59,6 +61,7 @@ const capabilities = [
     id: '04',
     label: 'Website Design & Development',
     Icon: Monitor,
+    href: '/capabilities/websites',
     blurb:
       'Websites that load fast, look sharp on every screen, and convert visitors into customers. Brand sites, full e-commerce stores, or custom platforms — design, build, and ongoing improvements.',
     deliverables: [
@@ -73,6 +76,7 @@ const capabilities = [
     id: '05',
     label: 'Content & Social Media',
     Icon: Megaphone,
+    href: '/capabilities/content-social',
     blurb:
       'The content that keeps your brand active online. Monthly content calendars, short-form video, photography, captions, and community management — visible to the right people every week.',
     deliverables: [
@@ -87,6 +91,7 @@ const capabilities = [
     id: '06',
     label: 'Performance Marketing & Ads',
     Icon: LineChart,
+    href: '/capabilities/performance-ads',
     blurb:
       'Paid campaigns across Meta, Google, TikTok, and other platforms that match your audience. Built around clear goals, tracked carefully, and adjusted based on what the data tells us — not guesswork.',
     deliverables: [
@@ -101,6 +106,7 @@ const capabilities = [
     id: '07',
     label: 'Strategy & Insights',
     Icon: Compass,
+    href: '/capabilities/strategy',
     blurb:
       'Before we design or launch anything, we study the market, the customer, and the competition. The strategy work shapes every other service we offer, so the creative output always serves a real business goal.',
     deliverables: [
@@ -204,7 +210,7 @@ export default function CapabilitiesPage() {
                         to={c.href}
                         className="eyebrow mt-8 inline-flex items-center gap-2 text-botcore-green hover:text-botcore-greyLight"
                       >
-                        Explore {c.label.split(' ')[0]}
+                        Explore
                         <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
                       </Link>
                     )}
