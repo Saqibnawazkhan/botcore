@@ -83,14 +83,15 @@ export default function CapabilitySubPage() {
         </div>
 
         {collage && (
-          <div className="relative mx-auto max-w-[1280px] px-6 pb-24 md:px-10 md:pb-32">
-            <div className="relative mx-auto h-[460px] w-full max-w-3xl md:h-[600px]">
+          <div className="relative mx-auto max-w-[1480px] px-6 pb-28 md:px-10 md:pb-40">
+            <div className="relative mx-auto h-[560px] w-full max-w-6xl sm:h-[640px] md:h-[820px] lg:h-[900px]">
               {/* Centre tile — sits behind the flanking ones */}
               <Link
                 to={`/reps/${collage[0].project.slug}`}
-                className="absolute left-1/2 top-1/2 z-10 w-[58%] -translate-x-1/2 -translate-y-1/2 overflow-hidden border border-white/10 bg-botcore-black shadow-[0_30px_80px_rgba(0,0,0,0.6)] transition-transform duration-500 hover:-translate-y-[55%]"
+                aria-label={`Open ${collage[0].project.name} case study`}
+                className="group/centre collage-tile-centre absolute left-1/2 top-1/2 z-10 block w-[68%] overflow-hidden border border-white/10 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[box-shadow] duration-500 hover:shadow-[0_50px_160px_rgba(0,255,0,0.18)] sm:w-[60%]"
               >
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/centre:scale-[1.04]">
                   <ProjectThumb
                     hue={collage[0].project.hue}
                     cover={collage[0].src}
@@ -98,14 +99,25 @@ export default function CapabilitySubPage() {
                     name={collage[0].project.name}
                   />
                 </div>
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-botcore-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/centre:opacity-100"
+                />
+                <div className="absolute bottom-0 left-0 right-0 flex translate-y-2 items-center justify-between px-5 py-4 opacity-0 transition-all duration-500 group-hover/centre:translate-y-0 group-hover/centre:opacity-100">
+                  <span className="text-sm font-semibold text-botcore-greyLight md:text-base">
+                    {collage[0].project.name}
+                  </span>
+                  <span className="eyebrow !text-botcore-green">View →</span>
+                </div>
               </Link>
 
               {/* Left flanking tile */}
               <Link
                 to={`/reps/${collage[1].project.slug}`}
-                className="absolute -left-2 bottom-2 z-20 w-[44%] -rotate-3 overflow-hidden border border-white/10 bg-botcore-black shadow-[0_30px_80px_rgba(0,0,0,0.65)] transition-transform duration-500 hover:scale-[1.04] hover:-rotate-2 md:-left-6 md:bottom-6"
+                aria-label={`Open ${collage[1].project.name} case study`}
+                className="group/left collage-tile-left absolute -left-4 bottom-0 z-20 block w-[52%] overflow-hidden border border-white/10 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[box-shadow] duration-500 hover:z-30 hover:shadow-[0_50px_160px_rgba(0,255,0,0.18)] sm:w-[48%] md:-left-10 md:bottom-4 lg:-left-16"
               >
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/left:scale-[1.05]">
                   <ProjectThumb
                     hue={collage[1].project.hue}
                     cover={collage[1].src}
@@ -113,20 +125,41 @@ export default function CapabilitySubPage() {
                     name={collage[1].project.name}
                   />
                 </div>
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-botcore-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/left:opacity-100"
+                />
+                <div className="absolute bottom-0 left-0 right-0 flex translate-y-2 items-center justify-between px-5 py-4 opacity-0 transition-all duration-500 group-hover/left:translate-y-0 group-hover/left:opacity-100">
+                  <span className="text-sm font-semibold text-botcore-greyLight md:text-base">
+                    {collage[1].project.name}
+                  </span>
+                  <span className="eyebrow !text-botcore-green">View →</span>
+                </div>
               </Link>
 
               {/* Right flanking tile */}
               <Link
                 to={`/reps/${collage[2].project.slug}`}
-                className="absolute -right-2 top-4 z-20 w-[46%] rotate-3 overflow-hidden border border-white/10 bg-botcore-black shadow-[0_30px_80px_rgba(0,0,0,0.65)] transition-transform duration-500 hover:scale-[1.04] hover:rotate-2 md:-right-6 md:top-8"
+                aria-label={`Open ${collage[2].project.name} case study`}
+                className="group/right collage-tile-right absolute -right-4 top-0 z-20 block w-[54%] overflow-hidden border border-white/10 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[box-shadow] duration-500 hover:z-30 hover:shadow-[0_50px_160px_rgba(0,255,0,0.18)] sm:w-[50%] md:-right-10 md:top-4 lg:-right-16"
               >
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-[4/3] transition-transform duration-700 group-hover/right:scale-[1.05]">
                   <ProjectThumb
                     hue={collage[2].project.hue}
                     cover={collage[2].src}
                     logo={null}
                     name={collage[2].project.name}
                   />
+                </div>
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-botcore-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/right:opacity-100"
+                />
+                <div className="absolute bottom-0 left-0 right-0 flex translate-y-2 items-center justify-between px-5 py-4 opacity-0 transition-all duration-500 group-hover/right:translate-y-0 group-hover/right:opacity-100">
+                  <span className="text-sm font-semibold text-botcore-greyLight md:text-base">
+                    {collage[2].project.name}
+                  </span>
+                  <span className="eyebrow !text-botcore-green">View →</span>
                 </div>
               </Link>
             </div>
