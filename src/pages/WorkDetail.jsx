@@ -88,11 +88,11 @@ export default function WorkDetail() {
           <MotionReveal>
             <Link
               to="/reps"
-              className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.24em] text-botcore-greyLight/80 transition-colors hover:text-botcore-green"
+              className="group inline-flex h-12 items-center gap-3 border-2 border-botcore-green/60 bg-botcore-green/5 px-5 font-mono text-xs font-bold uppercase tracking-[0.28em] text-botcore-green transition-colors hover:border-botcore-green hover:bg-botcore-green hover:text-botcore-black md:h-14 md:px-6 md:text-sm"
             >
               <span
                 aria-hidden
-                className="transition-transform group-hover:-translate-x-1"
+                className="text-base transition-transform group-hover:-translate-x-1 md:text-lg"
               >
                 ←
               </span>

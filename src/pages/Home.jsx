@@ -2,8 +2,6 @@ import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
 import Capabilities from '../components/Capabilities';
 import Portfolio from '../components/Portfolio';
-import CoreValues from '../components/CoreValues';
-import TeamSection from '../components/TeamSection';
 import BlogSection from '../components/BlogSection';
 import LaunchCTA from '../components/LaunchCTA';
 
@@ -14,8 +12,6 @@ export default function Home() {
       <AboutSection />
       <Capabilities />
       <Portfolio />
-      <CoreValues />
-      <TeamSection />
       <BlogSection />
       <LaunchCTA />
     </>

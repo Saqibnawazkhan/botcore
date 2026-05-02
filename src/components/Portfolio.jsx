@@ -9,7 +9,9 @@ export default function Portfolio() {
   return (
     <section className="relative border-t border-white/5">
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
-        <div className="eyebrow accent-rule">Selected Projects</div>
+        <span className="inline-flex items-center border border-botcore-green/40 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-botcore-green">
+          Selected Projects
+        </span>
         <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
           Brands We Helped Build{' '}
           <span className="text-botcore-green">From the Ground Up</span>

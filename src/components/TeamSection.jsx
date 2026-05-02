@@ -47,18 +47,23 @@ export default function TeamSection() {
           <MotionReveal>
             <div className="eyebrow accent-rule">The Botcore Team</div>
             <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-              A small team of designers, strategists, and{' '}
+              A team of designers, strategists, and{' '}
               <span className="text-botcore-green">storytellers.</span>
             </h2>
             <p className="mt-8 max-w-md text-base leading-relaxed text-botcore-greyLight/65">
               We come from design, advertising, photography, development, and
-              strategy backgrounds. We keep the team small on purpose so every
+              strategy backgrounds. We keep the team tight on purpose so every
               client gets real attention — not a junior account manager and a
               long email chain.
             </p>
-            <Link to="/team" className="btn-ghost mt-10 inline-flex">
-              Meet the team <span aria-hidden>↗</span>
-            </Link>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link to="/team" className="btn-ghost inline-flex">
+                Meet the team <span aria-hidden>↗</span>
+              </Link>
+              <Link to="/" className="btn-ghost inline-flex">
+                Home <span aria-hidden>↗</span>
+              </Link>
+            </div>
           </MotionReveal>
 
           <MotionReveal delay={0.1}>

@@ -54,9 +54,9 @@ const columns = [
 ];
 
 const socials = [
-  { Icon: FacebookIcon, label: 'Facebook' },
-  { Icon: InstagramIcon, label: 'Instagram' },
-  { Icon: LinkedinIcon, label: 'LinkedIn' },
+  { Icon: FacebookIcon, label: 'Facebook', href: '#' },
+  { Icon: InstagramIcon, label: 'Instagram', href: 'https://www.instagram.com/botcoree' },
+  { Icon: LinkedinIcon, label: 'LinkedIn', href: '#' },
 ];
 
 export default function Footer() {
@@ -73,11 +73,13 @@ export default function Footer() {
             started.
           </p>
           <ul className="flex gap-3">
-            {socials.map(({ Icon, label }) => (
+            {socials.map(({ Icon, label, href }) => (
               <li key={label}>
                 <a
-                  href="#"
+                  href={href}
                   aria-label={label}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="flex h-10 w-10 items-center justify-center border border-white/10 text-botcore-greyLight/60 transition-colors hover:border-botcore-green hover:text-botcore-green"
                 >
                   <Icon />

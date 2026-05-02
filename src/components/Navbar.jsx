@@ -1,22 +1,49 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { ArrowLeft, Menu, X } from 'lucide-react';
 import MenuOverlay from './MenuOverlay';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === '/';
+
+  const handleBack = () => {
+    setMenuOpen(false);
+    if (window.history.length > 1) navigate(-1);
+    else navigate('/');
+  };
 
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-botcore-black/80 backdrop-blur-md">
-        <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between px-6 md:px-10">
-          <Link
-            to="/"
-            onClick={() => setMenuOpen(false)}
-            className="text-lg font-semibold uppercase tracking-[0.2em] text-botcore-green"
-          >
-            BOTCORE
-          </Link>
+        <div className="flex h-[80px] items-center justify-between px-6 md:px-10">
+          <div className="flex items-center gap-3 md:gap-4">
+            {!isHome && (
+              <button
+                type="button"
+                onClick={handleBack}
+                aria-label="Go back"
+                className="flex h-10 items-center gap-2 border border-botcore-green/50 bg-botcore-green/5 px-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-botcore-green transition-colors hover:bg-botcore-green hover:text-botcore-black md:h-11"
+              >
+                <ArrowLeft size={14} strokeWidth={2.25} />
+                <span className="hidden sm:inline">Back</span>
+              </button>
+            )}
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+              aria-label="BotCore — home"
+              className="flex items-center"
+            >
+              <img
+                src="/botcore-logo.png"
+                alt="BotCore"
+                className="h-12 w-auto md:h-14"
+              />
+            </Link>
+          </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
             <Link

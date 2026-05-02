@@ -6,8 +6,9 @@ export default function AboutSection() {
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-32">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
           <MotionReveal className="lg:col-span-4">
-            <div className="eyebrow accent-rule">About Botcore</div>
-            <p className="mt-6 text-sm text-botcore-greyLight/50">01 · Signal</p>
+            <span className="inline-flex items-center border border-botcore-green/40 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-botcore-green">
+              About Botcore
+            </span>
           </MotionReveal>
 
           <MotionReveal delay={0.1} className="lg:col-span-8">
@@ -26,7 +27,7 @@ export default function AboutSection() {
               <p>
                 From the first sketch of a logo to the campaigns that bring in
                 real customers, we treat your business like our own. Every
-                brand we take on gets a small focused team, honest advice, and
+                brand we take on gets a focused team, honest advice, and
                 work that holds up next to anyone in the market.
               </p>
             </div>

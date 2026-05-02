@@ -110,10 +110,21 @@ export default function MenuOverlay({ open, onClose }) {
                 </ul>
 
                 <ul className="flex items-center gap-3">
-                  {[FacebookIcon, InstagramIcon, LinkedinIcon].map((Icon, i) => (
-                    <li key={i}>
+                  {[
+                    { Icon: FacebookIcon, label: 'Facebook', href: '#' },
+                    {
+                      Icon: InstagramIcon,
+                      label: 'Instagram',
+                      href: 'https://www.instagram.com/botcoree',
+                    },
+                    { Icon: LinkedinIcon, label: 'LinkedIn', href: '#' },
+                  ].map(({ Icon, label, href }) => (
+                    <li key={label}>
                       <a
-                        href="#"
+                        href={href}
+                        aria-label={label}
+                        target={href.startsWith('http') ? '_blank' : undefined}
+                        rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="flex h-9 w-9 items-center justify-center border border-white/15 text-botcore-greyLight/80 transition-colors hover:border-botcore-green hover:text-botcore-green"
                       >
                         <Icon />

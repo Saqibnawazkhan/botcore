@@ -56,9 +56,17 @@ export default function Studio() {
     name: '',
     email: '',
     company: '',
-    projectType: '',
+    projectTypes: [],
     message: '',
   });
+
+  const toggleProjectType = (t) =>
+    setForm((f) => ({
+      ...f,
+      projectTypes: f.projectTypes.includes(t)
+        ? f.projectTypes.filter((x) => x !== t)
+        : [...f.projectTypes, t],
+    }));
   const [submitted, setSubmitted] = useState(false);
 
   const update = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
@@ -133,11 +141,21 @@ export default function Studio() {
               <div className="mt-10">
                 <p className="eyebrow !text-botcore-green">Follow us</p>
                 <ul className="mt-4 flex gap-3">
-                  {[FacebookIcon, InstagramIcon, LinkedinIcon].map((Icon, i) => (
-                    <li key={i}>
+                  {[
+                    { Icon: FacebookIcon, label: 'Facebook', href: '#' },
+                    {
+                      Icon: InstagramIcon,
+                      label: 'Instagram',
+                      href: 'https://www.instagram.com/botcoree',
+                    },
+                    { Icon: LinkedinIcon, label: 'LinkedIn', href: '#' },
+                  ].map(({ Icon, label, href }) => (
+                    <li key={label}>
                       <a
-                        href="#"
-                        aria-label="Social link"
+                        href={href}
+                        aria-label={label}
+                        target={href.startsWith('http') ? '_blank' : undefined}
+                        rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="flex h-10 w-10 items-center justify-center border border-white/15 text-botcore-greyLight/70 transition-colors hover:border-botcore-green hover:text-botcore-green"
                       >
                         <Icon />
@@ -185,16 +203,17 @@ export default function Studio() {
 
                 <div className="flex flex-col gap-2">
                   <label className="eyebrow !text-botcore-greyLight/70">
-                    Project type
+                    Project type <span className="!tracking-[0.2em] opacity-60">(select one or more)</span>
                   </label>
                   <div className="flex flex-wrap gap-2">
                     {projectTypes.map((t) => {
-                      const active = form.projectType === t;
+                      const active = form.projectTypes.includes(t);
                       return (
                         <button
                           key={t}
                           type="button"
-                          onClick={() => setForm((f) => ({ ...f, projectType: t }))}
+                          aria-pressed={active}
+                          onClick={() => toggleProjectType(t)}
                           className={`border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.24em] transition-colors ${
                             active
                               ? 'border-botcore-green bg-botcore-green text-botcore-black'

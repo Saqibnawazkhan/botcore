@@ -26,7 +26,9 @@ export default function Reps() {
         />
         <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">Selected Projects</div>
+            <span className="inline-flex items-center border border-botcore-green/40 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-botcore-green">
+              Selected Projects
+            </span>
           </MotionReveal>
           <MotionReveal delay={0.1}>
             <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">

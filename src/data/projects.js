@@ -187,11 +187,11 @@ export const projects = [
     approach:
       'A restrained identity leaning on a custom display face, a muted palette, and a photography style that prioritises motion over aspiration. The booking flow was rebuilt from scratch with clear class timelines, instructor bios, and a one-screen checkout.',
     outcome:
-      'Booking completion jumped significantly and no-show rates dropped. The brand travels cleanly across four locations with a single source system.',
+      'Booking completion jumped significantly and no-show rates dropped. The brand carries cleanly across the studio with a single source system.',
     stats: [
       { value: '+71', suffix: '%', label: 'Booking completion' },
       { value: '−28', suffix: '%', label: 'No-show rate' },
-      { value: '4', suffix: ' studios', label: 'Unified system' },
+      { value: '1', suffix: ' studio', label: 'Unified system' },
     ],
     deliverables: [
       'Branding',
@@ -303,7 +303,7 @@ export const projects = [
     slug: 'zar',
     name: 'Zar',
     tags: ['Branding', 'Websites', 'Campaigns', 'Design'],
-    year: '2024',
+    year: '2025',
     hue: 260,
     industry: 'Brand',
     role: 'Brand identity, art direction',

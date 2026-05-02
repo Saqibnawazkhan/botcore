@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import MotionReveal from '../components/MotionReveal';
 import CoreValues from '../components/CoreValues';
-import TeamSection from '../components/TeamSection';
+import InfluencersSection from '../components/InfluencersSection';
 import LaunchCTA from '../components/LaunchCTA';
 
 const stats = [
@@ -82,7 +82,7 @@ export default function About() {
           </MotionReveal>
           <MotionReveal delay={0.1}>
             <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
-              A small team of designers, strategists, and{' '}
+              A team of designers, strategists, and{' '}
               <span className="text-botcore-green">storytellers.</span>
             </h1>
           </MotionReveal>
@@ -90,7 +90,7 @@ export default function About() {
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Botcore is built around a tight team that cares about the work.
               We come from design, advertising, photography, development, and
-              strategy backgrounds. We keep the team small on purpose so every
+              strategy backgrounds. We keep the team tight on purpose so every
               client gets real attention and real ownership of their work — not
               a junior account manager and a long email chain.
             </p>
@@ -129,7 +129,7 @@ export default function About() {
                 <p>
                   From the first sketch of a logo to the campaigns that bring
                   in real customers, we treat your business like our own. Every
-                  brand we take on gets a small focused team, honest advice,
+                  brand we take on gets a focused team, honest advice,
                   and work that holds up next to anyone in the market.
                 </p>
                 <p>
@@ -242,7 +242,7 @@ export default function About() {
       </section>
 
       <CoreValues />
-      <TeamSection />
+      <InfluencersSection />
       <LaunchCTA />
     </>
   );
