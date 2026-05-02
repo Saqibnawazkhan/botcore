@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Local asset backups (not deployed)
+public/visuals/_originals/
+public/visuals_wbg/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

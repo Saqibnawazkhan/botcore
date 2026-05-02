@@ -34,7 +34,6 @@ const columns = [
       { label: 'Approach', to: '/approach' },
       { label: 'Work', to: '/reps' },
       { label: 'About', to: '/about' },
-      { label: 'Blog', to: '/labs' },
       { label: 'Contact', to: '/studio' },
     ],
   },
@@ -42,8 +41,6 @@ const columns = [
     title: 'Get started',
     links: [
       { label: 'Start a project', to: '/studio' },
-      { label: 'Careers', to: '/' },
-      { label: 'Client portal', to: '/' },
     ],
   },
   {

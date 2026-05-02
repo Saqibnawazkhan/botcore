@@ -17,6 +17,7 @@ const capabilities = [
     id: '01',
     label: 'Branding',
     Icon: Sparkles,
+    image: '/visuals/branding.png',
     to: '/capabilities/branding',
     blurb: 'Names, logos, colour, type, voice, full guidelines.',
   },
@@ -24,6 +25,7 @@ const capabilities = [
     id: '02',
     label: 'Graphic Design',
     Icon: PenTool,
+    image: '/visuals/graphic-design.png',
     to: '/capabilities/graphic-design',
     blurb: 'Packaging, print, social, decks, signage, menus.',
   },
@@ -31,6 +33,7 @@ const capabilities = [
     id: '03',
     label: 'Photo & Video',
     Icon: Camera,
+    image: '/visuals/photo-video.png',
     to: '/capabilities/photo-video',
     blurb: 'Product, lifestyle, brand films, short-form social.',
   },
@@ -38,6 +41,7 @@ const capabilities = [
     id: '04',
     label: 'Websites',
     Icon: Monitor,
+    image: '/visuals/websites.png',
     to: '/capabilities/websites',
     blurb: 'Brand sites, e-commerce, custom builds, ongoing care.',
   },
@@ -45,6 +49,7 @@ const capabilities = [
     id: '05',
     label: 'Content & Social',
     Icon: Megaphone,
+    image: '/visuals/content-social.png',
     to: '/capabilities/content-social',
     blurb: 'Calendars, captions, short-form video, community.',
   },
@@ -76,29 +81,39 @@ function CapabilityCard({ c }) {
     <Link
       to={c.to}
       onMouseMove={trackPointer}
-      className="group relative flex h-full flex-col items-center justify-between gap-6 overflow-hidden border border-white/8 bg-white/[0.02] p-6 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green/60 hover:bg-white/[0.04] md:p-7"
+      className="group relative flex h-full flex-col items-center justify-between gap-5 overflow-hidden border border-white/8 bg-white/[0.02] p-5 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green/60 hover:bg-white/[0.04] md:p-6"
     >
+      {/* Diagonal sheen background */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-60"
+        style={{
+          background:
+            'repeating-linear-gradient(125deg, transparent 0 38px, rgba(255,255,255,0.025) 38px 76px)',
+        }}
+      />
+
       {/* Cursor-tracking spotlight */}
       <span
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           background:
-            'radial-gradient(220px circle at var(--mx,50%) var(--my,50%), rgba(0,255,0,0.18), transparent 70%)',
+            'radial-gradient(260px circle at var(--mx,50%) var(--my,50%), rgba(0,255,0,0.18), transparent 70%)',
         }}
       />
 
-      {/* Top-left dashed corner mark grows on hover */}
+      {/* Top dashed corner mark grows on hover */}
       <span
         aria-hidden
-        className="absolute left-4 top-3 h-[3px] w-12 transition-all duration-300 group-hover:w-20"
+        className="absolute left-4 top-3 h-[3px] w-16 transition-all duration-300 group-hover:w-24"
         style={{
           background:
             'repeating-linear-gradient(135deg, rgba(0,255,0,0.7) 0 6px, transparent 6px 10px)',
         }}
       />
 
-      {/* Bottom-right dashed corner mark mirrors on hover */}
+      {/* Bottom dashed corner mark mirrors on hover */}
       <span
         aria-hidden
         className="absolute bottom-3 right-4 h-[3px] w-0 transition-all duration-300 group-hover:w-12"
@@ -108,25 +123,32 @@ function CapabilityCard({ c }) {
         }}
       />
 
-      <span className="relative flex h-20 w-20 items-center justify-center text-botcore-greyLight/85 transition-all duration-300 group-hover:scale-110 group-hover:text-botcore-green md:h-24 md:w-24">
-        <Icon size={48} strokeWidth={1.25} />
+      {/* Hero visual */}
+      <span className="relative flex w-full items-center justify-center text-botcore-greyLight/85 transition-all duration-300 group-hover:scale-[1.04] group-hover:text-botcore-green">
+        {c.image ? (
+          <img
+            src={c.image}
+            alt=""
+            loading="lazy"
+            className="h-48 w-48 object-contain drop-shadow-[0_0_30px_rgba(0,255,0,0.42)] transition-all duration-300 group-hover:drop-shadow-[0_0_44px_rgba(0,255,0,0.62)] sm:h-56 sm:w-56 md:h-60 md:w-60"
+          />
+        ) : (
+          <Icon className="h-48 w-48 sm:h-56 sm:w-56 md:h-60 md:w-60" strokeWidth={1.1} />
+        )}
       </span>
 
       <div className="relative text-center">
         <h3
-          className="text-base font-bold uppercase tracking-[0.16em] text-botcore-greyLight transition-colors duration-300 group-hover:text-botcore-green md:text-lg"
+          className="text-lg font-bold uppercase tracking-[0.18em] text-botcore-greyLight transition-colors duration-300 group-hover:text-botcore-green md:text-xl"
           style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
         >
           {c.label}
         </h3>
-        <p className="mt-3 hidden text-xs leading-relaxed text-botcore-greyLight/55 md:block">
-          {c.blurb}
-        </p>
       </div>
 
       <span
         aria-hidden
-        className="relative flex h-9 w-9 items-center justify-center border border-botcore-green/40 text-botcore-green transition-all duration-300 group-hover:rotate-[10deg] group-hover:bg-botcore-green group-hover:text-botcore-black"
+        className="relative flex h-9 w-9 items-center justify-center rounded-full border border-botcore-green/40 text-botcore-green transition-all duration-300 group-hover:rotate-[10deg] group-hover:bg-botcore-green group-hover:text-botcore-black"
       >
         <ArrowUpRight size={16} strokeWidth={1.75} />
       </span>
@@ -139,8 +161,17 @@ function SeeAllCard() {
     <Link
       to="/capabilities"
       onMouseMove={trackPointer}
-      className="group relative flex h-full flex-col items-center justify-between gap-6 overflow-hidden border border-botcore-green/40 bg-botcore-green/[0.04] p-6 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green hover:bg-botcore-green/[0.08] md:p-7"
+      className="group relative flex h-full flex-col items-center justify-between gap-5 overflow-hidden border border-botcore-green/40 bg-botcore-green/[0.04] p-5 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green hover:bg-botcore-green/[0.08] md:p-6"
     >
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-60"
+        style={{
+          background:
+            'repeating-linear-gradient(125deg, transparent 0 38px, rgba(0,255,0,0.04) 38px 76px)',
+        }}
+      />
+
       <span
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -152,7 +183,7 @@ function SeeAllCard() {
 
       <span
         aria-hidden
-        className="absolute left-4 top-3 h-[3px] w-12 transition-all duration-300 group-hover:w-20"
+        className="absolute left-4 top-3 h-[3px] w-16 transition-all duration-300 group-hover:w-24"
         style={{
           background:
             'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
@@ -167,27 +198,24 @@ function SeeAllCard() {
         }}
       />
 
-      <span className="relative flex h-20 w-20 items-center justify-center text-botcore-green transition-all duration-300 group-hover:scale-110 md:h-24 md:w-24">
-        <ArrowRight size={56} strokeWidth={1.25} />
+      <span className="relative flex w-full items-center justify-center text-botcore-green transition-all duration-300 group-hover:scale-[1.04]">
+        <ArrowRight strokeWidth={1.1} className="h-48 w-48 drop-shadow-[0_0_28px_rgba(0,255,0,0.55)] sm:h-56 sm:w-56 md:h-60 md:w-60" />
       </span>
 
       <div className="relative text-center">
         <h3
-          className="text-base font-bold uppercase tracking-[0.16em] text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-lg"
+          className="text-lg font-bold uppercase tracking-[0.18em] text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-xl"
           style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
         >
           See All
           <br />
           Capabilities
         </h3>
-        <p className="mt-3 hidden text-xs leading-relaxed text-botcore-greyLight/65 md:block">
-          One team, one brief, every service a brand needs.
-        </p>
       </div>
 
       <span
         aria-hidden
-        className="relative flex h-9 w-9 items-center justify-center border border-botcore-green bg-botcore-green/30 text-botcore-green transition-all duration-300 group-hover:rotate-[10deg] group-hover:bg-botcore-green group-hover:text-botcore-black"
+        className="relative flex h-9 w-9 items-center justify-center rounded-full border border-botcore-green bg-botcore-green/30 text-botcore-green transition-all duration-300 group-hover:rotate-[10deg] group-hover:bg-botcore-green group-hover:text-botcore-black"
       >
         <ArrowUpRight size={16} strokeWidth={2} />
       </span>

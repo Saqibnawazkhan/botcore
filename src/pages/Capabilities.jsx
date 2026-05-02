@@ -16,6 +16,7 @@ const capabilities = [
     id: '01',
     label: 'Branding & Identity',
     Icon: Sparkles,
+    image: '/visuals/branding.png',
     href: '/capabilities/branding',
     blurb:
       'We create brand identities from the ground up — name treatment, logo, colour, typography, voice, and the full guidelines that keep everything consistent as you grow. Built to last beyond launch and stand up to real competition.',
@@ -31,6 +32,7 @@ const capabilities = [
     id: '02',
     label: 'Graphic Design',
     Icon: PenTool,
+    image: '/visuals/graphic-design.png',
     href: '/capabilities/graphic-design',
     blurb:
       'Design that bridges strategy and the moment a customer decides to trust you. Packaging, print, social creatives, pitch decks, menus, signage — any surface where your brand needs to appear.',
@@ -46,6 +48,7 @@ const capabilities = [
     id: '03',
     label: 'Photography & Video',
     Icon: Camera,
+    image: '/visuals/photo-video.png',
     href: '/capabilities/photo-video',
     blurb:
       'In-house photography and video — product shoots, lifestyle content, brand films, and short-form social. Strong original imagery is one of the fastest ways for a new brand to look credible.',
@@ -61,6 +64,7 @@ const capabilities = [
     id: '04',
     label: 'Website Design & Development',
     Icon: Monitor,
+    image: '/visuals/websites.png',
     href: '/capabilities/websites',
     blurb:
       'Websites that load fast, look sharp on every screen, and convert visitors into customers. Brand sites, full e-commerce stores, or custom platforms — design, build, and ongoing improvements.',
@@ -76,6 +80,7 @@ const capabilities = [
     id: '05',
     label: 'Content & Social Media',
     Icon: Megaphone,
+    image: '/visuals/content-social.png',
     href: '/capabilities/content-social',
     blurb:
       'The content that keeps your brand active online. Monthly content calendars, short-form video, photography, captions, and community management — visible to the right people every week.',
@@ -176,8 +181,17 @@ export default function CapabilitiesPage() {
                   </div>
 
                   <div className="flex items-start gap-5 md:col-span-4">
-                    <span className="flex h-14 w-14 shrink-0 items-center justify-center border border-botcore-green/40 text-botcore-green md:h-16 md:w-16">
-                      <c.Icon size={28} strokeWidth={1.25} />
+                    <span className="flex h-16 w-16 shrink-0 items-center justify-center border border-botcore-green/40 text-botcore-green md:h-20 md:w-20">
+                      {c.image ? (
+                        <img
+                          src={c.image}
+                          alt=""
+                          loading="lazy"
+                          className="h-[88%] w-[88%] object-contain drop-shadow-[0_0_14px_rgba(0,255,0,0.35)]"
+                        />
+                      ) : (
+                        <c.Icon size={32} strokeWidth={1.25} />
+                      )}
                     </span>
                     <h2
                       className="text-2xl font-bold uppercase tracking-tight text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-3xl"

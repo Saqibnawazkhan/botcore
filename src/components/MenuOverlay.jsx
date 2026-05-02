@@ -24,20 +24,14 @@ const columnA = [
   { label: 'WORK', to: '/reps' },
   { label: 'CAPABILITIES', to: '/capabilities' },
   { label: 'APPROACH', to: '/approach' },
-  { label: 'ABOUT', to: '/about' },
 ];
 
 const columnB = [
-  { label: 'BLOG', to: '/labs' },
-  { label: 'CAREERS', to: '/' },
+  { label: 'ABOUT', to: '/about' },
   { label: 'CONTACT', to: '/studio' },
-  { label: 'CLIENT PORTAL', to: '/' },
 ];
 
 const utilityLinks = [
-  'CAREERS',
-  'CLIENT PORTAL',
-  'BLOG',
   'PRIVACY POLICY',
   'TERMS',
 ];

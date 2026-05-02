@@ -70,9 +70,9 @@ export const capabilityList = [
     projectFilter: (p) => p.tags?.includes('Branding'),
     useGallery: true,
     collageImages: [
-      { src: '/projects/rzr-jaw/02.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Packaging' },
-      { src: '/projects/tajjal/banner.png', slug: 'tajjal', name: 'Tajjal — Olive Oil Identity' },
       { src: '/projects/edit-beauty/02.png', slug: 'edit-beauty', name: 'Edit Beauty — Product' },
+      { src: '/projects/tajjal/Untitled%20design%20-%202026-04-17T001549.935.png', slug: 'tajjal', name: 'Tajjal — Olive Oil Identity' },
+      { src: '/projects/rzr-jaw/P2PET21%20copy%202%20(2).png', slug: 'rzr-jaw', name: 'Rzr Jaw — Packaging', fit: 'contain' },
     ],
     extraImages: [
       { src: '/projects/pro-inhale/cover.png', slug: 'pro-inhale', name: 'Pro Inhale — Packaging Spec' },

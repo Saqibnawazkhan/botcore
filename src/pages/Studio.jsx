@@ -115,13 +115,13 @@ export default function Studio() {
                 <InfoRow
                   Icon={Mail}
                   label="Email"
-                  value="hello@botcore.technology"
-                  href="mailto:hello@botcore.technology"
+                  value="support@botcore.technology"
+                  href="mailto:support@botcore.technology"
                 />
                 <InfoRow
                   Icon={MapPin}
                   label="Office"
-                  value={<>Working with founders worldwide</>}
+                  value="I8/2, Islamabad"
                 />
                 <InfoRow
                   Icon={Clock}

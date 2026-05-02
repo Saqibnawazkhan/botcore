@@ -97,7 +97,7 @@ export default function CapabilitySubPage() {
                   src={collage[0].src}
                   alt={collage[0].name}
                   loading="lazy"
-                  className="block aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover/centre:scale-[1.04]"
+                  className={`block aspect-[4/3] w-full ${collage[0].fit === 'contain' ? 'object-contain p-3' : 'object-cover'} transition-transform duration-700 group-hover/centre:scale-[1.04]`}
                 />
                 <div
                   aria-hidden
@@ -121,7 +121,7 @@ export default function CapabilitySubPage() {
                   src={collage[1].src}
                   alt={collage[1].name}
                   loading="lazy"
-                  className="block aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover/left:scale-[1.05]"
+                  className={`block aspect-[4/3] w-full ${collage[1].fit === 'contain' ? 'object-contain p-3' : 'object-cover'} transition-transform duration-700 group-hover/left:scale-[1.05]`}
                 />
                 <div
                   aria-hidden
@@ -145,7 +145,7 @@ export default function CapabilitySubPage() {
                   src={collage[2].src}
                   alt={collage[2].name}
                   loading="lazy"
-                  className="block aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover/right:scale-[1.05]"
+                  className={`block aspect-[4/3] w-full ${collage[2].fit === 'contain' ? 'object-contain p-3' : 'object-cover'} transition-transform duration-700 group-hover/right:scale-[1.05]`}
                 />
                 <div
                   aria-hidden
