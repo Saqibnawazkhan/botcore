@@ -100,7 +100,7 @@ export default function WorkDetail() {
         />
 
         <div className="relative z-10 mx-auto flex h-full max-w-[1280px] flex-col px-6 pb-16 pt-28 md:px-10 md:pb-20 md:pt-32">
-          <MotionReveal>
+          <MotionReveal className="self-start">
             <Link
               to="/reps"
               className="group inline-flex h-12 items-center gap-3 border-2 border-botcore-green/60 bg-botcore-green/5 px-5 font-mono text-xs font-bold uppercase tracking-[0.28em] text-botcore-green transition-colors hover:border-botcore-green hover:bg-botcore-green hover:text-botcore-black md:h-14 md:px-6 md:text-sm"
