@@ -42,7 +42,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="eyebrow accent-rule"
+          className="eyebrow accent-rule-both"
         >
           Marketing Agency for New Brands
         </motion.div>

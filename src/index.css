@@ -80,6 +80,22 @@ p {
     margin-right: 12px;
   }
 
+  .accent-rule-both::before,
+  .accent-rule-both::after {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: #00ff00;
+    vertical-align: middle;
+  }
+  .accent-rule-both::before {
+    margin-right: 12px;
+  }
+  .accent-rule-both::after {
+    margin-left: 12px;
+  }
+
   .grid-faint {
     background-image:
       linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
