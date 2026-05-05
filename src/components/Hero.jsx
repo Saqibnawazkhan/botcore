@@ -5,23 +5,16 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[92vh] items-center overflow-hidden pt-[72px]">
       <video
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-35"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-45"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        poster="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=60"
         aria-hidden
       >
-        <source
-          src="https://cdn.pixabay.com/video/2023/10/13/185039-873351598_large.mp4"
-          type="video/mp4"
-        />
-        <source
-          src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-          type="video/mp4"
-        />
+        <source src="/projects/website%20final.mov" type="video/quicktime" />
+        <source src="/projects/website%20final.mov" type="video/mp4" />
       </video>
 
       <div
