@@ -178,9 +178,9 @@ export const capabilityList = [
     projectFilter: (p) => p.deliverables?.some((d) => /photograph|video|film/i.test(d)),
     useGallery: true,
     collageImages: [
+      { src: '/projects/reform.mov', slug: 'reform-pilates', name: 'Reform Pilates — Studio Film' },
+      { src: '/projects/IMG_6347.MOV', slug: 'rzr-jaw', name: 'Rzr Jaw — Brand Film' },
       { src: '/projects/edit-beauty/banner.png', slug: 'edit-beauty', name: 'Edit Beauty — Lifestyle' },
-      { src: '/projects/rzr-jaw/banner.png', slug: 'rzr-jaw', name: 'Rzr Jaw — Brand Film' },
-      { src: '/projects/pro-inhale/banner.png', slug: 'pro-inhale', name: 'Pro Inhale — Brand Hero' },
     ],
     extraImages: [
       { src: '/projects/edit-beauty/02.png', slug: 'edit-beauty', name: 'Edit Beauty — Product Hero' },

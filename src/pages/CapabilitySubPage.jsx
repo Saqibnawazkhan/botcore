@@ -18,6 +18,27 @@ function fallbackCollage(matchedProjects) {
   return slice.map((p) => ({ src: pick(p), slug: p.slug, name: p.name }));
 }
 
+function CollageMedia({ item, hoverClass }) {
+  const isVideo = /\.(mp4|webm|mov)$/i.test(item.src);
+  const fitClass = item.fit === 'contain' ? 'object-contain p-3' : 'object-cover';
+  const className = `block aspect-[4/3] w-full ${fitClass} transition-transform duration-700 ${hoverClass}`;
+  if (isVideo) {
+    return (
+      <video
+        src={item.src}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-label={item.name}
+        className={className}
+      />
+    );
+  }
+  return <img src={item.src} alt={item.name} loading="lazy" className={className} />;
+}
+
 export default function CapabilitySubPage() {
   const { slug } = useParams();
   const config = capabilityBySlug[slug];
@@ -93,11 +114,9 @@ export default function CapabilitySubPage() {
                 aria-label={`Open ${collage[0].name} case study`}
                 className="group/centre collage-tile-centre absolute left-1/2 top-1/2 z-10 block w-[68%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[60%]"
               >
-                <img
-                  src={collage[0].src}
-                  alt={collage[0].name}
-                  loading="lazy"
-                  className={`block aspect-[4/3] w-full ${collage[0].fit === 'contain' ? 'object-contain p-3' : 'object-cover'} transition-transform duration-700 group-hover/centre:scale-[1.04]`}
+                <CollageMedia
+                  item={collage[0]}
+                  hoverClass="group-hover/centre:scale-[1.04]"
                 />
                 <div
                   aria-hidden
@@ -117,11 +136,9 @@ export default function CapabilitySubPage() {
                 aria-label={`Open ${collage[1].name} case study`}
                 className="group/left collage-tile-left absolute -left-4 bottom-0 z-20 block w-[52%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:z-30 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[48%] md:-left-10 md:bottom-4 lg:-left-16"
               >
-                <img
-                  src={collage[1].src}
-                  alt={collage[1].name}
-                  loading="lazy"
-                  className={`block aspect-[4/3] w-full ${collage[1].fit === 'contain' ? 'object-contain p-3' : 'object-cover'} transition-transform duration-700 group-hover/left:scale-[1.05]`}
+                <CollageMedia
+                  item={collage[1]}
+                  hoverClass="group-hover/left:scale-[1.05]"
                 />
                 <div
                   aria-hidden
@@ -141,11 +158,9 @@ export default function CapabilitySubPage() {
                 aria-label={`Open ${collage[2].name} case study`}
                 className="group/right collage-tile-right absolute -right-4 top-0 z-20 block w-[54%] overflow-hidden border-2 border-botcore-green/70 bg-botcore-black shadow-[0_40px_120px_rgba(0,0,0,0.7)] transition-[border-color,box-shadow] duration-500 hover:z-30 hover:border-botcore-green hover:shadow-[0_50px_160px_rgba(0,255,0,0.25)] sm:w-[50%] md:-right-10 md:top-4 lg:-right-16"
               >
-                <img
-                  src={collage[2].src}
-                  alt={collage[2].name}
-                  loading="lazy"
-                  className={`block aspect-[4/3] w-full ${collage[2].fit === 'contain' ? 'object-contain p-3' : 'object-cover'} transition-transform duration-700 group-hover/right:scale-[1.05]`}
+                <CollageMedia
+                  item={collage[2]}
+                  hoverClass="group-hover/right:scale-[1.05]"
                 />
                 <div
                   aria-hidden

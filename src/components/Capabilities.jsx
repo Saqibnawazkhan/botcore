@@ -81,9 +81,8 @@ function CapabilityCard({ c }) {
     <Link
       to={c.to}
       onMouseMove={trackPointer}
-      className="group relative flex h-full flex-col items-center justify-between gap-5 overflow-hidden border border-white/8 bg-white/[0.02] p-5 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green/60 hover:bg-white/[0.04] md:p-6"
+      className="group relative flex h-full flex-col items-center gap-5 overflow-hidden border border-white/8 bg-white/[0.02] p-6 text-center transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green/60 hover:bg-white/[0.04] md:p-7"
     >
-      {/* Diagonal sheen background */}
       <span
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-60"
@@ -93,7 +92,6 @@ function CapabilityCard({ c }) {
         }}
       />
 
-      {/* Cursor-tracking spotlight */}
       <span
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -103,52 +101,33 @@ function CapabilityCard({ c }) {
         }}
       />
 
-      {/* Top dashed corner mark grows on hover */}
       <span
         aria-hidden
-        className="absolute left-4 top-3 h-[3px] w-16 transition-all duration-300 group-hover:w-24"
+        className="absolute left-4 top-3 h-[3px] w-12 transition-all duration-300 group-hover:w-20"
         style={{
           background:
             'repeating-linear-gradient(135deg, rgba(0,255,0,0.7) 0 6px, transparent 6px 10px)',
         }}
       />
 
-      {/* Bottom dashed corner mark mirrors on hover */}
-      <span
-        aria-hidden
-        className="absolute bottom-3 right-4 h-[3px] w-0 transition-all duration-300 group-hover:w-12"
-        style={{
-          background:
-            'repeating-linear-gradient(135deg, rgba(0,255,0,0.7) 0 6px, transparent 6px 10px)',
-        }}
-      />
-
-      {/* Hero visual */}
-      <span className="relative flex w-full items-center justify-center text-botcore-greyLight/85 transition-all duration-300 group-hover:scale-[1.04] group-hover:text-botcore-green">
-        {c.image ? (
-          <img
-            src={c.image}
-            alt=""
-            loading="lazy"
-            className="h-48 w-48 object-contain drop-shadow-[0_0_30px_rgba(0,255,0,0.42)] transition-all duration-300 group-hover:drop-shadow-[0_0_44px_rgba(0,255,0,0.62)] sm:h-56 sm:w-56 md:h-60 md:w-60"
-          />
-        ) : (
-          <Icon className="h-48 w-48 sm:h-56 sm:w-56 md:h-60 md:w-60" strokeWidth={1.1} />
-        )}
+      <span className="relative mt-4 flex items-center justify-center text-botcore-greyLight/85 transition-colors duration-300 group-hover:text-botcore-green">
+        <Icon className="h-12 w-12 md:h-14 md:w-14" strokeWidth={1.25} />
       </span>
 
-      <div className="relative text-center">
-        <h3
-          className="text-lg font-bold uppercase tracking-[0.18em] text-botcore-greyLight transition-colors duration-300 group-hover:text-botcore-green md:text-xl"
-          style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
-        >
-          {c.label}
-        </h3>
-      </div>
+      <h3
+        className="relative text-base font-bold uppercase tracking-[0.18em] text-botcore-greyLight transition-colors duration-300 group-hover:text-botcore-green md:text-lg"
+        style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
+      >
+        {c.label}
+      </h3>
+
+      <p className="relative max-w-[22ch] text-sm leading-relaxed text-botcore-greyLight/60">
+        {c.blurb}
+      </p>
 
       <span
         aria-hidden
-        className="relative flex h-9 w-9 items-center justify-center rounded-full border border-botcore-green/40 text-botcore-green transition-all duration-300 group-hover:rotate-[10deg] group-hover:bg-botcore-green group-hover:text-botcore-black"
+        className="relative mt-auto flex h-9 w-9 items-center justify-center border border-botcore-green/50 text-botcore-green transition-all duration-300 group-hover:bg-botcore-green group-hover:text-botcore-black"
       >
         <ArrowUpRight size={16} strokeWidth={1.75} />
       </span>
@@ -161,7 +140,7 @@ function SeeAllCard() {
     <Link
       to="/capabilities"
       onMouseMove={trackPointer}
-      className="group relative flex h-full flex-col items-center justify-between gap-5 overflow-hidden border border-botcore-green/40 bg-botcore-green/[0.04] p-5 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green hover:bg-botcore-green/[0.08] md:p-6"
+      className="group relative flex h-full flex-col items-center gap-5 overflow-hidden border border-botcore-green/40 bg-botcore-green/[0.06] p-6 text-center transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green hover:bg-botcore-green/[0.1] md:p-7"
     >
       <span
         aria-hidden
@@ -183,39 +162,33 @@ function SeeAllCard() {
 
       <span
         aria-hidden
-        className="absolute left-4 top-3 h-[3px] w-16 transition-all duration-300 group-hover:w-24"
-        style={{
-          background:
-            'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
-        }}
-      />
-      <span
-        aria-hidden
-        className="absolute bottom-3 right-4 h-[3px] w-0 transition-all duration-300 group-hover:w-12"
+        className="absolute left-4 top-3 h-[3px] w-12 transition-all duration-300 group-hover:w-20"
         style={{
           background:
             'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
         }}
       />
 
-      <span className="relative flex w-full items-center justify-center text-botcore-green transition-all duration-300 group-hover:scale-[1.04]">
-        <ArrowRight strokeWidth={1.1} className="h-48 w-48 drop-shadow-[0_0_28px_rgba(0,255,0,0.55)] sm:h-56 sm:w-56 md:h-60 md:w-60" />
+      <span className="relative mt-4 flex items-center justify-center text-botcore-green transition-transform duration-300 group-hover:translate-x-1">
+        <ArrowRight strokeWidth={1.5} className="h-12 w-12 md:h-14 md:w-14" />
       </span>
 
-      <div className="relative text-center">
-        <h3
-          className="text-lg font-bold uppercase tracking-[0.18em] text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-xl"
-          style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
-        >
-          See All
-          <br />
-          Capabilities
-        </h3>
-      </div>
+      <h3
+        className="relative text-base font-bold uppercase tracking-[0.18em] text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-lg"
+        style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
+      >
+        See All
+        <br />
+        Capabilities
+      </h3>
+
+      <p className="relative max-w-[22ch] text-sm leading-relaxed text-botcore-greyLight/60">
+        One team, one brief, every service a brand needs.
+      </p>
 
       <span
         aria-hidden
-        className="relative flex h-9 w-9 items-center justify-center rounded-full border border-botcore-green bg-botcore-green/30 text-botcore-green transition-all duration-300 group-hover:rotate-[10deg] group-hover:bg-botcore-green group-hover:text-botcore-black"
+        className="relative mt-auto flex h-9 w-9 items-center justify-center border border-botcore-green bg-botcore-green/20 text-botcore-green transition-all duration-300 group-hover:bg-botcore-green group-hover:text-botcore-black"
       >
         <ArrowUpRight size={16} strokeWidth={2} />
       </span>
