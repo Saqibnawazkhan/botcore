@@ -18,7 +18,7 @@ export default function Hero() {
       </video>
 
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-botcore-black/30 via-botcore-black/10 to-botcore-black"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-botcore-black/25 via-botcore-black/5 to-botcore-black"
         aria-hidden
       />
       <div
@@ -26,25 +26,25 @@ export default function Hero() {
         aria-hidden
         style={{
           background:
-            'radial-gradient(ellipse at 20% 40%, rgba(0,255,0,0.08) 0%, transparent 50%)',
+            'radial-gradient(ellipse 70% 70% at 22% 78%, rgba(13,13,13,0.85) 0%, rgba(13,13,13,0.55) 35%, transparent 70%)',
         }}
       />
 
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-6 pb-24 pt-20 md:px-10 md:pb-28">
         <span
           aria-hidden
-          className="pointer-events-none absolute -left-10 top-1/2 -z-0 h-[420px] w-[680px] -translate-y-1/2 rounded-[55%_45%_60%_40%/45%_55%_50%_50%] opacity-70 blur-3xl md:h-[520px] md:w-[820px]"
+          className="pointer-events-none absolute -left-2 -top-3 hidden h-[3px] w-20 md:block"
           style={{
             background:
-              'radial-gradient(60% 70% at 35% 50%, rgba(0,255,0,0.45) 0%, rgba(0,200,0,0.18) 40%, transparent 75%)',
+              'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
           }}
         />
         <span
           aria-hidden
-          className="pointer-events-none absolute -left-6 top-1/2 -z-0 h-[280px] w-[520px] -translate-y-1/2 rotate-[-4deg] rounded-[40%_60%_55%_45%/55%_45%_60%_40%] opacity-90 blur-[60px]"
+          className="pointer-events-none absolute -left-2 -top-3 hidden h-20 w-[3px] md:block"
           style={{
             background:
-              'radial-gradient(50% 60% at 40% 55%, rgba(0,255,0,0.55) 0%, transparent 70%)',
+              'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
           }}
         />
 
@@ -92,7 +92,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-8 right-6 hidden flex-col items-center gap-2 text-botcore-greyLight/50 md:right-10 md:flex">
+      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-botcore-greyLight/50 md:flex">
         <span className="eyebrow">scroll</span>
         <motion.span
           animate={{ y: [0, 5, 0] }}
