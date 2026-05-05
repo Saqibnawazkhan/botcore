@@ -37,7 +37,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1280px] px-6 py-20 md:px-10">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-center px-6 py-20 text-center md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-10 flex flex-wrap items-center gap-3"
+          className="mt-10 flex flex-wrap items-center justify-center gap-3"
         >
           <Link to="/capabilities" className="btn-primary">
             See What We Do <span aria-hidden>↗</span>
