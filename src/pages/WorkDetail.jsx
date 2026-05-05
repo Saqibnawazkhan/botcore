@@ -1,5 +1,6 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
 import MotionReveal from '../components/MotionReveal';
+import CountUp from '../components/CountUp';
 import LaunchCTA from '../components/LaunchCTA';
 import { getProjectBySlug, getNextProject } from '../data/projects';
 
@@ -225,7 +226,7 @@ export default function WorkDetail() {
                     className="card flex flex-col gap-2 p-5"
                   >
                     <dt className="text-3xl font-semibold tracking-tight text-botcore-greyLight md:text-4xl">
-                      {s.value}
+                      <CountUp value={s.value} />
                       <span className="text-botcore-green">{s.suffix || ''}</span>
                     </dt>
                     <dd className="eyebrow !tracking-[0.2em]">{s.label}</dd>

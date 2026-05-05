@@ -1,4 +1,5 @@
 import MotionReveal from './MotionReveal';
+import CountUp from './CountUp';
 
 export default function AboutSection() {
   return (
@@ -49,7 +50,7 @@ function Stat({ value, suffix = '', label }) {
   return (
     <div>
       <dt className="text-4xl font-semibold tracking-tight text-botcore-greyLight md:text-5xl">
-        {value}
+        <CountUp value={value} />
         <span className="text-botcore-green">{suffix}</span>
       </dt>
       <dd className="eyebrow mt-3">{label}</dd>
