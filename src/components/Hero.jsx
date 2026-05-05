@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-6 pb-24 pt-20 md:px-10 md:pb-28">
         <span
           aria-hidden
-          className="pointer-events-none absolute -left-2 -top-3 hidden h-[3px] w-20 md:block"
+          className="pointer-events-none absolute -left-2 top-16 hidden h-[3px] w-20 md:block"
           style={{
             background:
               'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
@@ -41,7 +41,7 @@ export default function Hero() {
         />
         <span
           aria-hidden
-          className="pointer-events-none absolute -left-2 -top-3 hidden h-20 w-[3px] md:block"
+          className="pointer-events-none absolute -left-2 top-16 hidden h-20 w-[3px] md:block"
           style={{
             background:
               'repeating-linear-gradient(135deg, rgba(0,255,0,0.85) 0 6px, transparent 6px 10px)',
