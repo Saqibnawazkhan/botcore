@@ -182,16 +182,7 @@ export default function CapabilitiesPage() {
 
                   <div className="flex items-start gap-5 md:col-span-4">
                     <span className="flex h-16 w-16 shrink-0 items-center justify-center border border-botcore-green/40 text-botcore-green md:h-20 md:w-20">
-                      {c.image ? (
-                        <img
-                          src={c.image}
-                          alt=""
-                          loading="lazy"
-                          className="h-[88%] w-[88%] object-contain drop-shadow-[0_0_14px_rgba(0,255,0,0.35)]"
-                        />
-                      ) : (
-                        <c.Icon size={32} strokeWidth={1.25} />
-                      )}
+                      <c.Icon size={32} strokeWidth={1.25} />
                     </span>
                     <h2
                       className="text-2xl font-bold uppercase tracking-tight text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-3xl"
