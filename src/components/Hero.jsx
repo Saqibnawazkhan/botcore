@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[92vh] items-center overflow-hidden pt-[72px]">
+    <section className="relative flex min-h-[92vh] items-end overflow-hidden pt-[72px]">
       <video
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
         autoPlay
@@ -18,7 +18,7 @@ export default function Hero() {
       </video>
 
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-botcore-black/40 via-botcore-black/30 to-botcore-black/85"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-botcore-black/30 via-botcore-black/10 to-botcore-black"
         aria-hidden
       />
       <div
@@ -30,12 +30,12 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-center px-6 py-20 text-center md:px-10">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-6 pb-24 pt-20 md:px-10 md:pb-28">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="eyebrow accent-rule-both"
+          className="eyebrow accent-rule"
         >
           Marketing Agency for New Brands
         </motion.div>
@@ -44,7 +44,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="h-hero mt-8 max-w-5xl font-bold text-botcore-greyLight"
+          className="h-hero mt-6 max-w-3xl font-bold text-botcore-greyLight"
         >
           Where New Brands{' '}
           <span className="text-botcore-green glow-green">Begin</span>
@@ -54,7 +54,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-8 max-w-xl text-base leading-relaxed text-botcore-greyLight/70 md:text-lg"
+          className="mt-6 max-w-xl text-base leading-relaxed text-botcore-greyLight/75 md:text-lg"
         >
           We build the marketing engine your brand needs from day one. Logo,
           website, content, ads, every piece working together.
@@ -64,7 +64,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-3"
+          className="mt-8 flex flex-wrap items-center gap-3"
         >
           <Link to="/capabilities" className="btn-primary">
             See What We Do <span aria-hidden>↗</span>
