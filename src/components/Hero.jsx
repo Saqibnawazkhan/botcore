@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[92vh] items-center overflow-hidden pt-[72px]">
       <video
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-45"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
         loop
@@ -18,7 +18,7 @@ export default function Hero() {
       </video>
 
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-botcore-black/80 via-botcore-black/70 to-botcore-black"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-botcore-black/40 via-botcore-black/30 to-botcore-black/85"
         aria-hidden
       />
       <div
