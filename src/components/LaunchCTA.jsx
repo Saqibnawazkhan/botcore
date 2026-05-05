@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import MotionReveal from './MotionReveal';
 
 export default function LaunchCTA() {
   return (
@@ -13,7 +14,7 @@ export default function LaunchCTA() {
         }}
       />
       <div className="relative mx-auto flex max-w-[1280px] flex-col items-start gap-8 px-6 py-24 md:flex-row md:items-end md:justify-between md:px-10 md:py-28">
-        <div className="max-w-2xl">
+        <MotionReveal from="left" className="max-w-2xl">
           <span className="eyebrow !text-botcore-black/70">Get in touch</span>
           <h2 className="h-hero mt-4 font-bold text-botcore-black">
             Ready to build your brand?
@@ -23,13 +24,15 @@ export default function LaunchCTA() {
             a rough idea, we will get on a call and tell you honestly how we
             can help.
           </p>
-        </div>
-        <Link
-          to="/studio"
-          className="inline-flex items-center gap-2 border-2 border-botcore-black bg-transparent px-7 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-botcore-black transition-colors hover:bg-botcore-black hover:text-botcore-green"
-        >
-          Start a project <span aria-hidden>↗</span>
-        </Link>
+        </MotionReveal>
+        <MotionReveal from="right" delay={0.15}>
+          <Link
+            to="/studio"
+            className="inline-flex items-center gap-2 border-2 border-botcore-black bg-transparent px-7 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-botcore-black transition-colors hover:bg-botcore-black hover:text-botcore-green"
+          >
+            Start a project <span aria-hidden>↗</span>
+          </Link>
+        </MotionReveal>
       </div>
     </section>
   );
