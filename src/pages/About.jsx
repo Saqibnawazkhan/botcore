@@ -76,18 +76,18 @@ export default function About() {
               'radial-gradient(ellipse at 20% 0%, rgba(0,255,0,0.07) 0%, transparent 55%)',
           }}
         />
-        <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-36 md:px-10 md:pb-24 md:pt-44">
+        <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-36 text-center md:px-10 md:pb-24 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">The Botcore team</div>
+            <div className="eyebrow accent-rule-both">The Botcore team</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
-            <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
+            <h1 className="h-hero mx-auto mt-6 max-w-4xl font-bold text-botcore-greyLight">
               A team of designers, strategists, and{' '}
               <span className="text-botcore-green">storytellers.</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Botcore is built around a tight team that cares about the work.
               We come from design, advertising, photography, development, and
               strategy backgrounds. We keep the team tight on purpose so every
@@ -96,7 +96,7 @@ export default function About() {
             </p>
           </MotionReveal>
           <MotionReveal delay={0.3}>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               <Link to="/studio" className="btn-primary">
                 Start a project <span aria-hidden>↗</span>
               </Link>
@@ -164,12 +164,12 @@ export default function About() {
 
       <section className="relative border-b border-white/5">
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
-          <div className="max-w-2xl">
-            <div className="eyebrow accent-rule">How we are set up</div>
-            <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="eyebrow accent-rule-both">How we are set up</div>
+            <h2 className="h-section mx-auto mt-5 font-semibold text-botcore-greyLight">
               Built to make everything in one place.
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-6 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Every service runs in-house. You do not need to manage a designer,
               a video team, a developer, and a media buyer separately — the
               work stays consistent and the timelines stay tight.

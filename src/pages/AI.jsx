@@ -131,24 +131,24 @@ export default function AI() {
               'radial-gradient(ellipse at 80% 0%, rgba(0,255,0,0.08) 0%, transparent 55%)',
           }}
         />
-        <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-36 md:px-10 md:pb-24 md:pt-44">
+        <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-36 text-center md:px-10 md:pb-24 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">AI Enablement</div>
+            <div className="eyebrow accent-rule-both">AI Enablement</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
-            <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
+            <h1 className="h-hero mx-auto mt-6 max-w-4xl font-bold text-botcore-greyLight">
               Turn AI potential into business{' '}
               <span className="text-botcore-green">momentum.</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Our AI Enablement program turns curiosity into capability. We help your
               team move past one-off experiments and build durable, defensible advantage.
             </p>
           </MotionReveal>
           <MotionReveal delay={0.3}>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               <Link to="/studio" className="btn-primary">
                 Book your AI audit <span aria-hidden>↗</span>
               </Link>
@@ -185,9 +185,9 @@ export default function AI() {
 
       <section className="relative border-b border-white/5">
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
-          <div className="max-w-2xl">
-            <div className="eyebrow accent-rule">What changes</div>
-            <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="eyebrow accent-rule-both">What changes</div>
+            <h2 className="h-section mx-auto mt-5 font-semibold text-botcore-greyLight">
               Four outcomes, sequenced.
             </h2>
           </div>
@@ -217,9 +217,9 @@ export default function AI() {
 
       <section id="how-it-works" className="relative border-b border-white/5">
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
-          <div className="max-w-2xl">
-            <div className="eyebrow accent-rule">Audit to activation</div>
-            <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="eyebrow accent-rule-both">Audit to activation</div>
+            <h2 className="h-section mx-auto mt-5 font-semibold text-botcore-greyLight">
               From first signal to scoped roadmap in under a month.
             </h2>
           </div>

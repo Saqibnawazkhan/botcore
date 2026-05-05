@@ -138,18 +138,18 @@ export default function CapabilitiesPage() {
         />
         <div className="grid-faint pointer-events-none absolute inset-0 opacity-30" aria-hidden />
 
-        <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-36 md:px-10 md:pb-24 md:pt-44">
+        <div className="relative mx-auto max-w-[1280px] px-6 pb-16 pt-36 text-center md:px-10 md:pb-24 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">What we do</div>
+            <div className="eyebrow accent-rule-both">What we do</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
-            <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
+            <h1 className="h-hero mx-auto mt-6 max-w-4xl font-bold text-botcore-greyLight">
               Everything your brand needs{' '}
               <span className="text-botcore-green glow-green">under one roof.</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               New brands need more than a logo or a single ad campaign — they
               need a full system that works from first impression to final
               sale. Botcore brings every service a marketing agency can offer
@@ -158,7 +158,7 @@ export default function CapabilitiesPage() {
             </p>
           </MotionReveal>
           <MotionReveal delay={0.3}>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               <Link to="/studio" className="btn-primary">
                 Start a project <span aria-hidden>↗</span>
               </Link>

@@ -8,10 +8,10 @@ export default function BlogSection() {
   return (
     <section className="relative border-t border-white/5">
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <div className="flex flex-col items-center gap-6 text-center">
           <div>
-            <div className="eyebrow accent-rule">Botcore Insights</div>
-            <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
+            <div className="eyebrow accent-rule-both">Botcore Insights</div>
+            <h2 className="h-section mx-auto mt-5 font-semibold text-botcore-greyLight">
               Notes from the team.
             </h2>
           </div>

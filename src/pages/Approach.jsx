@@ -154,12 +154,12 @@ export default function Approach() {
 
       <section className="relative border-b border-white/5">
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
-          <div className="max-w-2xl">
-            <div className="eyebrow accent-rule">Operating principles</div>
-            <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="eyebrow accent-rule-both">Operating principles</div>
+            <h2 className="h-section mx-auto mt-5 font-semibold text-botcore-greyLight">
               The way we work, in three lines.
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-6 text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Our process is the visible part. These are the principles that
               hold it up — non-negotiable on every project, regardless of scope.
             </p>

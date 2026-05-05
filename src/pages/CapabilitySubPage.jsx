@@ -73,7 +73,7 @@ export default function CapabilitySubPage() {
 
         <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 text-center md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule mx-auto inline-block">
+            <div className="eyebrow accent-rule-both mx-auto inline-block">
               {config.eyebrow}
             </div>
           </MotionReveal>
@@ -181,15 +181,17 @@ export default function CapabilitySubPage() {
       {extras.length > 0 && (
         <section className="relative border-b border-white/5">
           <div className="mx-auto max-w-[1480px] px-6 py-16 md:px-10 md:py-24">
-            <MotionReveal>
-              <div className="eyebrow accent-rule">More {config.shortLabel}</div>
-            </MotionReveal>
-            <MotionReveal delay={0.1}>
-              <h2 className="h-section mt-5 max-w-3xl font-semibold text-botcore-greyLight">
-                A closer look{' '}
-                <span className="text-botcore-green">at the work.</span>
-              </h2>
-            </MotionReveal>
+            <div className="text-center">
+              <MotionReveal>
+                <div className="eyebrow accent-rule-both">More {config.shortLabel}</div>
+              </MotionReveal>
+              <MotionReveal delay={0.1}>
+                <h2 className="h-section mx-auto mt-5 max-w-3xl font-semibold text-botcore-greyLight">
+                  A closer look{' '}
+                  <span className="text-botcore-green">at the work.</span>
+                </h2>
+              </MotionReveal>
+            </div>
             <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
               {extras.map((tile, i) => (
                 <MotionReveal key={tile.src} delay={Math.min(i, 8) * 0.04}>
@@ -343,13 +345,13 @@ export default function CapabilitySubPage() {
       {featured.length > 0 && (
         <section className="relative border-b border-white/5">
           <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-10 md:py-24">
-            <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+            <div className="flex flex-col items-center gap-8 text-center">
               <div>
                 <MotionReveal>
-                  <div className="eyebrow accent-rule">Mission Briefs</div>
+                  <div className="eyebrow accent-rule-both">Mission Briefs</div>
                 </MotionReveal>
                 <MotionReveal delay={0.1}>
-                  <h2 className="h-section mt-5 max-w-2xl font-semibold text-botcore-greyLight">
+                  <h2 className="h-section mx-auto mt-5 max-w-2xl font-semibold text-botcore-greyLight">
                     From refreshes to brands built{' '}
                     <span className="text-botcore-green">from the ground up.</span>
                   </h2>

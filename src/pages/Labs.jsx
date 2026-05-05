@@ -23,17 +23,17 @@ export default function Labs() {
               'radial-gradient(ellipse at 20% 0%, rgba(0,255,0,0.06) 0%, transparent 55%)',
           }}
         />
-        <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 md:px-10 md:pb-16 md:pt-44">
+        <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 text-center md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">Interstellar insights</div>
+            <div className="eyebrow accent-rule-both">Interstellar insights</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
-            <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
+            <h1 className="h-hero mx-auto mt-6 max-w-4xl font-bold text-botcore-greyLight">
               Mission <span className="text-botcore-green">control.</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Field notes from the studio — strategy, search, branding, and the
               technology shaping how we ship work.
             </p>

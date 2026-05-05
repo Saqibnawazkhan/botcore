@@ -89,18 +89,18 @@ export default function Studio() {
               'radial-gradient(ellipse at 20% 0%, rgba(0,255,0,0.06) 0%, transparent 55%)',
           }}
         />
-        <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 md:px-10 md:pb-16 md:pt-44">
+        <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 text-center md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
-            <div className="eyebrow accent-rule">Get in touch</div>
+            <div className="eyebrow accent-rule-both">Get in touch</div>
           </MotionReveal>
           <MotionReveal delay={0.1}>
-            <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
+            <h1 className="h-hero mx-auto mt-6 max-w-4xl font-bold text-botcore-greyLight">
               Ready to build your{' '}
               <span className="text-botcore-green">brand?</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Tell us about your project. Whether you have a clear brief or
               just a rough idea, we will get on a call, listen properly, and
               tell you honestly how we can help. Most projects start with a

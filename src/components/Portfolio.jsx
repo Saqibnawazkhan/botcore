@@ -9,18 +9,20 @@ export default function Portfolio() {
   return (
     <section className="relative border-t border-white/5">
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-28">
-        <span className="inline-flex items-center border border-botcore-green/40 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-botcore-green">
-          Selected Projects
-        </span>
-        <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
-          Brands We Helped Build{' '}
-          <span className="text-botcore-green">From the Ground Up</span>
-        </h2>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
-          Every project on this page started as a conversation with a founder
-          who had a vision and needed someone to help bring it to life. These
-          are the brands we have shaped, launched, and grown with.
-        </p>
+        <div className="text-center">
+          <span className="inline-flex items-center border border-botcore-green/40 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-botcore-green">
+            Selected Projects
+          </span>
+          <h2 className="h-section mx-auto mt-5 font-semibold text-botcore-greyLight">
+            Brands We Helped Build{' '}
+            <span className="text-botcore-green">From the Ground Up</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            Every project on this page started as a conversation with a founder
+            who had a vision and needed someone to help bring it to life. These
+            are the brands we have shaped, launched, and grown with.
+          </p>
+        </div>
 
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((p, i) => (

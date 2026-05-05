@@ -24,20 +24,20 @@ export default function Reps() {
               'radial-gradient(ellipse at 20% 0%, rgba(0,255,0,0.06) 0%, transparent 55%)',
           }}
         />
-        <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 md:px-10 md:pb-16 md:pt-44">
+        <div className="relative mx-auto max-w-[1280px] px-6 pb-12 pt-36 text-center md:px-10 md:pb-16 md:pt-44">
           <MotionReveal>
             <span className="inline-flex items-center border border-botcore-green/40 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-botcore-green">
               Selected Projects
             </span>
           </MotionReveal>
           <MotionReveal delay={0.1}>
-            <h1 className="h-hero mt-6 max-w-4xl font-bold text-botcore-greyLight">
+            <h1 className="h-hero mx-auto mt-6 max-w-4xl font-bold text-botcore-greyLight">
               Brands We Helped Build{' '}
               <span className="text-botcore-green">From the Ground Up</span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.2}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-botcore-greyLight/65 md:text-lg">
               Every project on this page started as a conversation with a
               founder who had a vision and needed someone to help bring it to
               life. These are the brands we have shaped, launched, and grown
