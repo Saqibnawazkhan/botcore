@@ -81,7 +81,7 @@ function CapabilityCard({ c }) {
     <Link
       to={c.to}
       onMouseMove={trackPointer}
-      className="group relative flex h-full flex-col items-center gap-5 overflow-hidden border border-white/8 bg-white/[0.02] p-6 text-center transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green/60 hover:bg-white/[0.04] md:p-7"
+      className="group relative flex h-full flex-col items-center gap-4 overflow-hidden border border-white/8 bg-white/[0.02] p-4 text-center transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green/60 hover:bg-white/[0.04] sm:gap-5 sm:p-6 md:p-7"
     >
       <span
         aria-hidden
@@ -111,11 +111,11 @@ function CapabilityCard({ c }) {
       />
 
       <span className="relative mt-4 flex items-center justify-center text-botcore-greyLight/85 transition-colors duration-300 group-hover:text-botcore-green">
-        <Icon className="h-12 w-12 md:h-14 md:w-14" strokeWidth={1.25} />
+        <Icon className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14" strokeWidth={1.25} />
       </span>
 
       <h3
-        className="relative text-base font-bold uppercase tracking-[0.18em] text-botcore-greyLight transition-colors duration-300 group-hover:text-botcore-green md:text-lg"
+        className="relative text-sm font-bold uppercase tracking-[0.16em] text-botcore-greyLight transition-colors duration-300 group-hover:text-botcore-green sm:text-base sm:tracking-[0.18em] md:text-lg"
         style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
       >
         {c.label}
@@ -140,7 +140,7 @@ function SeeAllCard() {
     <Link
       to="/capabilities"
       onMouseMove={trackPointer}
-      className="group relative flex h-full flex-col items-center gap-5 overflow-hidden border border-botcore-green/40 bg-botcore-green/[0.06] p-6 text-center transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green hover:bg-botcore-green/[0.1] md:p-7"
+      className="group relative flex h-full flex-col items-center gap-4 overflow-hidden border border-botcore-green/40 bg-botcore-green/[0.06] p-4 text-center transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-botcore-green hover:bg-botcore-green/[0.1] sm:gap-5 sm:p-6 md:p-7"
     >
       <span
         aria-hidden
@@ -170,11 +170,11 @@ function SeeAllCard() {
       />
 
       <span className="relative mt-4 flex items-center justify-center text-botcore-green transition-transform duration-300 group-hover:translate-x-1">
-        <ArrowRight strokeWidth={1.5} className="h-12 w-12 md:h-14 md:w-14" />
+        <ArrowRight strokeWidth={1.5} className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14" />
       </span>
 
       <h3
-        className="relative text-base font-bold uppercase tracking-[0.18em] text-botcore-greyLight transition-colors group-hover:text-botcore-green md:text-lg"
+        className="relative text-sm font-bold uppercase tracking-[0.16em] text-botcore-greyLight transition-colors group-hover:text-botcore-green sm:text-base sm:tracking-[0.18em] md:text-lg"
         style={{ fontFamily: 'Syne, Space Grotesk, sans-serif' }}
       >
         See All

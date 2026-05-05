@@ -243,7 +243,7 @@ export default function Studio() {
                   />
                 </div>
 
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
                   <p className="eyebrow max-w-xs !tracking-[0.2em]">
                     We reply to every message within 48 hours.
                   </p>

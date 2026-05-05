@@ -106,8 +106,8 @@ export default function CapabilitySubPage() {
         </div>
 
         {collage && (
-          <div className="relative mx-auto max-w-[1480px] px-6 pb-28 md:px-10 md:pb-40">
-            <div className="relative mx-auto h-[560px] w-full max-w-6xl sm:h-[640px] md:h-[820px] lg:h-[900px]">
+          <div className="relative mx-auto max-w-[1480px] overflow-hidden px-4 pb-20 sm:px-6 sm:pb-28 md:overflow-visible md:px-10 md:pb-40">
+            <div className="relative mx-auto h-[440px] w-full max-w-6xl sm:h-[640px] md:h-[820px] lg:h-[900px]">
               {/* Centre tile — sits behind the flanking ones */}
               <Link
                 to={`/reps/${collage[0].slug}`}

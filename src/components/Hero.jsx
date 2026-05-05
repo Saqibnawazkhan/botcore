@@ -30,7 +30,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-6 pb-24 pt-20 md:px-10 md:pb-28">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-5 pb-20 pt-20 sm:px-6 sm:pb-24 md:px-10 md:pb-28">
         <span
           aria-hidden
           className="pointer-events-none absolute -left-2 top-16 hidden h-[3px] w-20 md:block"
