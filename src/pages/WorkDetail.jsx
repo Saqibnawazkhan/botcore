@@ -5,6 +5,21 @@ import { getProjectBySlug, getNextProject } from '../data/projects';
 
 function Cover({ hue, banner, logo, alt }) {
   if (banner) {
+    const isVideo = /\.(mp4|webm|mov)$/i.test(banner);
+    if (isVideo) {
+      return (
+        <video
+          src={banner}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label={alt}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      );
+    }
     return (
       <img
         src={banner}

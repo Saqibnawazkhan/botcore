@@ -180,6 +180,7 @@ export const projects = [
     role: 'Brand identity, website, booking UX',
     duration: '11 weeks',
     logo: '/projects/thumbnails/reform.png',
+    banner: '/projects/reform.mov',
     overview:
       'Reform Pilates is a studio brand built around community and movement. We created the full identity, the studio signage, and the online presence so the experience customers feel inside the space matches what they see online before they ever walk in.',
     challenge:
