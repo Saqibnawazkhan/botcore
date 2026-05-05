@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
 
 function parseValue(raw) {
@@ -16,20 +16,20 @@ function parseValue(raw) {
   return { sign, target, tail, decimals };
 }
 
-function format({ sign, target, tail, decimals }, current) {
+function format({ sign, target: _t, tail, decimals }, current) {
   return `${sign}${current.toFixed(decimals)}${tail}`;
 }
 
 export default function CountUp({ value, duration = 1.4, className }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.4 });
-  const parsed = parseValue(value);
+  const parsed = useMemo(() => parseValue(value), [value]);
   const [display, setDisplay] = useState(
     parsed ? format(parsed, 0) : String(value),
   );
 
   useEffect(() => {
-    if (!inView || !parsed) return;
+    if (!inView || !parsed) return undefined;
     const start = performance.now();
     let raf = 0;
     const tick = (now) => {
