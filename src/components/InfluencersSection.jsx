@@ -1,41 +1,101 @@
 import MotionReveal from './MotionReveal';
 
 const influencers = [
-  { name: 'Ken Doll', hue: 320 },
-  { name: 'Annural Khalid', hue: 200 },
-  { name: 'Aizaz Hashmi', hue: 30 },
-  { name: 'Kashif Wazir', hue: 140 },
-  { name: 'Kashif Afridi', hue: 280 },
-  { name: 'Umair Yousafzai', hue: 60 },
-  { name: 'Syed Abdullah', hue: 190 },
-  { name: 'Kashif Ali', hue: 0 },
-  { name: 'Moiz Nawaz', hue: 240 },
-  { name: 'Hamna', hue: 340 },
+  {
+    name: 'Ken Doll',
+    handle: '@kendoll',
+    brand: 'Rzr Jaw',
+    image:
+      '/projects/influencer/Untitled%20design%20-%202026-05-05T040209.375.png',
+  },
+  {
+    name: 'Aizaz Hashmi',
+    handle: '@aizazhashmi',
+    brand: 'Rzr Jaw',
+    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.50.jpeg',
+  },
+  {
+    name: 'Syed Abdullah',
+    handle: '@syedabdullah',
+    brand: 'Rzr Jaw',
+    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51.jpeg',
+  },
+  {
+    name: 'Umair Yousafzai',
+    handle: '@umairyousafzai',
+    brand: 'Rzr Jaw',
+    image:
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(2).jpeg',
+  },
+  {
+    name: 'Hamna',
+    handle: '@hamna',
+    brand: 'Rzr Jaw',
+    image:
+      '/projects/influencer/Untitled%20design%20-%202026-05-05T040944.011.png',
+  },
+  {
+    name: 'Moiz Nawaz',
+    handle: '@moiznawaz',
+    brand: 'Rzr Jaw',
+    image:
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(1).jpeg',
+  },
+  {
+    name: 'Annural Khalid',
+    handle: '@annuralkhalid',
+    brand: 'Edit Beauty',
+    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.58.jpeg',
+  },
+  {
+    name: 'Kashif Ali',
+    handle: '@kashifali',
+    brand: 'Edit Beauty',
+    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59.jpeg',
+  },
+  {
+    name: 'Kashif Afridi',
+    handle: '@kashifafridi',
+    brand: 'Edit Beauty',
+    image:
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(1).jpeg',
+  },
+  {
+    name: 'Kashif Wazir',
+    handle: '@kashifwazir',
+    brand: 'Tajjal',
+    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55.jpeg',
+  },
 ];
 
-function InfluencerTile({ name, hue }) {
+function InfluencerTile({ name, handle, brand, image }) {
   return (
     <div className="card group relative aspect-[3/4] overflow-hidden">
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(180deg, hsl(${hue} 45% 24%) 0%, #0d0d0d 78%)`,
-        }}
+      <img
+        src={image}
+        alt={`${name} — ${brand}`}
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.05]"
       />
       <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 50% 35%, rgba(0,255,0,0.18), transparent 55%)',
-        }}
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-botcore-black/85 via-botcore-black/15 to-transparent"
       />
-      <span className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-2">
-        <span className="h-card font-semibold leading-tight text-botcore-greyLight">
-          {name}
+      <span className="absolute left-3 top-3 border border-botcore-green/60 bg-botcore-black/55 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.2em] text-botcore-green backdrop-blur-sm">
+        {brand}
+      </span>
+      <span className="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-2">
+        <span className="flex flex-col leading-tight">
+          <span className="text-sm font-semibold text-botcore-greyLight md:text-base">
+            {name}
+          </span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-botcore-greyLight/55">
+            {handle}
+          </span>
         </span>
         <span
           aria-hidden
-          className="text-botcore-greyLight/40 transition-colors group-hover:text-botcore-green"
+          className="text-botcore-greyLight/50 transition-colors group-hover:text-botcore-green"
         >
           ↗
         </span>

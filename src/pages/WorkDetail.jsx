@@ -281,7 +281,7 @@ export default function WorkDetail() {
                       src={src}
                       alt={`${project.name} — frame ${i + 1}`}
                       loading="lazy"
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     />
                   </div>
                 </MotionReveal>

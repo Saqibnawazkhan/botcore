@@ -28,6 +28,12 @@ export const projects = [
       '/projects/rzr-jaw/cover.png',
       '/projects/rzr-jaw/01.png',
       '/projects/rzr-jaw/02.png',
+      '/projects/influencer/Untitled%20design%20-%202026-05-05T040209.375.png',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.50.jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51.jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(1).jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(2).jpeg',
+      '/projects/influencer/Untitled%20design%20-%202026-05-05T040944.011.png',
     ],
     overview:
       'Rzr Jaw came to us as an early-stage product brand looking for an identity with edge and presence. We built the full brand system from the name treatment to the packaging language, then carried it across the website and launch content so the brand felt sharp and consistent the day it went live.',
@@ -67,6 +73,9 @@ export const projects = [
     gallery: [
       '/projects/tajjal/cover.png',
       '/projects/tajjal/01.png',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55.jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55%20(1).jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55%20(2).jpeg',
     ],
     overview:
       'Tajjal is a Pakistani Extra Virgin Olive Oil brand built around in-house manufacturing and a digital-first approach. We shaped the identity, the packaging, and the visual story behind the product, then created the assets needed to bring it to retail shelves and to investors. The work focuses on premium feel without losing the local roots that make the brand honest.',
@@ -107,6 +116,11 @@ export const projects = [
       '/projects/edit-beauty/cover.png',
       '/projects/edit-beauty/01.png',
       '/projects/edit-beauty/02.png',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.58.jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59.jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(1).jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(2).jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(3).jpeg',
     ],
     overview:
       'Edit Beauty needed a brand that could sit comfortably next to global names while staying approachable for everyday customers. We developed the identity, the packaging across the product line, and a content style that runs through the website and the social channels, giving the brand a clean and confident voice.',
@@ -214,6 +228,9 @@ export const projects = [
     role: 'Identity, environmental, campaign',
     duration: '8 weeks',
     logo: '/projects/thumbnails/soir.png',
+    gallery: [
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.34.41.jpeg',
+    ],
     overview:
       'Cafe Soir wanted a brand that felt like a place rather than just a logo. We worked on the identity, the menu, the food photography, and the in-store graphics, building a brand that customers recognise the moment they step inside or scroll past on social.',
     challenge:
