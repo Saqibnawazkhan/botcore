@@ -75,17 +75,23 @@ export default function WorkDetail() {
 
   return (
     <>
-      <section className="relative h-screen min-h-[600px] w-full overflow-hidden md:max-h-[1080px]">
-        <Cover
-          hue={project.hue}
-          banner={project.banner}
-          logo={project.logo}
-          alt={project.name}
-        />
+      <section className="relative w-full overflow-hidden md:h-screen md:min-h-[600px] md:max-h-[1080px]">
+        <div className="relative aspect-video w-full md:absolute md:inset-0 md:aspect-auto md:h-full">
+          <Cover
+            hue={project.hue}
+            banner={project.banner}
+            logo={project.logo}
+            alt={project.name}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-b from-transparent to-botcore-black md:hidden"
+          />
+        </div>
 
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 hidden md:block"
           style={{
             background:
               'linear-gradient(180deg, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.15) 35%, rgba(13,13,13,0.55) 75%, rgba(13,13,13,0.95) 100%)',
@@ -93,7 +99,7 @@ export default function WorkDetail() {
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 hidden md:block"
           style={{
             background:
               'linear-gradient(90deg, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.25) 45%, transparent 70%)',
@@ -115,7 +121,7 @@ export default function WorkDetail() {
           </Link>
         </MotionReveal>
 
-        <div className="relative z-10 mx-auto flex h-full max-w-[1280px] flex-col px-6 pb-16 pt-28 md:px-10 md:pb-20 md:pt-32">
+        <div className="relative z-10 mx-auto flex max-w-[1280px] flex-col px-6 pb-12 pt-8 md:h-full md:pb-20 md:pt-32 md:px-10">
           <div className="mt-auto">
             <MotionReveal delay={0.1}>
               <div className="flex flex-wrap items-center gap-3">
@@ -282,6 +288,31 @@ export default function WorkDetail() {
                       alt={`${project.name} — frame ${i + 1}`}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover object-top"
+                    />
+                  </div>
+                </MotionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {project.influencers && project.influencers.length > 0 && (
+        <section className="relative border-t border-white/5">
+          <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-10 md:py-20">
+            <div className="eyebrow accent-rule">Creators</div>
+            <h2 className="h-section mt-5 font-semibold text-botcore-greyLight">
+              Influencer used this.
+            </h2>
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {project.influencers.map((src, i) => (
+                <MotionReveal key={src} delay={i * 0.04}>
+                  <div className="relative aspect-[3/4] overflow-hidden border border-white/10">
+                    <img
+                      src={src}
+                      alt={`${project.name} — creator ${i + 1}`}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover object-center"
                     />
                   </div>
                 </MotionReveal>

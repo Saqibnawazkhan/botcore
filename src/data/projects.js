@@ -28,12 +28,14 @@ export const projects = [
       '/projects/rzr-jaw/cover.png',
       '/projects/rzr-jaw/01.png',
       '/projects/rzr-jaw/02.png',
-      '/projects/influencer/Untitled%20design%20-%202026-05-05T040209.375.png',
-      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.50.jpeg',
+    ],
+    influencers: [
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51.jpeg',
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(1).jpeg',
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(2).jpeg',
+      '/projects/influencer/Untitled%20design%20-%202026-05-05T040209.375.png',
       '/projects/influencer/Untitled%20design%20-%202026-05-05T040944.011.png',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.50.jpeg',
     ],
     overview:
       'Rzr Jaw came to us as an early-stage product brand looking for an identity with edge and presence. We built the full brand system from the name treatment to the packaging language, then carried it across the website and launch content so the brand felt sharp and consistent the day it went live.',
@@ -73,8 +75,10 @@ export const projects = [
     gallery: [
       '/projects/tajjal/cover.png',
       '/projects/tajjal/01.png',
-      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55.jpeg',
+    ],
+    influencers: [
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55%20(1).jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55.jpeg',
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55%20(2).jpeg',
     ],
     overview:
@@ -116,10 +120,12 @@ export const projects = [
       '/projects/edit-beauty/cover.png',
       '/projects/edit-beauty/01.png',
       '/projects/edit-beauty/02.png',
+    ],
+    influencers: [
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.58.jpeg',
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59.jpeg',
-      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(1).jpeg',
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(2).jpeg',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(1).jpeg',
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(3).jpeg',
     ],
     overview:
@@ -228,7 +234,7 @@ export const projects = [
     role: 'Identity, environmental, campaign',
     duration: '8 weeks',
     logo: '/projects/thumbnails/soir.png',
-    gallery: [
+    influencers: [
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.34.41.jpeg',
     ],
     overview:

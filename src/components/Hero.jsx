@@ -3,26 +3,32 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[92vh] items-end overflow-hidden pt-[72px]">
-      <video
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        aria-hidden
-      >
-        <source src="/projects/website%20final.mov" type="video/quicktime" />
-        <source src="/projects/website%20final.mov" type="video/mp4" />
-      </video>
+    <section className="relative overflow-hidden pt-[72px] md:flex md:min-h-[92vh] md:items-end">
+      <div className="relative aspect-video w-full md:absolute md:inset-0 md:aspect-auto md:h-full">
+        <video
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden
+        >
+          <source src="/projects/website%20final.mov" type="video/quicktime" />
+          <source src="/projects/website%20final.mov" type="video/mp4" />
+        </video>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-b from-transparent to-botcore-black md:hidden"
+        />
+      </div>
 
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-botcore-black/25 via-botcore-black/5 to-botcore-black"
+        className="pointer-events-none absolute inset-0 hidden bg-gradient-to-b from-botcore-black/25 via-botcore-black/5 to-botcore-black md:block"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 hidden md:block"
         aria-hidden
         style={{
           background:
@@ -30,7 +36,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-5 pb-20 pt-20 sm:px-6 sm:pb-24 md:px-10 md:pb-28">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-5 pb-16 pt-10 sm:px-6 sm:pb-20 md:px-10 md:pb-28 md:pt-20">
         <span
           aria-hidden
           className="pointer-events-none absolute -left-2 top-16 hidden h-[3px] w-20 md:block"
