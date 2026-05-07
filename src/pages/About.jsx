@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 import MotionReveal from '../components/MotionReveal';
 import CoreValues from '../components/CoreValues';
-import InfluencersSection from '../components/InfluencersSection';
 import LaunchCTA from '../components/LaunchCTA';
 
 const stats = [
@@ -242,7 +241,6 @@ export default function About() {
       </section>
 
       <CoreValues />
-      <InfluencersSection />
       <LaunchCTA />
     </>
   );

@@ -3,6 +3,7 @@ import AboutSection from '../components/AboutSection';
 import Capabilities from '../components/Capabilities';
 import Portfolio from '../components/Portfolio';
 import BlogSection from '../components/BlogSection';
+import InfluencersSection from '../components/InfluencersSection';
 import LaunchCTA from '../components/LaunchCTA';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Portfolio />
       <BlogSection />
       <LaunchCTA />
+      <InfluencersSection />
     </>
   );
 }
