@@ -18,27 +18,28 @@ const influencers = [
     name: 'Moiz Nawaz',
     handle: '@moiznawaz',
     brand: 'Rzr Jaw',
-    image:
-      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(1).jpeg',
+    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51.jpeg',
   },
   {
     name: 'Syed Abdulla',
     handle: '@syedabdulla',
     brand: 'Rzr Jaw',
-    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51.jpeg',
+    image:
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(2).jpeg',
   },
   {
     name: 'Anural Khalid',
     handle: '@anuralkhalid',
-    brand: 'Edit Beauty',
-    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.58.jpeg',
+    brand: 'Rzr Jaw',
+    image:
+      '/projects/influencer/Untitled%20design%20-%202026-05-05T040944.011.png',
   },
   {
     name: 'Hamna',
     handle: '@hamna',
     brand: 'Rzr Jaw',
     image:
-      '/projects/influencer/Untitled%20design%20-%202026-05-05T040944.011.png',
+      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(1).jpeg',
   },
 ];
 
