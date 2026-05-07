@@ -9,30 +9,10 @@ const influencers = [
       '/projects/influencer/Untitled%20design%20-%202026-05-05T040209.375.png',
   },
   {
-    name: 'Aizaz Hashmi',
-    handle: '@aizazhashmi',
+    name: 'Burki Brothers',
+    handle: '@burkibrothers',
     brand: 'Rzr Jaw',
     image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.50.jpeg',
-  },
-  {
-    name: 'Syed Abdullah',
-    handle: '@syedabdullah',
-    brand: 'Rzr Jaw',
-    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51.jpeg',
-  },
-  {
-    name: 'Umair Yousafzai',
-    handle: '@umairyousafzai',
-    brand: 'Rzr Jaw',
-    image:
-      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(2).jpeg',
-  },
-  {
-    name: 'Hamna',
-    handle: '@hamna',
-    brand: 'Rzr Jaw',
-    image:
-      '/projects/influencer/Untitled%20design%20-%202026-05-05T040944.011.png',
   },
   {
     name: 'Moiz Nawaz',
@@ -42,29 +22,23 @@ const influencers = [
       '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51%20(1).jpeg',
   },
   {
-    name: 'Annural Khalid',
-    handle: '@annuralkhalid',
+    name: 'Syed Abdulla',
+    handle: '@syedabdulla',
+    brand: 'Rzr Jaw',
+    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2022.34.51.jpeg',
+  },
+  {
+    name: 'Anural Khalid',
+    handle: '@anuralkhalid',
     brand: 'Edit Beauty',
     image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.58.jpeg',
   },
   {
-    name: 'Kashif Ali',
-    handle: '@kashifali',
-    brand: 'Edit Beauty',
-    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59.jpeg',
-  },
-  {
-    name: 'Kashif Afridi',
-    handle: '@kashifafridi',
-    brand: 'Edit Beauty',
+    name: 'Hamna',
+    handle: '@hamna',
+    brand: 'Rzr Jaw',
     image:
-      '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.26.59%20(1).jpeg',
-  },
-  {
-    name: 'Kashif Wazir',
-    handle: '@kashifwazir',
-    brand: 'Tajjal',
-    image: '/projects/influencer/WhatsApp%20Image%202026-05-05%20at%2023.32.55.jpeg',
+      '/projects/influencer/Untitled%20design%20-%202026-05-05T040944.011.png',
   },
 ];
 
